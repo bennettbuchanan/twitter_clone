@@ -112,7 +112,7 @@
 
           /* Target the userimage with margins and padding */
           .userimage {
-            margin: 15px 15px;
+            margin: 15px 15px 10px 15px;
             border: 1px solid black;
             float: left;
           
@@ -120,20 +120,58 @@
 
           /* Set the text margin and padding in user status paragraphs */
           .usertxt {
-            margin: 15px 5px;
-            
+            margin: 10px 15px;
+            text-align: justify;
             text-align:top;
           }
 
            /* Set parameters of user status containers */
           .status {
+            display:block;
             float: left;
             border: 2px solid blue;
-            margin: 15px 15px;
+            margin: 0px 10px 10px 0px;
           }
 
+          /* Set parameters of aside container */
+          aside {
+            
+            border:2px solid purple;
+            margin: 10px 10px;
+            float:left;
 
+          }
 
+          /* Set style elements for users */
+          .username {
+            font-weight: bold;
+            margin-top: 25px;
+            display: inline-block;
+          }
+
+          /* Set style elements for date */
+          .date {
+            color: #c0c0c0;
+            display: inline-block;
+
+          }
+
+          /* Set status float */
+          .statuscontent {
+            width:600px;
+            display:block;
+            float:left;
+            border:2px solid green;
+          }
+
+          /* Set aside float */
+          .asidecontent {
+            width:384px;
+            display:block;
+            float:right;
+            border:2px solid green;
+
+          }
 
 
           
@@ -152,31 +190,42 @@
       </div> 
       <!-- End Header -->
 
-      <!-- Homepage -->
+      <!-- Content Overwrap-->
       <div>
-        <div class="status">
-          <img src="http://www.firstcoastcardio.com/wp-content/uploads/2014/03/Brett-Sasseen-MD-FACC-150x150.jpg" alt="user1 image" class="userimage">
-          <p class="usertxt">Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis 
-          </p>
+        <!--Content -->
+        <div class="statuscontent">
+          <div class="status">
+            <img src="http://www.firstcoastcardio.com/wp-content/uploads/2014/03/Brett-Sasseen-MD-FACC-150x150.jpg" alt="user1 image" class="userimage">
+            <p class="username">Joe Bland</p>
+            <p class="date">Feb 01</p>
+
+            <p class="usertxt">Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis 
+            </p>
+          </div>
+
+          <div class="status">
+            <img src="http://www.firstcoastcardio.com/wp-content/uploads/2014/03/Brett-Sasseen-MD-FACC-150x150.jpg" alt="user1 image" class="userimage">
+            <p class="usertxt">Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis or
+            </p>
+          </div>
+
         </div>
 
-               <div class="status">
-          <img src="http://www.firstcoastcardio.com/wp-content/uploads/2014/03/Brett-Sasseen-MD-FACC-150x150.jpg" alt="user1 image" class="userimage">
-          <p class="usertxt">Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis or
-          </p>
+        <!--End Content -->
+
+        <!-- Aside -->
+        <div class="asidecontent">
+          <aside>
+            <p>nim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis</p>
+          </aside>
         </div>
+   
 
-
-
-       <!-- Aside -->
-       <div>
-
-
-       </div>
-       <!-- End Aside -->
+        
+        <!-- End Aside -->
 
       </div> 
-      <!-- End Homepage -->
+      <!-- End Content Overwrap -->
 
     </div><!-- End Outermost container -->
 
