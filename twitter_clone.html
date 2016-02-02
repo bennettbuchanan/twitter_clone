@@ -1,69 +1,119 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
   <head>
-    <title>The Twitter Clone</title>
-    <style>
-      /* http://meyerweb.com/eric/tools/css/reset/ 
-      v2.0 | 20110126
-      License: none (public domain)
-      */
+    <meta charset="utf-8">
+      <title>The Twitter Clone</title>
+        <style>
+          /* http://meyerweb.com/eric/tools/css/reset/ 
+          v2.0 | 20110126
+          License: none (public domain)
+          */
 
-      html, body, div, span, applet, object, iframe,
-      h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-      a, abbr, acronym, address, big, cite, code,
-      del, dfn, em, img, ins, kbd, q, s, samp,
-      small, strike, strong, sub, sup, tt, var,
-      b, u, i, center,
-      dl, dt, dd, ol, ul, li,
-      fieldset, form, label, legend,
-      table, caption, tbody, tfoot, thead, tr, th, td,
-      article, aside, canvas, details, embed, 
-      figure, figcaption, footer, header, hgroup, 
-      menu, nav, output, ruby, section, summary,
-      time, mark, audio, video {
-      margin: 0;
-      padding: 0;
-      border: 0;
-      font-size: 100%;
-      font: inherit;
-      vertical-align: baseline;
-      }
-      
-      /* HTML5 display-role reset for older browsers */
-      article, aside, details, figcaption, figure, 
-      footer, header, hgroup, menu, nav, section {
-      display: block;
-      }
-      
-      body {
-      line-height: 1;
-      }
-      
-      ol, ul {
-      list-style: none;
-      }
-      
-      blockquote, q {
-      quotes: none;
-      }
-      
-      blockquote:before, blockquote:after,
-      q:before, q:after {
-      content: '';
-      content: none;
-      }
-      
-      table {
-      border-collapse: collapse;
-      border-spacing: 0;
-      }
-    </style>
-    
+          html, body, div, span, applet, object, iframe,
+          h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+          a, abbr, acronym, address, big, cite, code,
+          del, dfn, em, img, ins, kbd, q, s, samp,
+          small, strike, strong, sub, sup, tt, var,
+          b, u, i, center,
+          dl, dt, dd, ol, ul, li,
+          fieldset, form, label, legend,
+          table, caption, tbody, tfoot, thead, tr, th, td,
+          article, aside, canvas, details, embed, 
+          figure, figcaption, footer, header, hgroup, 
+          menu, nav, output, ruby, section, summary,
+          time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+            /* change font from default */
+            font-family: Verdana, sans-serif; 
+          }
+          
+          /* HTML5 display-role reset for older browsers */
+          article, aside, details, figcaption, figure, 
+          footer, header, hgroup, menu, nav, section {
+            display: block;
+          }
+          
+          body {
+            line-height: 1;
+          }
+          
+          ol, ul {
+            list-style: none;
+          }
+          
+          blockquote, q {
+            quotes: none;
+          }
+          
+          blockquote:before, blockquote:after,
+          q:before, q:after {
+            content: '';
+            content: none;
+          }
+          
+          table {
+            border-collapse: collapse;
+            border-spacing: 0;
+          }
+
+          /* Begin custom styles */
+
+          /* Set fixed width and align to center of window */
+          .outercontainer {
+            width: 992px;
+            border: 2px solid red;
+            margin-left: auto;
+            margin-right: auto;
+          }
+
+          /* Set float to align element to the right */
+          .toprightmenu {
+            float: right;
+          }
+
+          /* target account info links to set color to black */
+          .toprightmenu a {
+            color: #000;
+          }
+
+          /* Set menu items to align to the center of the container */
+          .menu {
+            text-align: center;
+          }   
+
+          /* Target individual menu items to create appropriate spacing and styling */ 
+          .menu a {
+            padding: 1px 20px;
+            margin: 0px 1px;
+            border: 1px solid black;
+            background-color: #ccccff;  
+            color: #000;
+            text-decoration: none;
+          }
+
+          /* Target the tagline with an id and assign some margins to align based */ 
+          #tagline{
+            margin-top: 10px;
+            margin-left: 10px;
+          }
+          
+        </style>
   </head>
   <body>
-    <h1>Twitter Clone</h1>
-    
+    <!-- Outermost container -->
+    <div class="outercontainer">
+      <!-- Header -->
+      <div>
+        <img src="http://www.lysol.com/media/369/350x150.gif" alt="placeholder logo">
+        <p class="toprightmenu"><a href="#">Edit my profile</a> | <a href="#">Logout</a></p>
+        <p id="tagline">Tagline here</p>
+        <p class="menu" ><a href="#">Home</a><a href="#">My statuses</a><a href="#">All users</a></p>
+      </div> <!-- End Header -->
+    </div><!-- End Outermost container -->
   </body>
 </html>
