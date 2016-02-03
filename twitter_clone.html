@@ -30,6 +30,7 @@
             vertical-align: baseline;
             /* change font from default */
             font-family: Verdana, sans-serif; 
+            color: #222222;
           }
           
           /* HTML5 display-role reset for older browsers */
@@ -71,26 +72,64 @@
             border: 2px solid red;
             margin-left: auto;
             margin-right: auto;
-            bottom: 20px;
+          }
+
+          header {
+            position: relative;
+            overflow: hidden;
+          }
+
+          footer {
+            position: relative;
+            overflow: hidden;
+            background: #222222;
+            width: 992px;
+            border: 2px solid red;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          
+          footer div {
+            padding:20px;
+          }
+
+          footer div p{
+            color: #fff;
+          }
+
+          #logo {
+            float: left;
           }
 
           /* Set float to align element to the right */
-          .toprightmenu {
+          ul.toprightmenu li {
+            display: inline-block;
+            color: #000;
             float: right;
           }
 
-          /* target account info links to set color to black */
-          .toprightmenu a {
-            color: #000;
+          ul.toprightmenu a {
+            text-decoration: none;
           }
 
-          /* Set menu items to align to the center of the container */
-          .menu {
+          ul.toprightmenu a:hover {
+            text-decoration: underline;
+          }
+
+          /* Center main nav */
+          nav {
             text-align: center;
-          }   
+            width: 350px;
+            margin: auto;
+            margin-bottom: 40px;
+          }
+
+          nav ul li {
+            float: left;
+          }
 
           /* Target individual menu items to create appropriate spacing and styling */ 
-          .menu a {
+          nav ul li a {
             padding: 1px 20px;
             margin: 0px 1px;
             border: 1px solid black;
@@ -98,12 +137,6 @@
             color: #000;
             text-decoration: none;
           }
-
-           /* Set parameters of header div */
-           .header {
-            margin-bottom: 40px;
-
-           }
 
           /* Target the tagline with an id and assign some margins to align based */ 
           #tagline {
@@ -125,9 +158,14 @@
             text-align:top;
           }
 
+          aside {
+            width: 384px;
+            float:right;
+            border:2px solid green;
+          }
+
           .asidetxt {
             margin: 10px 15px;
-            text-align:top;
           }
 
            /* Set parameters of user status containers */
@@ -135,14 +173,7 @@
             display:block;
             float: left;
             border: 2px solid blue;
-            margin: 0px 10px 10px 0px;
-          }
-
-          /* Set parameters of aside container */
-          aside {
-            border:2px solid purple;
-            margin: 10px 10px;
-            float:left;
+            margin-bottom: 10px;
           }
 
           .asideimage{
@@ -162,118 +193,125 @@
 
           /* Set style elements for date */
           .date {
-            color: #c0c0c0;
+            color: #aeaeae;
             display: inline-block;
-
           }
 
           /* Set status float */
           .statuscontent {
             width:600px;
-            display:block;
             float:left;
-            border:2px solid green;
-          }
-
-          /* Set aside float */
-          .asidecontent {
-            width:384px;
-            display:block;
-            float:right;
             border:2px solid green;
           }
 
           .featureheader {
             font-size: 150%;
             text-align: center;
-            background: #c0c0c0;
+            background: #ddd;
             padding: 10px;
+            border-radius: 2px;
           }
   
           .beta {
             position:fixed;
             width: relative;
-            height:30px;
-            background:#c0c0c0;
+            height: auto;
+            background:#fff;
             bottom: 0px;
             right: 0px;
-            padding: 10px 20px 0px 0px;
+            padding: 10px 10px 10px 0px;
+            opacity: .9;
+            border: 1px solid black;
+            border-radius: 2px;
           }
 
           .beta p {
             text-align: center;
             margin-right: 0px;
-            margin-left: 15px
+            margin-left: 10px;
+            font-size: 80%;
           }
-
         </style>
   </head>
   <body>
-
     <!-- Outermost container -->
     <div class="outercontainer">
       <!-- Header -->
-      <div class="header">
-        <img src="http://www.lysol.com/media/369/350x150.gif" alt="placeholder logo">
-        <p class="toprightmenu"><a href="#">Edit my profile</a> | <a href="#">Logout</a></p>
+      <header>
+        <img id="logo" src="http://www.lysol.com/media/369/350x150.gif" alt="placeholder logo">
+        <ul class="toprightmenu">
+          <li><a href="#">Edit my profile</a></li>
+          <li> | </li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </header><!-- End Header -->
         <p id="tagline">Tagline here</p>
-        <p class="menu" ><a href="#">Home</a><a href="#">My statuses</a><a href="#">All users</a></p>
-      </div><!-- End Header -->
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">My statuses</a></li>
+            <li><a href="#">All users</a></li>
+          </ul>
+        </nav>
       <!-- Content Overwrap-->
       <div>
         <!--Content -->
         <div class="statuscontent">
-          <div class="status">
+          <section class="statuscontent">
             <img src="http://s19.postimg.org/t38mrbb0f/gus.jpg " alt="Gus image" class="userimage">
-            <p class="username">Gus</p>
+            <h1 class="username">Gus</h1>
             <p class="date">Feb 01</p>
-
             <p class="usertxt">Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, arci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis 
             </p>
-          </div>
-          <div class="status">
+          </section>
+          <section class="statuscontent">
             <img src="http://s19.postimg.org/br8a5vhj3/marine.jpg " alt="Marine image" class="userimage">
-            <p class="username">Marine</p>
+            <h1 class="username">Marine</h1>
             <p class="date">Feb 01</p>
-
             <p class="usertxt">Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla tor enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis 
             </p>
-          </div>
-          <div class="status">
+          </section>
+          <section class="statuscontent">
             <img src="http://s19.postimg.org/c1b7bh6rj/bilal.jpg " alt="Bilal image" class="userimage">
-            <p class="username">Bilal</p>
+            <h1 class="username">Bilal</h1>
             <p class="date">Feb 01</p>
 
             <p class="usertxt">Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus cidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis 
             </p>
-          </div>
-          <div class="status">
+          </section>
+          <section class="statuscontent">
             <img src="http://s19.postimg.org/adgnaki9r/zee.jpg" alt="Zee image" class="userimage">
-            <p class="username">Zee</p>
+            <h1 class="username">Zee</h1>
             <p class="date">Feb 01</p>
-
             <p class="usertxt">Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla tor enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis 
             </p>
-          </div>
+          </section>
         </div><!--End Content Overwrap-->
         <!-- Aside -->
-        <div class="asidecontent">
-          <aside class="status">
+        <aside>
+          <section>
             <div class="featureheader">Featured</div>
             <div>
               <img src="http://www.deluxebattery.com/wp-content/uploads/2014/08/albert-einstein-intriging-questions-01.jpg" alt="Albert image" class="asideimage">
-              <p class="username">Albert</p>
+              <h1 class="username">Albert</h1>
               <p class="asidetxt">Albert Einstein was a German-born theoretical physicist. He developed the general theory of relativity, one of the two pillars of modern physics. Einstein's work is also known for its influence on the philosophy of science. Actively involved on this site from the spirit realm.</p>
             </div>
+          </section>
+          <section>
             <div>
               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Feynman_at_Los_Alamos.jpg/220px-Feynman_at_Los_Alamos.jpg" alt="Robert image" class="asideimage">
-              <p class="username">Robert</p>
+              <h1 class="username">Robert</h1>
               <p class="asidetxt">Robert was an American theoretical physicist known for his work in the path integral formulation of quantum mechanics, the theory of quantum electrodynamics, and the physics of the superfluidity of supercooled liquid helium, as well as in particle physics for which he proposed the parton model. For his contributions to the development of quantum electrodynamics, Feynman, jointly with Julian Schwinger and Sin-Itiro Tomonaga, received the Nobel Prize in Physics in 1965.</p>
             </div>
-          </aside>
-        </div><!-- End Aside -->
+          </section>
+        </aside><!-- End Aside -->
       </div><!-- End Content Overwrap -->
     </div><!-- End Outermost container -->
+    <footer>
+      <div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi omnis ullam assumenda, alias cum, dolor non dolore. Enim asperiores possimus architecto eum maiores provident itaque nulla nobis repellendus. Aliquid, veniam.</p>
+      </div>
+    </footer>
     <div class="beta">
       <p>Welcome! Please bear in mind that this application is in beta.</p>
     </div>
