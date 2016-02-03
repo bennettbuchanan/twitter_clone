@@ -65,12 +65,13 @@
 
           /* Set fixed width and align to center of window */
           .outercontainer {
+            position: relative;
             overflow: hidden;
             width: 992px;
             border: 2px solid red;
             margin-left: auto;
             margin-right: auto;
-
+            bottom: 20px;
           }
 
           /* Set float to align element to the right */
@@ -115,13 +116,17 @@
             margin: 15px 15px 10px 15px;
             border: 1px solid black;
             float: left;
-          
           }
 
           /* Set the text margin and padding in user status paragraphs */
           .usertxt {
             margin: 10px 15px;
             text-align: justify;
+            text-align:top;
+          }
+
+          .asidetxt {
+            margin: 10px 15px;
             text-align:top;
           }
 
@@ -135,11 +140,17 @@
 
           /* Set parameters of aside container */
           aside {
-            
             border:2px solid purple;
             margin: 10px 10px;
             float:left;
+          }
 
+          .asideimage{
+            width: 125px;
+            height: 125px;
+            margin: 15px 15px 10px 15px;
+            border: 1px solid black;
+            float: left;
           }
 
           /* Set style elements for users */
@@ -170,11 +181,31 @@
             display:block;
             float:right;
             border:2px solid green;
-
           }
 
+          .featureheader {
+            font-size: 150%;
+            text-align: center;
+            background: #c0c0c0;
+            padding: 10px;
+          }
+  
+          .beta {
+            position:fixed;
+            width: relative;
+            height:30px;
+            background:#c0c0c0;
+            bottom: 0px;
+            right: 0px;
+            padding: 10px 20px 0px 0px;
+          }
 
-          
+          .beta p {
+            text-align: center;
+            margin-right: 0px;
+            margin-left: 15px
+          }
+
         </style>
   </head>
   <body>
@@ -187,68 +218,64 @@
         <p class="toprightmenu"><a href="#">Edit my profile</a> | <a href="#">Logout</a></p>
         <p id="tagline">Tagline here</p>
         <p class="menu" ><a href="#">Home</a><a href="#">My statuses</a><a href="#">All users</a></p>
-      </div> 
-      <!-- End Header -->
-
+      </div><!-- End Header -->
       <!-- Content Overwrap-->
       <div>
         <!--Content -->
         <div class="statuscontent">
           <div class="status">
-            <img src="http://www.firstcoastcardio.com/wp-content/uploads/2014/03/Brett-Sasseen-MD-FACC-150x150.jpg" alt="user1 image" class="userimage">
-            <p class="username">Joe Bland</p>
+            <img src="http://s19.postimg.org/t38mrbb0f/gus.jpg " alt="Gus image" class="userimage">
+            <p class="username">Gus</p>
             <p class="date">Feb 01</p>
 
-            <p class="usertxt">Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis 
+            <p class="usertxt">Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, arci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis 
             </p>
           </div>
-
           <div class="status">
-            <img src="http://www.firstcoastcardio.com/wp-content/uploads/2014/03/Brett-Sasseen-MD-FACC-150x150.jpg" alt="user1 image" class="userimage">
-            <p class="usertxt">Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis or
+            <img src="http://s19.postimg.org/br8a5vhj3/marine.jpg " alt="Marine image" class="userimage">
+            <p class="username">Marine</p>
+            <p class="date">Feb 01</p>
+
+            <p class="usertxt">Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla tor enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis 
             </p>
           </div>
+          <div class="status">
+            <img src="http://s19.postimg.org/c1b7bh6rj/bilal.jpg " alt="Bilal image" class="userimage">
+            <p class="username">Bilal</p>
+            <p class="date">Feb 01</p>
 
-        </div>
+            <p class="usertxt">Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus cidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis 
+            </p>
+          </div>
+          <div class="status">
+            <img src="http://s19.postimg.org/adgnaki9r/zee.jpg" alt="Zee image" class="userimage">
+            <p class="username">Zee</p>
+            <p class="date">Feb 01</p>
 
-        <!--End Content -->
-
+            <p class="usertxt">Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla tor enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis 
+            </p>
+          </div>
+        </div><!--End Content Overwrap-->
         <!-- Aside -->
         <div class="asidecontent">
-          <aside>
-            <p>nim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis</p>
+          <aside class="status">
+            <div class="featureheader">Featured</div>
+            <div>
+              <img src="http://www.deluxebattery.com/wp-content/uploads/2014/08/albert-einstein-intriging-questions-01.jpg" alt="Albert image" class="asideimage">
+              <p class="username">Albert</p>
+              <p class="asidetxt">Albert Einstein was a German-born theoretical physicist. He developed the general theory of relativity, one of the two pillars of modern physics. Einstein's work is also known for its influence on the philosophy of science. Actively involved on this site from the spirit realm.</p>
+            </div>
+            <div>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Feynman_at_Los_Alamos.jpg/220px-Feynman_at_Los_Alamos.jpg" alt="Robert image" class="asideimage">
+              <p class="username">Robert</p>
+              <p class="asidetxt">Robert was an American theoretical physicist known for his work in the path integral formulation of quantum mechanics, the theory of quantum electrodynamics, and the physics of the superfluidity of supercooled liquid helium, as well as in particle physics for which he proposed the parton model. For his contributions to the development of quantum electrodynamics, Feynman, jointly with Julian Schwinger and Sin-Itiro Tomonaga, received the Nobel Prize in Physics in 1965.</p>
+            </div>
           </aside>
-        </div>
-   
-
-        
-        <!-- End Aside -->
-
-      </div> 
-      <!-- End Content Overwrap -->
-
+        </div><!-- End Aside -->
+      </div><!-- End Content Overwrap -->
     </div><!-- End Outermost container -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <div class="beta">
+      <p>Welcome! Please bear in mind that this application is in beta.</p>
+    </div>
   </body>
 </html>
