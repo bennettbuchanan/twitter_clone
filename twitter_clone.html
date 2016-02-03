@@ -108,14 +108,6 @@
             float: right;
           }
 
-          ul.toprightmenu a {
-            text-decoration: none;
-          }
-
-          ul.toprightmenu a:hover {
-            text-decoration: underline;
-          }
-
           /* Add pipe character after li with id of firstitem, add padding for equal spacing */
           #firstitem::after {
               content: "|";
@@ -140,7 +132,6 @@
             margin: 0px 1px;
             border: 1px solid black;
             background-color: #ccccff;  
-            color: #000;
             text-decoration: none;
           }
 
@@ -208,6 +199,7 @@
             width:600px;
             float:left;
             border:2px solid green;
+            margin-bottom: 20px;
           }
 
           .featureheader {
@@ -236,6 +228,50 @@
             margin-right: 0px;
             margin-left: 10px;
             font-size: 80%;
+          }
+
+          .button {
+            border: none;
+            color: white;
+            padding: 10px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 5px 15px 15px 15px;
+            cursor: pointer;
+            border-radius: 4px;
+            background:  #e7969c; /* For browsers that do not support gradients */
+            background: -webkit-linear-gradient( #e7969c, #ad494a); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient( #e7969c, #ad494a); /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient( #e7969c, #ad494a); /* For Firefox 3.6 to 15 */
+            background: linear-gradient( #e7969c, #ad494a); /* Standard syntax */
+          }
+          
+          /* Add hover pseudo class to button to change gradient */
+          .button:hover{
+            color: white;
+            background:  #ad494a; /* For browsers that do not support gradients */
+            background: -webkit-linear-gradient( #ad494a, #e7969c); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient( #ad494a, #e7969c); /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient( #ad494a, #e7969c); /* For Firefox 3.6 to 15 */
+            background: linear-gradient( #ad494a, #e7969c); /* Standard syntax */
+          }
+          
+          /* Add active pseudo to change colors when a user clicks on the button */
+          .button:active {
+            background:  #ad494a; 
+          }
+
+          /* Keep anchor tags at bottom to define color styles */
+          a {
+            color: #d6616b;
+            text-decoration: none;
+          }
+
+          a:hover {
+            color: #d6616b;
+            text-decoration: underline;
           }
         </style>
   </head>
@@ -266,8 +302,9 @@
             <img src="http://s19.postimg.org/t38mrbb0f/gus.jpg " alt="Gus image" class="userimage">
             <h1 class="username">Gus</h1>
             <p class="date">Feb 01</p>
-            <p class="usertxt">Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, arci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis 
+            <p class="usertxt">Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, arci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis.  orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis
             </p>
+              <a href="http://www.google.com" class="button">Link Button</a>
           </section>
           <section class="statuscontent">
             <img src="http://s19.postimg.org/br8a5vhj3/marine.jpg " alt="Marine image" class="userimage">
