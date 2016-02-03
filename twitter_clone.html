@@ -101,7 +101,7 @@
             float: left;
           }
 
-          /* Set float to align element to the right */
+          /* Set float to align element to the right of the outermost div and set display inline-block to arrange horizontally */
           ul.toprightmenu li {
             display: inline-block;
             color: #000;
@@ -114,6 +114,12 @@
 
           ul.toprightmenu a:hover {
             text-decoration: underline;
+          }
+
+          /* Add pipe character after li with id of firstitem, add padding for equal spacing */
+          #firstitem::after {
+              content: "|";
+              padding: 0 .5em; 
           }
 
           /* Center main nav */
@@ -240,9 +246,8 @@
       <header>
         <img id="logo" src="http://www.lysol.com/media/369/350x150.gif" alt="placeholder logo">
         <ul class="toprightmenu">
-          <li><a href="#">Edit my profile</a></li>
-          <li> | </li>
           <li><a href="#">Logout</a></li>
+          <li id="firstitem"><a href="#">Edit my profile</a></li>
         </ul>
       </header><!-- End Header -->
         <p id="tagline">Tagline here</p>
