@@ -77,7 +77,7 @@
           header {
             position: relative;
             overflow: hidden;
-          }
+            }
 
           footer {
             position: relative;
@@ -102,14 +102,21 @@
           }
 
           /* Set float to align element to the right of the outermost div and set display inline-block to arrange horizontally */
-          ul.toprightmenu li {
+
+          .toprightmenu {
+            float: right;
+            padding: 10px;
+          }
+
+          .toprightmenu li {
             display: inline-block;
             color: #000;
-            float: right;
+            float: left;
+
           }
 
           /* Add pipe character after li with id of firstitem, add padding for equal spacing */
-          #firstitem::after {
+          #firstitem:after {
               content: "|";
               padding: 0 .5em; 
           }
@@ -287,8 +294,8 @@
       <header>
         <img id="logo" src="http://www.lysol.com/media/369/350x150.gif" alt="placeholder logo">
         <ul class="toprightmenu">
-          <li><a href="#">Logout</a></li>
           <li id="firstitem"><a href="#">Edit my profile</a></li>
+          <li><a href="#">Logout</a></li>
         </ul>
       </header><!-- End Header -->
         <p id="tagline">Tagline here</p>
