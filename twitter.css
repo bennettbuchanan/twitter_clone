@@ -1,401 +1,407 @@
-          /* http://meyerweb.com/eric/tools/css/reset/ 
-          v2.0 | 20110126
-          License: none (public domain)
-          */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
 
-          html, body, div, span, applet, object, iframe,
-          h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-          a, abbr, acronym, address, big, cite, code,
-          del, dfn, em, img, ins, kbd, q, s, samp,
-          small, strike, strong, sub, sup, tt, var,
-          b, u, i, center,
-          dl, dt, dd, ol, ul, li,
-          fieldset, form, label, legend,
-          table, caption, tbody, tfoot, thead, tr, th, td,
-          article, aside, canvas, details, embed, 
-          figure, figcaption, footer, header, hgroup, 
-          menu, nav, output, ruby, section, summary,
-          time, mark, audio, video {
-            margin: 0;
-            padding: 0;
-            border: 0;
-            font-size: 100%;
-            font: inherit;
-            vertical-align: baseline;
-            /* change font from default */
-            font-family: Verdana, sans-serif; 
-            color: #222222;
-          }
-          
-          /* HTML5 display-role reset for older browsers */
-          article, aside, details, figcaption, figure, 
-          footer, header, hgroup, menu, nav, section {
-            display: block;
-          }
-          
-          body {
-            line-height: 1;
-          }
-          
-          ol, ul {
-            list-style: none;
-          }
-          
-          blockquote, q {
-            quotes: none;
-          }
-          
-          blockquote:before, blockquote:after,
-          q:before, q:after {
-            content: '';
-            content: none;
-          }
-          
-          table {
-            border-collapse: collapse;
-            border-spacing: 0;
-          }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  /* change font from default */
+  font-family: Verdana, sans-serif; 
+  color: #222222;
+}
 
-          /* Begin custom styles */
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
 
-          /* Set fixed width and align to center of window */
-          .outercontainer {
-            position: relative;
-            overflow: hidden;
-            width: 992px;
-            margin-left: auto;
-            margin-right: auto;
-          }
+body {
+  line-height: 1;
+}
 
-          header {
-            position: relative;
-            overflow: hidden;
-            }
+ol, ul {
+  list-style: none;
+}
 
-          footer {
-            position: relative;
-            overflow: hidden;
-            background: #636363;
-            width: 992px;
-            margin-left: auto;
-            margin-right: auto;
-          }
-          
-          footer div {
-            padding:20px;
-          }
+blockquote, q {
+  quotes: none;
+}
 
-          footer div p{
-            color: #fff;
-          }
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
 
-          #logo {
-            float: left;
-          }
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 
-          /* Set float to align element to the right of the outermost div and set display inline-block to arrange horizontally */
+/* Set fixed width and align to center of window */
+.outercontainer {
+  position: relative;
+  overflow: hidden;
+  width: 992px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-          .toprightmenu {
-            float: right;
-            padding: 10px;
-          }
+header {
+  position: relative;
+  overflow: hidden;
+  }
 
-          .toprightmenu li {
-            display: inline-block;
-            color: #000;
-            float: left;
+header img {
+  height: 165px;
+  opacity: .7;
+}
 
-          }
+footer {
+  position: relative;
+  overflow: hidden;
+  background: #636363;
+  width: 992px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-          /* Add pipe character after li with id of firstitem, add padding for equal spacing */
-          #firstitem:after {
-              content: "|";
-              padding: 0 .5em; 
-          }
+footer div {
+  padding:20px;
+}
 
-          /* Center main nav */
-          nav {
-            text-align: center;
-            width: 350px;
-            margin: auto;
-            margin-bottom: 40px;
-          }
+footer div p{
+  color: #fff;
+}
 
-          nav ul li {
-            float: left;
-          }
+#logo {
+  float: left;
+}
 
-          /* Target individual menu items to create appropriate spacing and styling */ 
-          nav ul li a {
-            padding: 1px 20px;
-            margin: 0px 1px;
-            border: 1px solid black;
-            text-decoration: none;
-            border-radius: 4px;
-          }
+/* Set float to align element to the right of the outermost div and set display inline-block to arrange horizontally */
+.toprightmenu {
+  float: right;
+  padding: 10px;
+}
 
-          /* Target the tagline with an id and assign some margins to align based */ 
-          #tagline {
-            margin-top: 10px;
-            margin-left: 10px;
-          }
+.toprightmenu li {
+  display: inline-block;
+}
 
-          /* Target the userimage with margins and padding */
-          .userimage {
-            margin: 0px 15px 10px 0px;
-            border: 1px solid black;
-            float: left;
-          }
+/* Add pipe character after li with id of firstitem, add padding for equal spacing */
+#firstitem:after {
+    content: " |";
+}
 
-          /* Set the text margin and padding in user status paragraphs */
-          .usertxt {
-            margin-top: 10px;
-            text-align: justify;
-            text-align:top;
-          }
+/* Center main nav */
+nav {
+  text-align: center;
+  width: 350px;
+  margin: auto;
+  margin-bottom: 40px;
+}
 
-          aside {
-            width: 384px;
-            float:right;
-            background: #dadaeb;
-            border-radius: 4px;
-          }
+nav ul li {
+  float: left;
+}
 
-          .asidetxt {
-            margin: 10px 0px;
-          }
+/* Target individual menu items to create appropriate spacing and styling */ 
+nav ul li a {
+  padding: 1px 20px;
+  margin: 0px 1px;
+  border: 1px solid black;
+  text-decoration: none;
+  border-radius: 4px;
+}
 
-           /* Set parameters of user status containers */
-          .status {
-            display:block;
-            float: left;
-            margin-bottom: 10px;
-          }
+/* Target the tagline with an id and assign some margins to align based */ 
+#tagline {
+  margin-top: 10px;
+  margin-left: 10px;
+}
 
-          .asideimage{
-            width: 125px;
-            height: 125px;
-            margin: 0px 15px 10px 0px;
-            border: 1px solid black;
-            float: left;
-          }
+/* Target the userimage with margins and padding */
+.userimage {
+  margin: 0px 15px 10px 0px;
+  border: 1px solid black;
+  float: left;
+  height: 150px;
+  width: 150px;
+}
 
-          /* Set style elements for users */
-          .username {
-            font-weight: bold;
-            margin-top: 10px;
-            display: inline-block;
-          }
+/* Set the text margin and padding in user status paragraphs */
+.usertxt {
+  margin-top: 10px;
+  text-align: justify;
+  text-align:top;
+}
 
-          /* Set style elements for date */
-          .date {
-            color: #aeaeae;
-            display: inline-block;
-          }
+aside {
+  width: 384px;
+  float:right;
+  background: #ddd;
+  border-radius: 4px;
+}
 
-          /* Set status float */
-          .statuscontent {
-            width:555px;
-            float:left;
-            margin-bottom: 20px;
-            border: 1px solid black;
-            padding: 15px;
-            border-radius: 4px;
-          }
+.asidetxt {
+  margin: 10px 0px;
+}
 
-          .statuscontentcontainer {
-            width:555px;
-            float:left;
-          }
+ /* Set parameters of user status containers */
+.status {
+  display:block;
+  float: left;
+  margin-bottom: 10px;
+}
 
-          .featureheader {
-            margin: 20px 20px 0px 20px;
-            font-size: 150%;
-            text-align: center;
-            background: white;
-            padding: 10px;
-            border: 1px solid black;
-            border-radius: 4px;
-            margin-bottom: 20px;
-          }
+.asideimage{
+  width: 125px;
+  height: 125px;
+  margin: 0px 15px 10px 0px;
+  border: 1px solid black;
+  float: left;
+}
 
-          .featureduser {
-            border: 1px solid black;
-            border-radius: 4px;
-            margin-bottom: 20px;
-            background: white;
-            margin: 20px;
-            padding: 20px;
-          }
-  
-          .beta {
-            position:fixed;
-            width: relative;
-            height: auto;
-            background:#e7cb94;
-            bottom: 0px;
-            right: 0px;
-            padding: 10px 10px 10px 0px;
-            opacity: .9;
-            border: 1px solid black;
-            border-radius: 2px;
-          }
+/* Set style elements for users */
+.username {
+  font-weight: bold;
+  margin-top: 10px;
+  display: inline-block;
+}
 
-          .beta p {
-            text-align: center;
-            margin-right: 0px;
-            margin-left: 10px;
-            font-size: 80%;
-          }
+/* Set style elements for date */
+.date {
+  color: #aeaeae;
+  display: inline-block;
+}
 
-          .button {
-            position: relative;
-            border: none;
-            color: white;
-            padding: 10px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 5px 15px 0px 0px;
-            width: 100px;
-            cursor: pointer;
-            border-radius: 4px;
-            background:  #e7969c; /* For browsers that do not support gradients */
-            background: -webkit-linear-gradient( #e7969c, #ad494a); /* For Safari 5.1 to 6.0 */
-            background: -o-linear-gradient( #e7969c, #ad494a); /* For Opera 11.1 to 12.0 */
-            background: -moz-linear-gradient( #e7969c, #ad494a); /* For Firefox 3.6 to 15 */
-            background: linear-gradient( #e7969c, #ad494a); /* Standard syntax */
-          }
-          
-          /* Add hover pseudo class to button to change gradient */
-          .button:hover{
-            color: white;
-            background:  #ad494a; /* For browsers that do not support gradients */
-            background: -webkit-linear-gradient( #ad494a, #e7969c); /* For Safari 5.1 to 6.0 */
-            background: -o-linear-gradient( #ad494a, #e7969c); /* For Opera 11.1 to 12.0 */
-            background: -moz-linear-gradient( #ad494a, #e7969c); /* For Firefox 3.6 to 15 */
-            background: linear-gradient( #ad494a, #e7969c); /* Standard syntax */
-          }
-          
-          /* Add active pseudo to change colors when a user clicks on the button */
-          .button:active {
-            background:  #ad494a; 
-          }
+/* Set status float */
+.statuscontent {
+  width:555px;
+  float:left;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  padding: 15px 15px 5px 15px;
+  border-radius: 4px;
+}
 
-          .profile {
-            position: relative;
-            overflow: hidden;
-            width: 300px;
-            float: left;
-            border: 1px solid black;
-            border-radius: 4px;
-          }
+.statuscontentcontainer {
+  width:555px;
+  float:left;
+}
 
-          .profile .bio {
-            padding: 10px;
-          }
+.featureheader {
+  margin: 20px 20px 0px 20px;
+  font-size: 150%;
+  text-align: center;
+  background: white;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
 
-          #minipic {
-            position: absolute;
-            border: solid white 5px;
-            border-radius: 10px;
-            float: left;
-            z-index: 1;
-            top: 60px;
-            left: 5px;
-          }
+.featureduser {
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  background: white;
+  margin: 20px;
+  padding: 20px 20px 10px 20px;
+}
 
-          .userinfo {
-            float: left;
-            margin: 0px 5px 5px 90px;
-            font-size: 16px;
-            font-weight: bolder;
-            font-family: Arial; 
-            width: 190px;
-          }
+.beta {
+  position:fixed;
+  width: relative;
+  height: auto;
+  background:#e7cb94;
+  bottom: 0px;
+  right: 0px;
+  padding: 10px 10px 10px 0px;
+  opacity: .9;
+  border: 1px solid black;
+  border-radius: 2px;
+}
 
-          #useraddress {
-            font-size: 12px;
-            font-family: Arial;
-            color: #979797;
-            margin: 3px 20px 0px 0px;
-          }
+.beta p {
+  text-align: center;
+  margin-right: 0px;
+  margin-left: 10px;
+  font-size: 80%;
+}
 
-          .userstats {
-            text-align: center;
-            width: 300px;
-            margin: 10px 0px 10px 15px;
-            float: left;
-          }
+.button {
+  position: relative;
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px 15px 10px 0px;
+  width: 100px;
+  cursor: pointer;
+  border-radius: 4px;
+  background:  #e7969c; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient( #e7969c, #ad494a); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient( #e7969c, #ad494a); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient( #e7969c, #ad494a); /* For Firefox 3.6 to 15 */
+  background: linear-gradient( #e7969c, #ad494a); /* Standard syntax */
+}
 
-          .userstats li {
-            padding: 0px 20px;
-            text-align: center;
-            font-size: 15px;
-            font-family: Arial;
-            color: #979797;
-            background: white;
-            float: left; 
-          }
+/* Add hover pseudo class to button to change gradient */
+.button:hover{
+  color: white;
+  background:  #ad494a; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient( #ad494a, #e7969c); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient( #ad494a, #e7969c); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient( #ad494a, #e7969c); /* For Firefox 3.6 to 15 */
+  background: linear-gradient( #ad494a, #e7969c); /* Standard syntax */
+}
 
-          .userstats li a {
-            margin: auto;
-            width: 180px;
-          }
+/* Add active pseudo to change colors when a user clicks on the button */
+.button:active {
+  background:  #ad494a; 
+  -moz-transition: all 0s;
+  -o-transition: all 0s;
+  -webkit-transition: all 0s;
+  transition: all 0s;
+}
 
-          .followstats {
-            padding-left: 55px!important;
-            padding-right: 55px!important;
-          }
+.profile {
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+  float: left;
+  border: 1px solid black;
+  border-radius: 4px;
+}
 
-          .statuspost {
-            width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 10px;
-            border: 1px solid black;
-            border-radius: 4px;
-          }
+.profile .bio {
+  padding: 10px;
+}
 
-          .postcontainer {
-            float: left;
-            overflow: hidden;
-            position: relative;
-            width: 683px;
-          }
+.minipic {
+  position: absolute;
+  border: solid white 5px;
+  border-radius: 10px;
+  float: left;
+  z-index: 1;
+  top: 60px;
+  left: 5px;
+  width: 70px;
+  height: 70px;
+}
 
-          .postheader {
-            background: #ddd;
-            padding: 10px;
-            border-radius: 4px;
-          }
+.userinfo {
+  float: left;
+  margin: 0px 5px 5px 90px;
+  font-size: 16px;
+  font-weight: bolder;
+  font-family: Arial; 
+  width: 190px;
+}
 
-          .postcontent {
-            padding: 10px;
-          }
+#useraddress {
+  font-size: 12px;
+  font-family: Arial;
+  color: #979797;
+  margin: 3px 20px 0px 0px;
+}
 
-          .alluserspage {
-            margin-left: 20px;
-            margin-bottom: 20px;
-          }
+.userstats {
+  text-align: center;
+  width: 300px;
+  margin: 10px 0px 10px 15px;
+  float: left;
+}
 
-          /* Keep anchor tags at bottom to define color styles */
-          a {
-            color: #d6616b;
-            text-decoration: none;
-            -moz-transition: all 2s;
-            -o-transition: all 2s;
-            -webkit-transition: all 2s;
-            transition: all 2s;
-          }
+.userstats li {
+  padding: 0px 20px;
+  text-align: center;
+  font-size: 15px;
+  font-family: Arial;
+  color: #979797;
+  background: white;
+  float: left; 
+}
 
-          a:hover {
-            color: #5254a3;
-            text-decoration: underline;
-            background-color: #cedb9c;
-          }
+.userstats li a {
+  margin: auto;
+  width: 180px;
+}
 
-          img {
-            border-radius: 4px!important;
-          }
+.followstats {
+  padding-left: 55px!important;
+  padding-right: 55px!important;
+}
+
+.statuspost {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.postcontainer {
+  float: left;
+  overflow: hidden;
+  position: relative;
+  width: 683px;
+}
+
+.postheader {
+  background: #ddd;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.postcontent {
+  padding: 10px;
+}
+
+.alluserspage {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+/* Keep anchor tags at bottom to define color styles */
+a {
+  color: #d6616b;
+  text-decoration: none;
+  -moz-transition: all 2s;
+  -o-transition: all 2s;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+a:hover {
+  color: #5254a3;
+  text-decoration: underline;
+  background-color: #cedb9c;
+}
+
+img {
+  border-radius: 4px!important;
+}
