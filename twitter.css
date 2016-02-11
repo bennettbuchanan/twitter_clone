@@ -150,7 +150,6 @@ nav ul li a {
 /* Set the text margin and padding in user status paragraphs */
 .usertxt {
   margin-top: 10px;
-  text-align: justify;
   text-align:top;
 }
 
@@ -195,12 +194,14 @@ aside {
 
 /* Set status float */
 .statuscontent {
-  width:555px;
-  float:left;
-  margin-bottom: 20px;
   border: 1px solid black;
-  padding: 15px 15px 5px 15px;
   border-radius: 4px;
+  background: white;
+  margin: 0px, 20px, 20px, 20px;
+  padding: 20px 20px 10px 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  min-height: 160px;
 }
 
 .statuscontentcontainer {
@@ -412,11 +413,30 @@ img {
 @media screen and (max-width: 992px) {
 
 
-
 }
 
 @media screen and (max-width: 768px) {
 
+  .outercontainer {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
+  aside {
+    width: 100%;
+    border-radius: 0px;
+  }
+
+  .statuscontentcontainer {
+    width:100%;
+    float:left;
+  }
+
+  .statuscontent {
+    margin: 20px;
+  }
 
 }
