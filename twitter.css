@@ -92,6 +92,11 @@ footer div p{
   color: #fff;
 }
 
+.logocontainer{
+    width: 300px;
+    float: left;
+  }
+
 #logo {
   float: left;
 }
@@ -136,6 +141,9 @@ nav ul li a {
 #tagline {
   margin-top: 10px;
   margin-left: 10px;
+  margin-bottom: 20px;
+  float: left;
+  width: 300px;
 }
 
 /* Target the userimage with margins and padding */
@@ -231,7 +239,7 @@ aside {
 
 .beta {
   position:fixed;
-  width: relative;
+  width: 30%;
   height: auto;
   background:#e7cb94;
   bottom: 0px;
@@ -441,20 +449,40 @@ img {
 
   #logo {
     float: none;
-    margin: auto;
+    width: 250px;
+    margin-left: 25px;
   }
 
   .logocontainer{
     float: none;
-    padding: 10px;
     margin: auto;
-    width: 250px;
+    width: 300px;
   }
 
   .toprightmenu {
     float: none;
-    padding: 10px;
+    padding: 20px;
     margin: auto;
     width: 200px;
+  }
+
+  #tagline {
+    width: 250px;
+    margin-left: 25px;
+
+    text-align: center;
+  }
+
+  footer {
+    width: 100%;
+  }
+  
+  nav {
+    margin-bottom: 0px;
+  }
+
+  .beta {
+    width: 100%;
+    position:fixed;
   }
 }
