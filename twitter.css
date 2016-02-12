@@ -309,6 +309,11 @@ aside {
   padding: 10px;
 }
 
+.profile .background{
+  height: 100px;
+  width: 100%;
+}
+
 .minipic {
   position: absolute;
   border: solid white 5px;
