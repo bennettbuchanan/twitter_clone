@@ -439,4 +439,22 @@ img {
     margin: 20px;
   }
 
+  #logo {
+    float: none;
+    margin: auto;
+  }
+
+  .logocontainer{
+    float: none;
+    padding: 10px;
+    margin: auto;
+    width: 250px;
+  }
+
+  .toprightmenu {
+    float: none;
+    padding: 10px;
+    margin: auto;
+    width: 200px;
+  }
 }
