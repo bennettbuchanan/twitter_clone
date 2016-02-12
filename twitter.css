@@ -469,7 +469,6 @@ img {
   #tagline {
     width: 250px;
     margin-left: 25px;
-
     text-align: center;
   }
 
@@ -479,6 +478,7 @@ img {
   
   nav {
     margin-bottom: 0px;
+    width: 345px;
   }
 
   .beta {
