@@ -72,7 +72,6 @@ header {
 
 header img {
   height: 165px;
-  opacity: .7;
 }
 
 footer {
@@ -417,7 +416,7 @@ a:hover {
 }
 
 img {
-  border-radius: 4px!important;
+  border-radius: 4px;
 }
 
 /* Begin responsive CSS */
@@ -425,9 +424,103 @@ img {
 
 @media screen and (max-width: 992px) {
 
+  .outercontainer {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
+  .statuscontentcontainer {
+    width:100%;
+    float:left;
+ }
+
+  .statuscontent {
+    margin: 20px;
+  }
+
+  #logo {
+    float: left;
+    width: 250px;
+    margin-left: 25px;
+    border-radius: 0px;
+  }
+
+  .logocontainer{
+    float: left;
+    margin: auto;
+    width: 300px;
+  } 
+
+  .toprightmenu {
+    float: right;
+    padding: 20px;
+    margin: auto;
+    width: 200px;
+  }
+
+  #tagline {
+    float: left;
+    margin-left: 10px;
+    text-align: center;
+  }
+
+ aside {
+  width: 100%;
+  float:left;
+  background: #ddd;
+  border-radius: 4px;
 }
 
+.featureheader {
+  width: 58.5%;
+  margin: 20px 20px 0px 20px;
+  font-size: 150%;
+  text-align: center;
+  background: white;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  display: none;
+}
+
+.featureduser {
+  width: 25%;
+  float: left;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  background: white;
+  margin: 20px 0px 20px 20px;
+  padding: 20px 20px 10px 20px;
+}
+
+  footer {
+    width: 100%;
+  }
+  
+  nav {
+    margin-bottom: 0px;
+    width: 345px;
+  }3
+
+.beta {
+  position:fixed;
+  width: 25%;
+  margin: 20px;
+  height: auto;
+  background:#e7cb94;
+  bottom: 0px;
+  right: 0px;
+  padding: 10px 10px 10px 0px;
+  opacity: .9;
+  border: 1px solid black;
+  border-radius: 2px;
+}
+}
 @media screen and (max-width: 768px) {
 
   .outercontainer {
@@ -477,6 +570,15 @@ img {
     text-align: center;
   }
 
+  .featureheader {
+    width: auto;
+  }
+
+  .featureduser {
+    width: auto;
+    margin: 20px;
+  }
+
   footer {
     width: 100%;
   }
@@ -487,6 +589,7 @@ img {
   }
 
   .beta {
+    margin: 0px;
     width: 100%;
     position:fixed;
   }
