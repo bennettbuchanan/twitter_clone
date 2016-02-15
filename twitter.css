@@ -193,6 +193,12 @@ aside {
   display: inline-block;
 }
 
+.featuredusername {
+  font-weight: bold;
+  margin-top: 10px;
+  display: inline-block;
+}
+
 /* Set style elements for date */
 .date {
   color: #aeaeae;
@@ -225,6 +231,7 @@ aside {
   border: 1px solid black;
   border-radius: 4px;
   margin-bottom: 20px;
+  display: none;
 }
 
 .featureduser {
@@ -454,72 +461,78 @@ img {
     width: 300px;
   } 
 
-  .toprightmenu {
-    float: right;
-    padding: 20px;
-    margin: auto;
-    width: 200px;
-  }
-
   #tagline {
     float: left;
     margin-left: 10px;
     text-align: center;
   }
 
- aside {
-  width: 100%;
-  float:left;
-  background: #ddd;
-  border-radius: 4px;
-}
+   aside {
+    width: 100%;
+    float:left;
+    background: #ddd;
+    border-radius: 4px;
+  }
 
-.featureheader {
-  width: 58.5%;
-  margin: 20px 20px 0px 20px;
-  font-size: 150%;
-  text-align: center;
-  background: white;
-  padding: 10px;
-  border: 1px solid black;
-  border-radius: 4px;
-  margin-bottom: 20px;
-  display: none;
-}
+  .asideimage {
+    clear: right
+  }
 
-.featureduser {
-  width: 25%;
-  float: left;
-  border: 1px solid black;
-  border-radius: 4px;
-  margin-bottom: 20px;
-  background: white;
-  margin: 20px 0px 20px 20px;
-  padding: 20px 20px 10px 20px;
-}
+  .asidetxt {
+    margin: 10px 0px;
+    float: left;
+  }
 
-  footer {
+  .featuredusername {
+    float: left;
     width: 100%;
   }
-  
-  nav {
-    margin-bottom: 0px;
-    width: 345px;
-  }3
 
-.beta {
-  position:fixed;
-  width: 25%;
-  margin: 20px;
-  height: auto;
-  background:#e7cb94;
-  bottom: 0px;
-  right: 0px;
-  padding: 10px 10px 10px 0px;
-  opacity: .9;
-  border: 1px solid black;
-  border-radius: 2px;
-}
+  .featureheader {
+    width: 58.5%;
+    margin: 20px 20px 0px 20px;
+    font-size: 150%;
+    text-align: center;
+    background: white;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+
+  .featureduser {
+    width: 25%;
+    float: left;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    background: white;
+    margin: 20px 0px 20px 20px;
+    padding: 20px 20px 10px 20px;
+  }
+
+    footer {
+      width: 100%;
+    }
+    
+    nav {
+      margin-bottom: 0px;
+      width: 345px;
+    }
+
+  .beta {
+    position:fixed;
+    width: 25%;
+    margin: 20px;
+    height: auto;
+    background:#e7cb94;
+    bottom: 0px;
+    right: 0px;
+    padding: 10px 10px 10px 0px;
+    opacity: .9;
+    border: 1px solid black;
+    border-radius: 2px;
+  }
 }
 @media screen and (max-width: 768px) {
 
@@ -576,7 +589,7 @@ img {
 
   .featureduser {
     width: auto;
-    margin: 20px;
+    margin: 20px 20px 0px 20px;
   }
 
   footer {
@@ -592,5 +605,21 @@ img {
     margin: 0px;
     width: 100%;
     position:fixed;
+  }
+
+  .asidetxt {
+    margin: 10px 0px;
+    float: none;
+  }
+
+  .featuredusername {
+    font-weight: bold;
+    margin-top: 10px;
+    width: auto;
+    float: none; 
+  }
+  /* add extra space at bottom for beta notifcation */
+  #bottomfeature{
+    margin-bottom: 55px;
   }
 }
