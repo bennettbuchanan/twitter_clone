@@ -115,20 +115,27 @@ footer div p{
     content: " |";
 }
 
+#nav-button {
+  opacity: 0;
+}
+
 /* Center main nav */
-nav {
+.centernav {
   text-align: center;
   width: 350px;
   margin: auto;
   margin-bottom: 40px;
+  margin-top: 200px;
+  clear: right;
+  padding-top: 180px;
 }
 
-nav ul li {
+.centernav li {
   float: left;
 }
 
 /* Target individual menu items to create appropriate spacing and styling */ 
-nav ul li a {
+.centernav li a {
   padding: 1px 20px;
   margin: 0px 1px;
   border: 1px solid black;
@@ -513,9 +520,18 @@ img {
     margin: 20px 0px 20px 20px;
   }
     
-  nav {
-    margin-bottom: 0px;
-    width: 345px;
+  .centernav {
+    text-align: center;
+    width: 350px;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 200px;
+    clear: right;
+    padding-top: 180px;
+  }
+
+  .centernav li {
+    float: left;
   }
 
   /* reduce width to not overlay with aside features */
@@ -593,14 +609,16 @@ img {
 
   /* center item on page */
   .toprightmenu {
-    float: none;
-    padding: 20px;
-    margin: auto;
-    width: 200px;
+      float: left;
+      padding: 10px;
+      margin: auto;
+      width: 200px;
   }
 
   #tagline {
     width: 250px;
+    float: left;
+    clear: right;
     text-align: center;
   }
 
@@ -618,9 +636,26 @@ img {
   }
   
   /* add bottom margin to push profile image down */
-  nav {
-    margin-bottom: 40px;
-    width: 345px;
+  .centernav {
+    text-align: center;
+
+    margin: auto;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    clear: right;
+    padding-top: 0px;
+    float: left;
+      padding: 10px;
+      margin: auto;
+      width: 200px;
+  }
+
+  .centernav li {
+    float: left;
+  }
+
+  .centernav li a {
+    border: none;
   }
 
   .beta {
@@ -644,6 +679,17 @@ img {
   #bottomfeature{
     margin-bottom: 55px;
   }
+  
+  #nav-button {
+    opacity: 1;
+    width: 50px;
+    height: 50px;
+    float: left;
+  }
+
+  .nav-hide{
+  display: none;
+}
 
   /*end CSS for homepage */
 }

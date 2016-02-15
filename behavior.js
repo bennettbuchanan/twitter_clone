@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
   document.getElementById('nav-button').addEventListener('click', function(){
-    var body = document.getElementsByTagName('body')[0];
-    if (body.className == 'nav-show') {
-      body.className = '';
+    var nav = document.getElementsByTagName('nav')[0];
+    if (nav.className == 'nav-hide') {
+      nav.className = 'nav-show';
     }
     else {
-      body.className = 'nav-show';
+      nav.className = 'nav-hide';
     }
   })
 });
