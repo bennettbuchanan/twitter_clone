@@ -263,6 +263,7 @@ aside {
   font-size: 80%;
 }
 
+/* add button styles */
 .button {
   position: relative;
   border: none;
@@ -450,7 +451,7 @@ img {
       width: 99%;
   }
 
-
+  /* center all users two column layout */
   .alluserswrapper{
     width: 690px;
     margin: auto;
@@ -478,25 +479,6 @@ img {
     margin: 20px;
   }
 
-  #logo {
-    float: left;
-    width: 250px;
-    margin-left: 25px;
-    border-radius: 0px;
-  }
-
-  .logocontainer{
-    float: left;
-    margin: auto;
-    width: 300px;
-  } 
-
-  #tagline {
-    float: left;
-    margin-left: 10px;
-    text-align: center;
-  }
-
    aside {
     width: 100%;
     float:left;
@@ -504,6 +486,7 @@ img {
     border-radius: 4px;
   }
 
+  /* clear content right so text drops below image */
   .asideimage {
     clear: right
   }
@@ -522,46 +505,23 @@ img {
     width: 58.5%;
     margin: 20px 20px 0px 20px;
     font-size: 150%;
-    text-align: center;
-    background: white;
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 4px;
-    margin-bottom: 20px;
   }
 
   .featureduser {
     width: 25%;
     float: left;
-    border: 1px solid black;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    background: white;
     margin: 20px 0px 20px 20px;
-    padding: 20px 20px 10px 20px;
+  }
+    
+  nav {
+    margin-bottom: 0px;
+    width: 345px;
   }
 
-    footer {
-      width: 100%;
-    }
-    
-    nav {
-      margin-bottom: 0px;
-      width: 345px;
-    }
-
+  /* reduce width to not overlay with aside features */
   .beta {
-    position:fixed;
     width: 25%;
     margin: 20px;
-    height: auto;
-    background:#e7cb94;
-    bottom: 0px;
-    right: 0px;
-    padding: 10px 10px 10px 0px;
-    opacity: .9;
-    border: 1px solid black;
-    border-radius: 2px;
   }
 
   /*end CSS for homepage */
@@ -613,32 +573,25 @@ img {
     margin-right: auto;
   }
 
+  /* remove border radius to lay flush with bottom */
   aside {
-    width: 100%;
     border-radius: 0px;
   }
 
-  .statuscontentcontainer {
-    width:100%;
-    float:left;
-  }
-
-  .statuscontent {
-    margin: 20px;
-  }
-
+  /* remove float to center image */
   #logo {
     float: none;
     width: 250px;
-    margin-left: 25px;
+    margin-left: 10px;
   }
 
   .logocontainer{
     float: none;
     margin: auto;
-    width: 300px;
+    width: 275px;
   }
 
+  /* center item on page */
   .toprightmenu {
     float: none;
     padding: 20px;
@@ -648,7 +601,6 @@ img {
 
   #tagline {
     width: 250px;
-    margin-left: 25px;
     text-align: center;
   }
 
