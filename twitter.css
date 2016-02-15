@@ -379,7 +379,7 @@ aside {
   width: 500px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   border: 1px solid black;
   border-radius: 4px;
 }
@@ -430,6 +430,36 @@ img {
 
 
 @media screen and (max-width: 992px) {
+
+  /* begin CSS for user status page */
+
+  /* add margin to progfile sectionn */
+  .profile {
+    margin: 20px 20px 0px 20px;
+  }
+  
+  /* float container left and decrease width to fit side by side with profile*/
+  .postcontainer {
+      float: left;
+      width: 50%;
+      margin-top: 20px;
+  }
+
+  /* adjust to 99% relative to container */
+  .statuspost {
+      width: 99%;
+  }
+
+
+  .alluserswrapper{
+    width: 690px;
+    margin: auto;
+  }
+
+  /* end CSS for user status page */
+
+
+  /* begin CSS for homepage */
 
   .outercontainer {
     position: relative;
@@ -533,8 +563,47 @@ img {
     border: 1px solid black;
     border-radius: 2px;
   }
+
+  /*end CSS for homepage */
 }
 @media screen and (max-width: 768px) {
+
+  /* begin CSS for user status page */
+
+   /* add margin to profile section to center item */
+  .profile {
+    width: 300px;
+    float: none;
+    margin: auto;
+  }
+  
+  /* include margin-bottom for allusers page */
+  .alluserspage {
+    margin-bottom: 20px;
+  }
+  
+  /* float container left and decrease width to fit side by side with profile*/
+  .postcontainer {
+      float: none;
+      width: 300px;
+      margin: auto;
+  }
+
+  /* adjust to 99% relative to container add margin for spacing*/
+  .statuspost {
+      width: 99%;
+      margin-top: 20px;
+  }
+
+  .alluserswrapper{
+    width: 100%;
+    margin: auto;
+  }
+
+
+  /* end CSS for user status page */
+
+  /* begin CSS for homepage */
 
   .outercontainer {
     position: relative;
@@ -596,8 +665,9 @@ img {
     width: 100%;
   }
   
+  /* add bottom margin to push profile image down */
   nav {
-    margin-bottom: 0px;
+    margin-bottom: 40px;
     width: 345px;
   }
 
@@ -622,4 +692,6 @@ img {
   #bottomfeature{
     margin-bottom: 55px;
   }
+
+  /*end CSS for homepage */
 }
