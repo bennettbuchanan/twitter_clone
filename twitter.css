@@ -460,6 +460,13 @@ img {
     flex-direction: column;
   }
 
+  .contentoverwrap {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
   .statuscontentcontainer {
     width:100%;
  }
