@@ -67,32 +67,15 @@ table {
 header {
   display: flex;
   width: 100%;
-
-  }
+  justify-content: space-between;
+}
 
 header img {
   height: 165px;
 }
 
-footer {
-  position: relative;
-  overflow: hidden;
-  background: #636363;
-  width: 992px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-footer div {
-  padding:20px;
-}
-
-footer div p{
-  color: #fff;
-}
-
 .logocontainer{
-    width: 300px;
+    width: 250px;
     display: flex;
     flex-direction: column;
   }
@@ -104,8 +87,7 @@ footer div p{
 /* Set float to align element to the right of the outermost div and set display inline-block to arrange horizontally */
 .toprightmenu {
   display: flex;
-  order: 1;
-  padding: 10px;
+  padding: 10px 10px 0px 0px;
 }
 
 .toprightmenu li {
@@ -117,20 +99,10 @@ footer div p{
     content: " |";
 }
 
-#nav-button {
-  opacity: 0;
-}
-
 /* Center main nav */
 .centernav {
     display: flex;
     align-items: flex-end;
-}
-
-nav {
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
 }
 
 .centernav li {
@@ -140,7 +112,7 @@ nav {
 
 /* Target individual menu items to create appropriate spacing and styling */ 
 .centernav li a {
-  padding: 1px 20px;
+  padding: 1px 15px;
   margin: 0px 1px;
   border: 1px solid black;
   text-decoration: none;
@@ -523,20 +495,6 @@ img {
     float: left;
     margin: 20px 0px 20px 20px;
   }
-    
-  .centernav {
-    text-align: center;
-    width: 350px;
-    margin: auto;
-    margin-bottom: 20px;
-    margin-top: 200px;
-    clear: right;
-    padding-top: 180px;
-  }
-
-  .centernav li {
-    float: left;
-  }
 
   /* reduce width to not overlay with aside features */
   .beta {
@@ -580,7 +538,6 @@ img {
     margin: auto;
   }
 
-
   /* end CSS for user status page */
 
   /* begin CSS for homepage */
@@ -593,38 +550,77 @@ img {
     margin-right: auto;
   }
 
+  header {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .logocontainer{
+      width: 250px;
+      display: flex;
+      flex-direction: column;
+  }
+
+  #logo {
+    display: flex;
+  }
+
+  /* Set float to align element to the right of the outermost div and set display inline-block to arrange horizontally */
+  .toprightmenu {
+    display: flex;
+    padding: 0px 0px 20px 0px;
+  }
+
+  .toprightmenu li {
+    display: flex;
+  }
+
+  /* Add pipe character after li with id of firstitem, add padding for equal spacing */
+  #firstitem:after {
+      content: " |";
+  }
+
+  /* Center main nav */
+  .centernav {
+      display: flex;
+      align-items: flex-end;
+      order: 1;
+  }
+
+  .centernav li {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Target individual menu items to create appropriate spacing and styling */ 
+  .centernav li a {
+    padding: 1px 15px;
+    margin: 0px 1px;
+    border: 1px solid black;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+
+  /* Target the tagline with an id and assign some margins to align based */ 
+  #tagline {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    width: 300px;
+  }
+
+
   /* remove border radius to lay flush with bottom */
   aside {
     border-radius: 0px;
   }
 
   /* remove float to center image */
-  #logo {
-    float: none;
-    width: 250px;
-    margin-left: 10px;
-  }
-
-  .logocontainer{
-    float: none;
-    margin: auto;
-    width: 275px;
-  }
 
   /* center item on page */
-  .toprightmenu {
-      float: left;
-      padding: 10px;
-      margin: auto;
-      width: 200px;
-  }
-
-  #tagline {
-    width: 250px;
-    float: left;
-    clear: right;
-    text-align: center;
-  }
 
   .featureheader {
     width: auto;
@@ -640,27 +636,6 @@ img {
   }
   
   /* add bottom margin to push profile image down */
-  .centernav {
-    text-align: center;
-
-    margin: auto;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    clear: right;
-    padding-top: 0px;
-    float: left;
-      padding: 10px;
-      margin: auto;
-      width: 200px;
-  }
-
-  .centernav li {
-    float: left;
-  }
-
-  .centernav li a {
-    border: none;
-  }
 
   .beta {
     margin: 0px;
@@ -683,17 +658,6 @@ img {
   #bottomfeature{
     margin-bottom: 55px;
   }
-  
-  #nav-button {
-    opacity: 1;
-    width: 50px;
-    height: 50px;
-    float: left;
-  }
-
-  .nav-hide{
-  display: none;
-}
 
   /*end CSS for homepage */
 }
