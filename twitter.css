@@ -554,13 +554,13 @@ img {
     display: flex;
     width: 100%;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
   }
 
   .logocontainer{
-      width: 250px;
-      display: flex;
-      flex-direction: column;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
   }
 
   #logo {
@@ -570,7 +570,7 @@ img {
   /* Set float to align element to the right of the outermost div and set display inline-block to arrange horizontally */
   .toprightmenu {
     display: flex;
-    padding: 0px 0px 20px 0px;
+    padding: 10px 0px 10px 0px;
   }
 
   .toprightmenu li {
@@ -605,11 +605,11 @@ img {
 
   /* Target the tagline with an id and assign some margins to align based */ 
   #tagline {
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-bottom: 20px;
+    margin: 0px;
+    padding: 10px 20px;
     display: flex;
-    width: 300px;
+    width: 210px;
+    text-align: center;
   }
 
 
