@@ -62,6 +62,7 @@ table {
   width: 992px;
   margin-left: auto;
   margin-right: auto;
+  flex-direction: column;
 }
 
 header {
@@ -82,6 +83,13 @@ header img {
 
 #logo {
   display: flex;
+}
+
+.contentoverwrap {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 /* Set float to align element to the right of the outermost div and set display inline-block to arrange horizontally */
@@ -145,9 +153,9 @@ header img {
 
 aside {
   width: 384px;
-  float:right;
   background: #ddd;
   border-radius: 4px;
+  margin-bottom: 20px;
 }
 
 .asidetxt {
@@ -193,16 +201,13 @@ aside {
   border: 1px solid black;
   border-radius: 4px;
   background: white;
-  margin: 0px, 20px, 20px, 20px;
-  padding: 20px 20px 10px 20px;
   margin-bottom: 20px;
-  margin-left: 20px;
+  padding: 20px 20px 10px 20px;
   min-height: 160px;
 }
 
 .statuscontentcontainer {
   width:555px;
-  float:left;
 }
 
 .featureheader {
@@ -451,20 +456,20 @@ img {
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+    flex-direction: column;
   }
 
   .statuscontentcontainer {
     width:100%;
-    float:left;
  }
 
   .statuscontent {
-    margin: 20px;
+    margin: 0px 20px 20px 20px;
   }
 
    aside {
     width: 100%;
-    float:left;
     background: #ddd;
     border-radius: 4px;
   }
