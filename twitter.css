@@ -58,16 +58,16 @@ table {
 
 /* Set fixed width and align to center of window */
 .outercontainer {
-  position: relative;
-  overflow: hidden;
+  display: flex;
   width: 992px;
   margin-left: auto;
   margin-right: auto;
 }
 
 header {
-  position: relative;
-  overflow: hidden;
+  display: flex;
+  width: 100%;
+
   }
 
 header img {
@@ -93,21 +93,23 @@ footer div p{
 
 .logocontainer{
     width: 300px;
-    float: left;
+    display: flex;
+    flex-direction: column;
   }
 
 #logo {
-  float: left;
+  display: flex;
 }
 
 /* Set float to align element to the right of the outermost div and set display inline-block to arrange horizontally */
 .toprightmenu {
-  float: right;
+  display: flex;
+  order: 1;
   padding: 10px;
 }
 
 .toprightmenu li {
-  display: inline-block;
+  display: flex;
 }
 
 /* Add pipe character after li with id of firstitem, add padding for equal spacing */
@@ -121,17 +123,19 @@ footer div p{
 
 /* Center main nav */
 .centernav {
-  text-align: center;
-  width: 350px;
-  margin: auto;
-  margin-bottom: 40px;
-  margin-top: 200px;
-  clear: right;
-  padding-top: 180px;
+    display: flex;
+    align-items: flex-end;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
 }
 
 .centernav li {
-  float: left;
+  display: flex;
+  justify-content: center;
 }
 
 /* Target individual menu items to create appropriate spacing and styling */ 
@@ -148,7 +152,7 @@ footer div p{
   margin-top: 10px;
   margin-left: 10px;
   margin-bottom: 20px;
-  float: left;
+  display: flex;
   width: 300px;
 }
 
