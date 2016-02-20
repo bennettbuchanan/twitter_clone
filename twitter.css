@@ -75,11 +75,11 @@ header img {
   height: 165px;
 }
 
-.logocontainer{
-    width: 250px;
-    display: flex;
-    flex-direction: column;
-  }
+.logocontainer {
+  width: 225px;
+  display: flex;
+  flex-direction: column;
+}
 
 #logo {
   display: flex;
@@ -92,10 +92,19 @@ header img {
   justify-content: space-between;
 }
 
+.alluserswrapper {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 /* Set float to align element to the right of the outermost div and set display inline-block to arrange horizontally */
 .toprightmenu {
-  display: flex;
+  width: 215px;
   padding: 10px 10px 0px 0px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .toprightmenu li {
@@ -133,7 +142,8 @@ header img {
   margin-left: 10px;
   margin-bottom: 20px;
   display: flex;
-  width: 300px;
+  padding: 0px;
+  width: 225px;
 }
 
 /* Target the userimage with margins and padding */
@@ -295,9 +305,9 @@ aside {
   position: relative;
   overflow: hidden;
   width: 300px;
-  float: left;
   border: 1px solid black;
   border-radius: 4px;
+  margin:0px 10px 25px 10px;
 }
 
 .profile .bio {
@@ -423,9 +433,6 @@ img {
   /* begin CSS for user status page */
 
   /* add margin to progfile sectionn */
-  .profile {
-    margin: 20px 20px 0px 20px;
-  }
   
   /* float container left and decrease width to fit side by side with profile*/
   .postcontainer {
@@ -437,12 +444,6 @@ img {
   /* adjust to 99% relative to container */
   .statuspost {
       width: 99%;
-  }
-
-  /* center all users two column layout */
-  .alluserswrapper{
-    width: 690px;
-    margin: auto;
   }
 
   /* end CSS for user status page */
@@ -521,15 +522,16 @@ img {
   /* begin CSS for user status page */
 
    /* add margin to profile section to center item */
-  .profile {
-    width: 300px;
-    float: none;
-    margin: auto;
-  }
-  
+
   /* include margin-bottom for allusers page */
   .alluserspage {
     margin-bottom: 20px;
+  }
+
+  .profile {
+    position: relative;
+    overflow: hidden;
+    width: 300px;
   }
   
   /* float container left and decrease width to fit side by side with profile*/
@@ -543,11 +545,6 @@ img {
   .statuspost {
       width: 99%;
       margin-top: 20px;
-  }
-
-  .alluserswrapper{
-    width: 100%;
-    margin: auto;
   }
 
   /* end CSS for user status page */
@@ -570,6 +567,8 @@ img {
   /* Set float to align element to the right of the outermost div and set display inline-block to arrange horizontally */
   .toprightmenu {
     padding: 10px 0px;
+    display: flex;
+    justify-content: center;
   }
 
   /* Add pipe character after li with id of firstitem, add padding for equal spacing */
@@ -585,8 +584,8 @@ img {
   /* redefine margin, width, and padding for proper layout */ 
   #tagline {
     margin: 0px;
-    padding: 10px 20px;
-    width: 210px;
+    padding: 10px 10px 0px 10px;
+    max-width: 200px;
     text-align: center;
   }
 
