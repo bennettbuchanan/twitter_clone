@@ -122,13 +122,13 @@ header img {
 
 /* Add pipe character after li with id of firstitem, add padding for equal spacing */
 #firstitem:after {
-    content: " |";
+  content: " |";
 }
 
 /* Center main nav */
 .centernav {
-    display: flex;
-    align-self: flex-end;
+  display: flex;
+  align-self: flex-end;
 }
 
 .centernav li {
@@ -170,7 +170,7 @@ header img {
 }
 
 aside {
-  width: 384px;
+  width: 415px;
   background: #ddd;
   border-radius: 4px;
   margin-bottom: 20px;
@@ -349,7 +349,7 @@ aside {
   width: 190px;
 }
 
-#useraddress {
+.useraddress {
   font-size: 12px;
   font-family: Arial;
   color: #979797;
@@ -398,18 +398,6 @@ aside {
   border-radius: 4px;
 }
 
-
-/*.statuspost {
-  width: 500px;
-  margin: 0px 10px 20px 20px;
-  border: 1px solid black;
-  border-radius: 4px;
-}
-
-.postcontainer {
-  width: 50%;
-}*/
-
 .postheader {
   background: #ddd;
   padding: 10px;
@@ -446,8 +434,6 @@ img {
 }
 
 /* Begin responsive CSS */
-
-
 @media screen and (max-width: 992px) {
 
   /* begin CSS for user status page */
@@ -502,7 +488,7 @@ img {
 
   .statuscontentcontainer {
     width:100%;
- }
+  }
 
   .statuscontent {
     margin: 0px 20px 20px 20px;
@@ -670,6 +656,7 @@ img {
     width: auto;
     float: none; 
   }
+  
   /* add extra space at bottom for beta notifcation */
   #bottomfeature{
     margin-bottom: 55px;
