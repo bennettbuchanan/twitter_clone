@@ -104,7 +104,7 @@ header img {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 /* Set float to align element to the right of the outermost div and set display inline-block to arrange horizontally */
@@ -146,11 +146,10 @@ header img {
 /* Target the tagline with an id and assign some margins to align based */ 
 #tagline {
   margin-top: 10px;
-  margin-left: 10px;
-  margin-bottom: 20px;
   display: flex;
   padding: 0px;
   width: 215px;
+  text-align: center;
 }
 
 /* Target the userimage with margins and padding */
@@ -382,7 +381,23 @@ aside {
   padding-right: 55px!important;
 }
 
+.postcontainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 630px;
+  margin: 0px 5px 20px 10px;
+}
+
 .statuspost {
+  width: 46%;
+  margin: 0px 20px 20px 0px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+
+/*.statuspost {
   width: 500px;
   margin: 0px 10px 20px 20px;
   border: 1px solid black;
@@ -391,7 +406,7 @@ aside {
 
 .postcontainer {
   width: 50%;
-}
+}*/
 
 .postheader {
   background: #ddd;
@@ -435,16 +450,31 @@ img {
 
   /* begin CSS for user status page */
 
-  /* add margin to progfile sectionn */
+  /* add margin to profile sectionn */
   
   /* float container left and decrease width to fit side by side with profile*/
   .postcontainer {
-      
+    width: 50%;
+    margin: 0px 5px 20px 10px;
   }
 
-  /* adjust to 99% relative to container */
-  .statuspost {
-      width: 99%;
+  .statuspost { 
+    width: 99%;
+    margin: 0px 0px 20px 0px;
+  }
+
+  .profile {
+    position: relative;
+    overflow: hidden;
+    width: 45%;
+  }
+
+  .mystatuseswrapper {
+    padding: 0 10px 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
   }
 
   /* end CSS for user status page */
@@ -536,12 +566,13 @@ img {
   
   /* float container left and decrease width to fit side by side with profile*/
   .postcontainer {
-      width: 99%;
+    width: 99%;
+    margin: 0px 5px 20px 10px;
   }
 
   .statuspost {
-      width: 99%;
-      margin: 20px 0 0 0;
+    width: 99%; 
+    margin: 0px 0px 20px 0px;
   }
 
   /* adjust to 99% relative to container add margin for spacing*/
