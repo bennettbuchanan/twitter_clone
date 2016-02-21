@@ -173,18 +173,10 @@ aside {
   width: 415px;
   background: #ddd;
   border-radius: 4px;
-  margin-bottom: 20px;
 }
 
 .asidetxt {
   margin: 10px 0px;
-}
-
- /* Set parameters of user status containers */
-.status {
-  display:block;
-  float: left;
-  margin-bottom: 10px;
 }
 
 .asideimage{
@@ -310,6 +302,8 @@ aside {
 }
 
 .profile {
+  display: flex;
+  flex-direction: column;
   position: relative;
   overflow: hidden;
   width: 300px;
@@ -320,7 +314,6 @@ aside {
 
 .profile .bio {
   padding: 10px;
-  float: left;
 }
 
 .profile .background{
@@ -341,7 +334,6 @@ aside {
 }
 
 .userinfo {
-  float: left;
   margin: 0px 5px 5px 90px;
   font-size: 16px;
   font-weight: bolder;
@@ -360,7 +352,6 @@ aside {
   text-align: center;
   width: 300px;
   margin: 10px 0px 10px 15px;
-  float: left;
 }
 
 .userstats li {
@@ -370,7 +361,7 @@ aside {
   font-family: Arial;
   color: #979797;
   background: white;
-  float: left; 
+  display: inline-block;
 }
 
 .userstats li a {
@@ -494,10 +485,13 @@ img {
     margin: 0px 20px 20px 20px;
   }
 
-   aside {
+  aside {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
     width: 100%;
     background: #ddd;
-    border-radius: 4px;
+    border-radius: 0px;
   }
 
   /* clear content right so text drops below image */
@@ -507,11 +501,9 @@ img {
 
   .asidetxt {
     margin: 10px 0px;
-    float: left;
   }
 
   .featuredusername {
-    float: left;
     width: 100%;
   }
 
@@ -523,7 +515,6 @@ img {
 
   .featureduser {
     width: 25%;
-    float: left;
     margin: 20px 0px 20px 20px;
   }
 
@@ -615,11 +606,6 @@ img {
     text-align: center;
   }
 
-  /* remove border radius to lay flush with bottom */
-  aside {
-    border-radius: 0px;
-  }
-
   /* remove float to center image */
 
   /* center item on page */
@@ -645,18 +631,25 @@ img {
     position:fixed;
   }
 
+  aside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    background: #ddd;
+    border-radius: 0px;
+  }
+
   .asidetxt {
     margin: 10px 0px;
-    float: none;
   }
 
   .featuredusername {
     font-weight: bold;
     margin-top: 10px;
-    width: auto;
-    float: none; 
+    display: block;
   }
-  
+
   /* add extra space at bottom for beta notifcation */
   #bottomfeature{
     margin-bottom: 55px;
