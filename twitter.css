@@ -69,6 +69,7 @@ header {
   padding: 10px 10px 20px 10px;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 header img {
@@ -86,8 +87,8 @@ header img {
 }
 
 .contentoverwrap {
-  padding: 0 10px 0 10px;
   display: flex;
+  align-items: flex-start;
   flex-direction: row;
   justify-content: space-between;
 }
@@ -104,6 +105,7 @@ header img {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: flex-start;
   justify-content: center;
 }
 
@@ -126,7 +128,7 @@ header img {
 /* Center main nav */
 .centernav {
     display: flex;
-    align-items: flex-end;
+    align-self: flex-end;
 }
 
 .centernav li {
@@ -615,7 +617,8 @@ img {
 
   /* Center main nav, keep center nav on bottom */
   .centernav {
-      order: 1;
+    order: 1;
+    align-self: center;
   }
 
   /* redefine margin, width, and padding for proper layout */ 
