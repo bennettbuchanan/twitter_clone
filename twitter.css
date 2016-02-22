@@ -56,76 +56,90 @@ table {
   border-spacing: 0;
 }
 
-/* Set fixed width and align to center of window */
-.outercontainer {
-  position: relative;
-  overflow: hidden;
+/* begin container styles */
+.outercontainer { 
+  display: flex;
   width: 992px;
   margin-left: auto;
   margin-right: auto;
+  flex-direction: column;
 }
 
+.contentoverwrap {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.mystatuseswrapper {
+  padding: 0 10px 0 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.alluserswrapper {
+  padding: 0 10px 0 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* Begin header styles */
 header {
-  position: relative;
-  overflow: hidden;
-  }
+  padding: 10px 10px 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
 
 header img {
-  height: 165px;
-  opacity: .7;
+  height: 130px;
 }
 
-footer {
-  position: relative;
-  overflow: hidden;
-  background: #636363;
-  width: 992px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-footer div {
-  padding:20px;
-}
-
-footer div p{
-  color: #fff;
+.logocontainer {
+  width: 215px;
+  display: flex;
+  flex-direction: column;
 }
 
 #logo {
-  float: left;
+  display: flex;
 }
 
-/* Set float to align element to the right of the outermost div and set display inline-block to arrange horizontally */
+/* Set flex-end to align element to the right of the outermost div and set display inline-block to arrange horizontally */
 .toprightmenu {
-  float: right;
-  padding: 10px;
+  width: 215px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .toprightmenu li {
-  display: inline-block;
+  display: flex;
 }
 
 /* Add pipe character after li with id of firstitem, add padding for equal spacing */
 #firstitem:after {
-    content: " |";
+  content: " |";
 }
 
 /* Center main nav */
-nav {
-  text-align: center;
-  width: 350px;
-  margin: auto;
-  margin-bottom: 40px;
+.centernav {
+  display: flex;
+  align-self: flex-end;
 }
 
-nav ul li {
-  float: left;
+.centernav li {
+  display: flex;
+  justify-content: center;
 }
 
 /* Target individual menu items to create appropriate spacing and styling */ 
-nav ul li a {
-  padding: 1px 20px;
+.centernav li a {
+  padding: 1px 15px;
   margin: 0px 1px;
   border: 1px solid black;
   text-decoration: none;
@@ -135,10 +149,15 @@ nav ul li a {
 /* Target the tagline with an id and assign some margins to align based */ 
 #tagline {
   margin-top: 10px;
-  margin-left: 10px;
+  display: flex;
+  padding: 0px;
+  width: 215px;
+  text-align: center;
 }
 
-/* Target the userimage with margins and padding */
+/* begin homepage CSS */
+
+/* add margins and padding to user image */
 .userimage {
   margin: 0px 15px 10px 0px;
   border: 1px solid black;
@@ -150,13 +169,11 @@ nav ul li a {
 /* Set the text margin and padding in user status paragraphs */
 .usertxt {
   margin-top: 10px;
-  text-align: justify;
   text-align:top;
 }
 
 aside {
-  width: 384px;
-  float:right;
+  width: 415px;
   background: #ddd;
   border-radius: 4px;
 }
@@ -165,47 +182,12 @@ aside {
   margin: 10px 0px;
 }
 
- /* Set parameters of user status containers */
-.status {
-  display:block;
-  float: left;
-  margin-bottom: 10px;
-}
-
 .asideimage{
   width: 125px;
   height: 125px;
   margin: 0px 15px 10px 0px;
   border: 1px solid black;
   float: left;
-}
-
-/* Set style elements for users */
-.username {
-  font-weight: bold;
-  margin-top: 10px;
-  display: inline-block;
-}
-
-/* Set style elements for date */
-.date {
-  color: #aeaeae;
-  display: inline-block;
-}
-
-/* Set status float */
-.statuscontent {
-  width:555px;
-  float:left;
-  margin-bottom: 20px;
-  border: 1px solid black;
-  padding: 15px 15px 5px 15px;
-  border-radius: 4px;
-}
-
-.statuscontentcontainer {
-  width:555px;
-  float:left;
 }
 
 .featureheader {
@@ -217,6 +199,7 @@ aside {
   border: 1px solid black;
   border-radius: 4px;
   margin-bottom: 20px;
+  display: none;
 }
 
 .featureduser {
@@ -230,7 +213,7 @@ aside {
 
 .beta {
   position:fixed;
-  width: relative;
+  width: 30%;
   height: auto;
   background:#e7cb94;
   bottom: 0px;
@@ -248,6 +231,7 @@ aside {
   font-size: 80%;
 }
 
+/* add button styles */
 .button {
   position: relative;
   border: none;
@@ -287,17 +271,56 @@ aside {
   transition: all 0s;
 }
 
+/* begin styles for mystatuses page */
+.username {
+  font-weight: bold;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.featuredusername {
+  font-weight: bold;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+/* Set style elements for date */
+.date {
+  color: #aeaeae;
+  display: inline-block;
+}
+
+.statuscontent {
+  border: 1px solid black;
+  border-radius: 4px;
+  background: white;
+  margin-bottom: 20px;
+  padding: 20px 20px 10px 20px;
+  min-height: 160px;
+}
+
+.statuscontentcontainer {
+  width:555px;
+}
+
 .profile {
+  display: flex;
+  flex-direction: column;
   position: relative;
   overflow: hidden;
   width: 300px;
-  float: left;
   border: 1px solid black;
   border-radius: 4px;
+  margin: 0px 10px 20px 10px;
 }
 
 .profile .bio {
   padding: 10px;
+}
+
+.profile .background{
+  height: 100px;
+  width: 100%;
 }
 
 .minipic {
@@ -313,7 +336,6 @@ aside {
 }
 
 .userinfo {
-  float: left;
   margin: 0px 5px 5px 90px;
   font-size: 16px;
   font-weight: bolder;
@@ -321,7 +343,7 @@ aside {
   width: 190px;
 }
 
-#useraddress {
+.useraddress {
   font-size: 12px;
   font-family: Arial;
   color: #979797;
@@ -332,7 +354,6 @@ aside {
   text-align: center;
   width: 300px;
   margin: 10px 0px 10px 15px;
-  float: left;
 }
 
 .userstats li {
@@ -342,7 +363,7 @@ aside {
   font-family: Arial;
   color: #979797;
   background: white;
-  float: left; 
+  display: inline-block;
 }
 
 .userstats li a {
@@ -355,20 +376,19 @@ aside {
   padding-right: 55px!important;
 }
 
-.statuspost {
-  width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px;
-  border: 1px solid black;
-  border-radius: 4px;
+.postcontainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 630px;
+  margin: 0px 5px 20px 10px;
 }
 
-.postcontainer {
-  float: left;
-  overflow: hidden;
-  position: relative;
-  width: 683px;
+.statuspost {
+  width: 46%;
+  margin: 0px 20px 20px 0px;
+  border: 1px solid black;
+  border-radius: 4px;
 }
 
 .postheader {
@@ -379,11 +399,6 @@ aside {
 
 .postcontent {
   padding: 10px;
-}
-
-.alluserspage {
-  margin-left: 20px;
-  margin-bottom: 20px;
 }
 
 /* Keep anchor tags at bottom to define color styles */
@@ -403,5 +418,209 @@ a:hover {
 }
 
 img {
-  border-radius: 4px!important;
+  border-radius: 4px;
+}
+
+@media (max-width: 992px) {
+   
+   /* begin CSS for homepage */
+  .outercontainer {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contentoverwrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .statuscontentcontainer {
+    width:100%;
+  }
+
+  .statuscontent {
+    margin: 0px 20px 20px 20px;
+  }
+
+  aside {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    background: #ddd;
+    border-radius: 0px;
+  }
+
+  /* clear content right so text drops below image */
+  .asideimage {
+    clear: right
+  }
+
+  .asidetxt {
+    margin: 10px 0px;
+  }
+
+  .featuredusername {
+    width: 100%;
+  }
+
+  .featureheader {
+    width: 58.5%;
+    margin: 20px 20px 0px 20px;
+    font-size: 150%;
+  }
+
+  .featureduser {
+    width: 25%;
+    margin: 20px 0px 20px 20px;
+  }
+
+  /* reduce width to not overlay with aside features */
+  .beta {
+    margin: 20px;
+  }
+
+  /* begin user status page */
+
+  /* add margin to profile section */
+  .postcontainer {
+    width: 50%;
+    margin: 0px 5px 20px 10px;
+  }
+
+  .statuspost { 
+    width: 99%;
+    margin: 0px 0px 20px 0px;
+  }
+
+  .profile {
+    position: relative;
+    overflow: hidden;
+    width: 45%;
+  }
+
+  .mystatuseswrapper {
+    padding: 0 10px 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* begin styles for header and containers */
+  .outercontainer {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Set justify-content to center */
+  .toprightmenu {
+    padding: 10px 0px;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Center main nav, keep center nav on bottom */
+  .centernav {
+    order: 1;
+    align-self: center;
+  }
+
+  /* redefine margin, width, and padding for proper layout */ 
+  #tagline {
+    margin: 0px;
+    padding: 10px 10px 0px 10px;
+    max-width: 200px;
+    text-align: center;
+  }
+
+  /* begin CSS for homepage */
+  .featureheader {
+    width: auto;
+  }
+
+  .featureduser {
+    width: auto;
+    margin: 20px 20px 0px 20px;
+  }
+  
+  /* add bottom margin to push profile image down */
+  .beta {
+    margin: 0px;
+    width: 100%;
+    position:fixed;
+  }
+
+  aside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    background: #ddd;
+    border-radius: 0px;
+  }
+
+  .asidetxt {
+    margin: 10px 0px;
+  }
+
+  .featuredusername {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+  }
+
+  /* add extra space at bottom for beta notifcation */
+  #bottomfeature{
+    margin-bottom: 55px;
+  }
+
+  /* begin CSS for mystatuses page and allusers page */
+
+  /* include margin-bottom for allusers page */
+  .alluserspage {
+    margin-bottom: 20px;
+  }
+
+  .profile {
+    position: relative;
+    overflow: hidden;
+    width: 99%;
+  }
+  
+  .postcontainer {
+    width: 99%;
+    margin: 0px 5px 20px 10px;
+  }
+
+  .statuspost {
+    width: 99%; 
+    margin: 0px 0px 20px 0px;
+  }
+
+  /* adjust to 99% relative to container add margin for spacing*/
+  .alluserswrapper {
+    padding: 0 10px 0 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
