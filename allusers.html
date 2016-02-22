@@ -3,224 +3,270 @@
   <head>
     <link rel="stylesheet" type="text/css" href="twitter.css">
     <meta charset="utf-8">
-      <title>The Twitter Clone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Twitter Clone</title>
   </head>
   <body>
-  <script src="behavior.js"></script>
+    <script src="behavior.js"></script>
     <!-- Outermost container -->
     <div class="outercontainer">
       <!-- Header -->
       <header>
         <div class="logocontainer">
           <img id="logo" src="http://m.rgbimg.com/cache1nUobR/users/r/re/redfloor/600/mlDwaD2.jpg" alt="Impossible Octopus Fitness Club Logo">
-          <p id="tagline">Impossible Octopus Fitness Club</p>
-          <button id="nav-button">
-          </button>
+          <p id="tagline">Impossible Octopus Fitness</p>
         </div>
-        <nav class="nav-hide">
-          <ul class="toprightmenu">
-            <li id="firstitem"><a href="#">Edit my profile</a></li>
-            <li><a href="#">Logout</a></li>
-          </ul>
-          <ul class="centernav">
-            <li><a href="twitter_clone.html">Home</a></li>
-            <li><a href="mystatuses.html">My statuses</a></li>
-            <li><a href="allusers.html">All users</a></li>
-          </ul>
-        </nav>
-      </header><!-- End Header -->
-      <div class="alluserswrapper">
-          <div class="profile alluserspage"> <!-- profile -->
-            <img class="background" src="http://www.transparenttextures.com/patterns/45-degree-fabric-dark.png">
-            <img class="minipic" src="https://pbs.twimg.com/profile_images/671167132147691520/uV8CeWDU_bigger.jpg">
-            <div class="userinfo">
-              <p><a href="https://twitter.com/nbveroczi">Naomi Veroczi</a></p>
-                <div>
-                  <p id="useraddress">@nbveroczi<p/>
-                </div>
-            </div>
+        <ul class="centernav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="mystatuses.html">My statuses</a></li>
+          <li><a href="allusers.html">All users</a></li>
+        </ul>
+        <ul class="toprightmenu">
+          <li id="firstitem"><a href="#">Edit my profile</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </header>
+      <!-- End Header -->
+      <!-- Content Overwrap-->
+      <div class="mystatuseswrapper">
+        <div class="profile">
+          <!-- profile -->
+          <img class="background" src="http://www.transparenttextures.com/patterns/45-degree-fabric-dark.png" alt="User Header Image">
+          <img class="minipic" src="https://pbs.twimg.com/profile_images/671167132147691520/uV8CeWDU_bigger.jpg" alt="User Profile Image">
+          <div class="userinfo">
+            <p><a href="https://twitter.com/nbveroczi">Naomi Veroczi</a></p>
             <div>
-              <ul class="userstats">
-                <li><a href="#">FOLLOWING</a></li>
-                <li><a href="#">FOLLOWERS</a></li>
-                <li class="followstats">20</li>
-                <li class="followstats">134</li>
-              </ul>
+              <p class="useraddress">@nbveroczi
+              </p>
             </div>
-            <div class="bio"> <!-- Bio -->
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio suscipit tempora impedit, consectetur minima, illum molestiae? A facilis sed odio non, molestiae laborum facere esse eligendi eos, dolores officiis soluta.</p>
-            </div> <!-- End Bio -->
-          </div> <!-- End profile -->
-          <div class="profile alluserspage"> <!-- profile -->
-            <img class="background" src="http://www.transparenttextures.com/patterns/45-degree-fabric-dark.png">
-            <img class="minipic" src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg">
-            <div class="userinfo">
-              <p><a href="https://twitter.com/nbveroczi">User Name</a></p>
-                <div>
-                  <p id="useraddress">@username<p/>
-                </div>
-            </div>
+          </div>
+          <div>
+            <ul class="userstats">
+              <li><a href="#">FOLLOWING</a></li>
+              <li><a href="#">FOLLOWERS</a></li>
+              <li class="followstats">20</li>
+              <li class="followstats">134</li>
+            </ul>
+          </div>
+          <div class="bio">
+            <!-- Bio -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio suscipit tempora impedit, consectetur minima, illum molestiae? A facilis sed odio non, molestiae laborum facere esse eligendi eos, dolores officiis soluta.</p>
+          </div>
+          <!-- End Bio -->
+        </div>
+        <!-- End profile -->
+        <div class="profile">
+          <!-- profile -->
+          <img class="background" src="http://www.transparenttextures.com/patterns/45-degree-fabric-dark.png" alt="User Header Image">
+          <img class="minipic" src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User Profile Image">
+          <div class="userinfo">
+            <p><a href="https://twitter.com/nbveroczi">User Name</a></p>
             <div>
-              <ul class="userstats">
-                <li><a href="#">FOLLOWING</a></li>
-                <li><a href="#">FOLLOWERS</a></li>
-                <li class="followstats">20</li>
-                <li class="followstats">134</li>
-              </ul>
+              <p class="useraddress">@username
+              </p>
             </div>
-            <div class="bio"> <!-- Bio -->
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio suscipit tempora impedit, consectetur minima, illum molestiae? A facilis sed odio non, molestiae laborum facere esse eligendi eos, dolores officiis soluta.</p>
-            </div> <!-- End Bio -->
-          </div> <!-- End profile -->
-          <div class="profile alluserspage"> <!-- profile -->
-            <img class="background" src="http://www.transparenttextures.com/patterns/45-degree-fabric-dark.png">
-            <img class="minipic" src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg">
-            <div class="userinfo">
-              <p><a href="https://twitter.com/nbveroczi">User Name</a></p>
-                <div>
-                  <p id="useraddress">@username<p/>
-                </div>
-            </div>
+          </div>
+          <div>
+            <ul class="userstats">
+              <li><a href="#">FOLLOWING</a></li>
+              <li><a href="#">FOLLOWERS</a></li>
+              <li class="followstats">20</li>
+              <li class="followstats">134</li>
+            </ul>
+          </div>
+          <div class="bio">
+            <!-- Bio -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio suscipit tempora impedit, consectetur minima, illum molestiae? A facilis sed odio non, molestiae laborum facere esse eligendi eos, dolores officiis soluta.</p>
+          </div>
+          <!-- End Bio -->
+        </div>
+        <!-- End profile -->
+        <div class="profile">
+          <!-- profile -->
+          <img class="background" src="http://www.transparenttextures.com/patterns/45-degree-fabric-dark.png" alt="User Header Image">
+          <img class="minipic" src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User Profile Image">
+          <div class="userinfo">
+            <p><a href="https://twitter.com/nbveroczi">User Name</a></p>
             <div>
-              <ul class="userstats">
-                <li><a href="#">FOLLOWING</a></li>
-                <li><a href="#">FOLLOWERS</a></li>
-                <li class="followstats">20</li>
-                <li class="followstats">134</li>
-              </ul>
+              <p class="useraddress">@username
+              </p>
             </div>
-            <div class="bio"> <!-- Bio -->
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio suscipit tempora impedit, consectetur minima, illum molestiae? A facilis sed odio non, molestiae laborum facere esse eligendi eos, dolores officiis soluta.</p>
-            </div> <!-- End Bio -->
-          </div> <!-- End profile -->
-          <div class="profile alluserspage"> <!-- profile -->
-            <img class="background" src="http://www.transparenttextures.com/patterns/45-degree-fabric-dark.png">
-            <img class="minipic" src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg">
-            <div class="userinfo">
-              <p><a href="https://twitter.com/nbveroczi">User Name</a></p>
-                <div>
-                  <p id="useraddress">@username<p/>
-                </div>
-            </div>
+          </div>
+          <div>
+            <ul class="userstats">
+              <li><a href="#">FOLLOWING</a></li>
+              <li><a href="#">FOLLOWERS</a></li>
+              <li class="followstats">20</li>
+              <li class="followstats">134</li>
+            </ul>
+          </div>
+          <div class="bio">
+            <!-- Bio -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio suscipit tempora impedit, consectetur minima, illum molestiae? A facilis sed odio non, molestiae laborum facere esse eligendi eos, dolores officiis soluta.</p>
+          </div>
+          <!-- End Bio -->
+        </div>
+        <!-- End profile -->
+        <div class="profile">
+          <!-- profile -->
+          <img class="background" src="http://www.transparenttextures.com/patterns/45-degree-fabric-dark.png" alt="User Header Image">
+          <img class="minipic" src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User Profile Image">
+          <div class="userinfo">
+            <p><a href="https://twitter.com/nbveroczi">User Name</a></p>
             <div>
-              <ul class="userstats">
-                <li><a href="#">FOLLOWING</a></li>
-                <li><a href="#">FOLLOWERS</a></li>
-                <li class="followstats">20</li>
-                <li class="followstats">134</li>
-              </ul>
+              <p class="useraddress">@username
+              </p>
             </div>
-            <div class="bio"> <!-- Bio -->
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio suscipit tempora impedit, consectetur minima, illum molestiae? A facilis sed odio non, molestiae laborum facere esse eligendi eos, dolores officiis soluta.</p>
-            </div> <!-- End Bio -->
-          </div> <!-- End profile -->
-          <div class="profile alluserspage"> <!-- profile -->
-            <img class="background" src="http://www.transparenttextures.com/patterns/45-degree-fabric-dark.png">
-            <img class="minipic" src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg">
-            <div class="userinfo">
-              <p><a href="https://twitter.com/nbveroczi">User Name</a></p>
-                <div>
-                  <p id="useraddress">@username<p/>
-                </div>
-            </div>
+          </div>
+          <div>
+            <ul class="userstats">
+              <li><a href="#">FOLLOWING</a></li>
+              <li><a href="#">FOLLOWERS</a></li>
+              <li class="followstats">20</li>
+              <li class="followstats">134</li>
+            </ul>
+          </div>
+          <div class="bio">
+            <!-- Bio -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio suscipit tempora impedit, consectetur minima, illum molestiae? A facilis sed odio non, molestiae laborum facere esse eligendi eos, dolores officiis soluta.</p>
+          </div>
+          <!-- End Bio -->
+        </div>
+        <!-- End profile -->
+        <div class="profile">
+          <!-- profile -->
+          <img class="background" src="http://www.transparenttextures.com/patterns/45-degree-fabric-dark.png" alt="User Header Image">
+          <img class="minipic" src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User Profile Image">
+          <div class="userinfo">
+            <p><a href="https://twitter.com/nbveroczi">User Name</a></p>
             <div>
-              <ul class="userstats">
-                <li><a href="#">FOLLOWING</a></li>
-                <li><a href="#">FOLLOWERS</a></li>
-                <li class="followstats">20</li>
-                <li class="followstats">134</li>
-              </ul>
+              <p class="useraddress">@username
+              </p>
             </div>
-            <div class="bio"> <!-- Bio -->
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio suscipit tempora impedit, consectetur minima, illum molestiae? A facilis sed odio non, molestiae laborum facere esse eligendi eos, dolores officiis soluta.</p>
-            </div> <!-- End Bio -->
-          </div> <!-- End profile -->
-          <div class="profile alluserspage"> <!-- profile -->
-            <img class="background" src="http://www.transparenttextures.com/patterns/45-degree-fabric-dark.png">
-            <img class="minipic" src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg">
-            <div class="userinfo">
-              <p><a href="https://twitter.com/nbveroczi">User Name</a></p>
-                <div>
-                  <p id="useraddress">@username<p/>
-                </div>
-            </div>
+          </div>
+          <div>
+            <ul class="userstats">
+              <li><a href="#">FOLLOWING</a></li>
+              <li><a href="#">FOLLOWERS</a></li>
+              <li class="followstats">20</li>
+              <li class="followstats">134</li>
+            </ul>
+          </div>
+          <div class="bio">
+            <!-- Bio -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio suscipit tempora impedit, consectetur minima, illum molestiae? A facilis sed odio non, molestiae laborum facere esse eligendi eos, dolores officiis soluta.</p>
+          </div>
+          <!-- End Bio -->
+        </div>
+        <!-- End profile -->
+        <div class="profile">
+          <!-- profile -->
+          <img class="background" src="http://www.transparenttextures.com/patterns/45-degree-fabric-dark.png" alt="User Header Image">
+          <img class="minipic" src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User Profile Image">
+          <div class="userinfo">
+            <p><a href="https://twitter.com/nbveroczi">User Name</a></p>
             <div>
-              <ul class="userstats">
-                <li><a href="#">FOLLOWING</a></li>
-                <li><a href="#">FOLLOWERS</a></li>
-                <li class="followstats">20</li>
-                <li class="followstats">134</li>
-              </ul>
+              <p class="useraddress">@username
+              </p>
             </div>
-            <div class="bio"> <!-- Bio -->
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio suscipit tempora impedit, consectetur minima, illum molestiae? A facilis sed odio non, molestiae laborum facere esse eligendi eos, dolores officiis soluta.</p>
-            </div> <!-- End Bio -->
-          </div> <!-- End profile -->
-          <div class="profile alluserspage"> <!-- profile -->
-            <img class="background" src="http://www.transparenttextures.com/patterns/45-degree-fabric-dark.png">
-            <img class="minipic" src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg">
-            <div class="userinfo">
-              <p><a href="https://twitter.com/nbveroczi">User Name</a></p>
-                <div>
-                  <p id="useraddress">@username<p/>
-                </div>
-            </div>
+          </div>
+          <div>
+            <ul class="userstats">
+              <li><a href="#">FOLLOWING</a></li>
+              <li><a href="#">FOLLOWERS</a></li>
+              <li class="followstats">20</li>
+              <li class="followstats">134</li>
+            </ul>
+          </div>
+          <div class="bio">
+            <!-- Bio -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio suscipit tempora impedit, consectetur minima, illum molestiae? A facilis sed odio non, molestiae laborum facere esse eligendi eos, dolores officiis soluta.</p>
+          </div>
+          <!-- End Bio -->
+        </div>
+        <!-- End profile -->
+        <div class="profile">
+          <!-- profile -->
+          <img class="background" src="http://www.transparenttextures.com/patterns/45-degree-fabric-dark.png" alt="User Header Image">
+          <img class="minipic" src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User Profile Image">
+          <div class="userinfo">
+            <p><a href="https://twitter.com/nbveroczi">User Name</a></p>
             <div>
-              <ul class="userstats">
-                <li><a href="#">FOLLOWING</a></li>
-                <li><a href="#">FOLLOWERS</a></li>
-                <li class="followstats">20</li>
-                <li class="followstats">134</li>
-              </ul>
+              <p class="useraddress">@username
+              </p>
             </div>
-            <div class="bio"> <!-- Bio -->
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio suscipit tempora impedit, consectetur minima, illum molestiae? A facilis sed odio non, molestiae laborum facere esse eligendi eos, dolores officiis soluta.</p>
-            </div> <!-- End Bio -->
-          </div> <!-- End profile -->
-          <div class="profile alluserspage"> <!-- profile -->
-            <img class="background" src="http://www.transparenttextures.com/patterns/45-degree-fabric-dark.png">
-            <img class="minipic" src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg">
-            <div class="userinfo">
-              <p><a href="https://twitter.com/nbveroczi">User Name</a></p>
-                <div>
-                  <p id="useraddress">@username<p/>
-                </div>
-            </div>
+          </div>
+          <div>
+            <ul class="userstats">
+              <li><a href="#">FOLLOWING</a></li>
+              <li><a href="#">FOLLOWERS</a></li>
+              <li class="followstats">20</li>
+              <li class="followstats">134</li>
+            </ul>
+          </div>
+          <div class="bio">
+            <!-- Bio -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio suscipit tempora impedit, consectetur minima, illum molestiae? A facilis sed odio non, molestiae laborum facere esse eligendi eos, dolores officiis soluta.</p>
+          </div>
+          <!-- End Bio -->
+        </div>
+        <!-- End profile -->
+        <div class="profile">
+          <!-- profile -->
+          <img class="background" src="http://www.transparenttextures.com/patterns/45-degree-fabric-dark.png" alt="User Header Image">
+          <img class="minipic" src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User Profile Image">
+          <div class="userinfo">
+            <p><a href="https://twitter.com/nbveroczi">User Name</a></p>
             <div>
-              <ul class="userstats">
-                <li><a href="#">FOLLOWING</a></li>
-                <li><a href="#">FOLLOWERS</a></li>
-                <li class="followstats">20</li>
-                <li class="followstats">134</li>
-              </ul>
+              <p class="useraddress">@username
+              </p>
             </div>
-            <div class="bio"> <!-- Bio -->
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio suscipit tempora impedit, consectetur minima, illum molestiae? A facilis sed odio non, molestiae laborum facere esse eligendi eos, dolores officiis soluta.</p>
-            </div> <!-- End Bio -->
-          </div> <!-- End profile -->
-          <div class="profile alluserspage"> <!-- profile -->
-            <img class="background" src="http://www.transparenttextures.com/patterns/45-degree-fabric-dark.png">
-            <img class="minipic" src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg">
-            <div class="userinfo">
-              <p><a href="https://twitter.com/nbveroczi">User Name</a></p>
-                <div>
-                  <p id="useraddress">@username<p/>
-                </div>
-            </div>
+          </div>
+          <div>
+            <ul class="userstats">
+              <li><a href="#">FOLLOWING</a></li>
+              <li><a href="#">FOLLOWERS</a></li>
+              <li class="followstats">20</li>
+              <li class="followstats">134</li>
+            </ul>
+          </div>
+          <div class="bio">
+            <!-- Bio -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio suscipit tempora impedit, consectetur minima, illum molestiae? A facilis sed odio non, molestiae laborum facere esse eligendi eos, dolores officiis soluta.</p>
+          </div>
+          <!-- End Bio -->
+        </div>
+        <!-- End profile -->
+        <div class="profile">
+          <!-- profile -->
+          <img class="background" src="http://www.transparenttextures.com/patterns/45-degree-fabric-dark.png" alt="User Header Image">
+          <img class="minipic" src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User Profile Image">
+          <div class="userinfo">
+            <p><a href="https://twitter.com/nbveroczi">User Name</a></p>
             <div>
-              <ul class="userstats">
-                <li><a href="#">FOLLOWING</a></li>
-                <li><a href="#">FOLLOWERS</a></li>
-                <li class="followstats">20</li>
-                <li class="followstats">134</li>
-              </ul>
+              <p class="useraddress">@username
+              </p>
             </div>
-            <div class="bio"> <!-- Bio -->
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio suscipit tempora impedit, consectetur minima, illum molestiae? A facilis sed odio non, molestiae laborum facere esse eligendi eos, dolores officiis soluta.</p>
-            </div> <!-- End Bio -->
-          </div> <!-- End profile -->   
-        </div> <!-- End alluserswrapper -->            
-    </div><!-- End Outermost container -->
+          </div>
+          <div>
+            <ul class="userstats">
+              <li><a href="#">FOLLOWING</a></li>
+              <li><a href="#">FOLLOWERS</a></li>
+              <li class="followstats">20</li>
+              <li class="followstats">134</li>
+            </ul>
+          </div>
+          <div class="bio">
+            <!-- Bio -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio suscipit tempora impedit, consectetur minima, illum molestiae? A facilis sed odio non, molestiae laborum facere esse eligendi eos, dolores officiis soluta.</p>
+          </div>
+          <!-- End Bio -->
+        </div>
+        <!-- End profile -->
+      </div>
+      <!-- End mystatuseswrapper -->
+    </div>
+    <!-- End Outermost container -->
     <div class="beta">
       <p>Welcome! Please bear in mind that this application is in beta.</p>
     </div>
