@@ -222,6 +222,7 @@ aside {
   opacity: .9;
   border: 1px solid black;
   border-radius: 2px;
+  z-index: 2;
 }
 
 .beta p {
