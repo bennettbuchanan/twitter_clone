@@ -56,34 +56,13 @@ table {
   border-spacing: 0;
 }
 
-/* Set fixed width and align to center of window */
+/* begin container styles */
 .outercontainer { 
   display: flex;
   width: 992px;
   margin-left: auto;
   margin-right: auto;
   flex-direction: column;
-}
-
-header {
-  padding: 10px 10px 20px 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-header img {
-  height: 130px;
-}
-
-.logocontainer {
-  width: 215px;
-  display: flex;
-  flex-direction: column;
-}
-
-#logo {
-  display: flex;
 }
 
 .contentoverwrap {
@@ -109,7 +88,29 @@ header img {
   justify-content: center;
 }
 
-/* Set float to align element to the right of the outermost div and set display inline-block to arrange horizontally */
+/* Begin header styles */
+header {
+  padding: 10px 10px 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+header img {
+  height: 130px;
+}
+
+.logocontainer {
+  width: 215px;
+  display: flex;
+  flex-direction: column;
+}
+
+#logo {
+  display: flex;
+}
+
+/* Set flex-end to align element to the right of the outermost div and set display inline-block to arrange horizontally */
 .toprightmenu {
   width: 215px;
   display: flex;
@@ -154,7 +155,9 @@ header img {
   text-align: center;
 }
 
-/* Target the userimage with margins and padding */
+/* begin homepage CSS */
+
+/* add margins and padding to user image */
 .userimage {
   margin: 0px 15px 10px 0px;
   border: 1px solid black;
@@ -185,39 +188,6 @@ aside {
   margin: 0px 15px 10px 0px;
   border: 1px solid black;
   float: left;
-}
-
-/* Set style elements for users */
-.username {
-  font-weight: bold;
-  margin-top: 10px;
-  display: inline-block;
-}
-
-.featuredusername {
-  font-weight: bold;
-  margin-top: 10px;
-  display: inline-block;
-}
-
-/* Set style elements for date */
-.date {
-  color: #aeaeae;
-  display: inline-block;
-}
-
-/* Set status float */
-.statuscontent {
-  border: 1px solid black;
-  border-radius: 4px;
-  background: white;
-  margin-bottom: 20px;
-  padding: 20px 20px 10px 20px;
-  min-height: 160px;
-}
-
-.statuscontentcontainer {
-  width:555px;
 }
 
 .featureheader {
@@ -299,6 +269,38 @@ aside {
   -o-transition: all 0s;
   -webkit-transition: all 0s;
   transition: all 0s;
+}
+
+/* begin styles for mystatuses page */
+.username {
+  font-weight: bold;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.featuredusername {
+  font-weight: bold;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+/* Set style elements for date */
+.date {
+  color: #aeaeae;
+  display: inline-block;
+}
+
+.statuscontent {
+  border: 1px solid black;
+  border-radius: 4px;
+  background: white;
+  margin-bottom: 20px;
+  padding: 20px 20px 10px 20px;
+  min-height: 160px;
+}
+
+.statuscontentcontainer {
+  width:555px;
 }
 
 .profile {
@@ -399,11 +401,6 @@ aside {
   padding: 10px;
 }
 
-.alluserspage {
-  margin-left: 20px;
-  margin-bottom: 20px;
-}
-
 /* Keep anchor tags at bottom to define color styles */
 a {
   color: #d6616b;
@@ -424,43 +421,9 @@ img {
   border-radius: 4px;
 }
 
-/* Begin responsive CSS */
-@media screen and (max-width: 992px) {
-
-  /* begin CSS for user status page */
-
-  /* add margin to profile sectionn */
-  
-  /* float container left and decrease width to fit side by side with profile*/
-  .postcontainer {
-    width: 50%;
-    margin: 0px 5px 20px 10px;
-  }
-
-  .statuspost { 
-    width: 99%;
-    margin: 0px 0px 20px 0px;
-  }
-
-  .profile {
-    position: relative;
-    overflow: hidden;
-    width: 45%;
-  }
-
-  .mystatuseswrapper {
-    padding: 0 10px 0 10px;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-  }
-
-  /* end CSS for user status page */
-
-
-  /* begin CSS for homepage */
-
+@media (max-width: 992px) {
+   
+   /* begin CSS for homepage */
   .outercontainer {
     position: relative;
     overflow: hidden;
@@ -520,53 +483,40 @@ img {
 
   /* reduce width to not overlay with aside features */
   .beta {
-    width: 25%;
     margin: 20px;
   }
 
-  /*end CSS for homepage */
-}
-@media screen and (max-width: 768px) {
+  /* begin user status page */
 
-  /* begin CSS for user status page */
+  /* add margin to profile section */
+  .postcontainer {
+    width: 50%;
+    margin: 0px 5px 20px 10px;
+  }
 
-   /* add margin to profile section to center item */
-
-  /* include margin-bottom for allusers page */
-  .alluserspage {
-    margin-bottom: 20px;
+  .statuspost { 
+    width: 99%;
+    margin: 0px 0px 20px 0px;
   }
 
   .profile {
     position: relative;
     overflow: hidden;
-    width: 99%;
-  }
-  
-  /* float container left and decrease width to fit side by side with profile*/
-  .postcontainer {
-    width: 99%;
-    margin: 0px 5px 20px 10px;
+    width: 45%;
   }
 
-  .statuspost {
-    width: 99%; 
-    margin: 0px 0px 20px 0px;
-  }
-
-  /* adjust to 99% relative to container add margin for spacing*/
-  .alluserswrapper {
+  .mystatuseswrapper {
     padding: 0 10px 0 10px;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    align-content: center;
     justify-content: center;
   }
+}
 
-  /* end CSS for user status page */
+@media (max-width: 768px) {
 
-  /* begin CSS for homepage */
-
+  /* begin styles for header and containers */
   .outercontainer {
     position: relative;
     overflow: hidden;
@@ -580,16 +530,11 @@ img {
     align-items: center;
   }
 
-  /* Set float to align element to the right of the outermost div and set display inline-block to arrange horizontally */
+  /* Set justify-content to center */
   .toprightmenu {
     padding: 10px 0px;
     display: flex;
     justify-content: center;
-  }
-
-  /* Add pipe character after li with id of firstitem, add padding for equal spacing */
-  #firstitem:after {
-      content: " |";
   }
 
   /* Center main nav, keep center nav on bottom */
@@ -606,10 +551,7 @@ img {
     text-align: center;
   }
 
-  /* remove float to center image */
-
-  /* center item on page */
-
+  /* begin CSS for homepage */
   .featureheader {
     width: auto;
   }
@@ -618,13 +560,8 @@ img {
     width: auto;
     margin: 20px 20px 0px 20px;
   }
-
-  footer {
-    width: 100%;
-  }
   
   /* add bottom margin to push profile image down */
-
   .beta {
     margin: 0px;
     width: 100%;
@@ -655,5 +592,35 @@ img {
     margin-bottom: 55px;
   }
 
-  /*end CSS for homepage */
+  /* begin CSS for mystatuses page and allusers page */
+
+  /* include margin-bottom for allusers page */
+  .alluserspage {
+    margin-bottom: 20px;
+  }
+
+  .profile {
+    position: relative;
+    overflow: hidden;
+    width: 99%;
+  }
+  
+  .postcontainer {
+    width: 99%;
+    margin: 0px 5px 20px 10px;
+  }
+
+  .statuspost {
+    width: 99%; 
+    margin: 0px 0px 20px 0px;
+  }
+
+  /* adjust to 99% relative to container add margin for spacing*/
+  .alluserswrapper {
+    padding: 0 10px 0 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
