@@ -9,32 +9,32 @@
   <body>
     <script src="behavior.js"></script>
     <!-- Outermost container -->
-    <div class="outercontainer">
+    <div class="outercontainer flex-item">
       <!-- Header -->
-      <header>
-        <div class="logocontainer">
+      <header class="flex-item">
+        <div class="logocontainer flex-item">
           <img id="logo" src="http://m.rgbimg.com/cache1nUobR/users/r/re/redfloor/600/mlDwaD2.jpg" alt="Impossible Octopus Fitness Club Logo">
           <p id="tagline">Impossible Octopus Fitness</p>
         </div>
-        <ul class="centernav">
+        <ul class="centernav flex-item">
           <li><a href="index.html">Home</a></li>
           <li><a href="mystatuses.html">My statuses</a></li>
           <li><a href="allusers.html">All users</a></li>
         </ul>
-        <ul class="toprightmenu">
+        <ul class="toprightmenu flex-item">
           <li id="firstitem"><a href="#">Edit my profile</a></li>
-          <li><a href="#">Logout</a></li>
+          <li><a href="#">&nbsp;Logout</a></li>
         </ul>
       </header>
       <!-- End Header -->
       <!-- Content Overwrap-->
-      <div class="contentoverwrap">
+      <div class="contentoverwrap flex-item">
         <!--Content -->
         <div class="statuscontentcontainer">
           <div class="poststatus">
             <form action="demo_form.asp" method="get">
             <textarea name="status">What is your status?</textarea>
-            <div class="locationdiv">
+            <div class="locationdiv flex-item">
               <div>
                 <input id="location" type="checkbox" name="location" value="yes">
                 Include Location

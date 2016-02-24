@@ -56,9 +56,12 @@ table {
   border-spacing: 0;
 }
 
+.flex-item {
+  display: flex;
+}
+
 /* begin container styles */
 .outercontainer { 
-  display: flex;
   width: 992px;
   margin-left: auto;
   margin-right: auto;
@@ -66,7 +69,6 @@ table {
 }
 
 .contentoverwrap {
-  display: flex;
   align-items: flex-start;
   flex-direction: row;
   justify-content: space-between;
@@ -74,14 +76,12 @@ table {
 
 .mystatuseswrapper {
   padding: 0 10px 0 10px;
-  display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
 .alluserswrapper {
   padding: 0 10px 0 10px;
-  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -91,7 +91,6 @@ table {
 /* Begin header styles */
 header {
   padding: 10px 10px 20px 10px;
-  display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
@@ -102,23 +101,13 @@ header img {
 
 .logocontainer {
   width: 215px;
-  display: flex;
   flex-direction: column;
-}
-
-#logo {
-  display: flex;
 }
 
 /* Set flex-end to align element to the right of the outermost div and set display inline-block to arrange horizontally */
 .toprightmenu {
   width: 215px;
-  display: flex;
   justify-content: flex-end;
-}
-
-.toprightmenu li {
-  display: flex;
 }
 
 /* Add pipe character after li with id of firstitem, add padding for equal spacing */
@@ -128,13 +117,7 @@ header img {
 
 /* Center main nav */
 .centernav {
-  display: flex;
   align-self: flex-end;
-}
-
-.centernav li {
-  display: flex;
-  justify-content: center;
 }
 
 /* Target individual menu items to create appropriate spacing and styling */ 
@@ -149,7 +132,6 @@ header img {
 /* Target the tagline with an id and assign some margins to align based */ 
 #tagline {
   margin-top: 10px;
-  display: flex;
   padding: 0px;
   width: 215px;
   text-align: center;
@@ -324,23 +306,19 @@ textarea {
 }
 
 .locationdiv {
-  display: flex;
   justify-content: space-between;
-
 }
 
 #location {
- margin: 5px 5px;
+  margin: 5px 5px;
 }
 
 /* end styles for form */
-
 .statuscontentcontainer {
   width:555px;
 }
 
 .profile {
-  display: flex;
   flex-direction: column;
   position: relative;
   overflow: hidden;
@@ -413,7 +391,6 @@ textarea {
 }
 
 .postcontainer {
-  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 630px;
@@ -466,12 +443,10 @@ img {
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-    display: flex;
     flex-direction: column;
   }
 
   .contentoverwrap {
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
@@ -485,7 +460,6 @@ img {
   }
 
   aside {
-    display: flex;
     flex-direction: row;
     align-items: flex-start;
     width: 100%;
@@ -543,8 +517,6 @@ img {
 
   .mystatuseswrapper {
     padding: 0 10px 0 10px;
-    display: flex;
-    flex-wrap: wrap;
     align-content: center;
     justify-content: center;
   }
@@ -569,7 +541,6 @@ img {
   /* Set justify-content to center */
   .toprightmenu {
     padding: 10px 0px;
-    display: flex;
     justify-content: center;
   }
 
@@ -605,7 +576,6 @@ img {
   }
 
   aside {
-    display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
@@ -654,7 +624,6 @@ img {
   /* adjust to 99% relative to container add margin for spacing*/
   .alluserswrapper {
     padding: 0 10px 0 10px;
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
