@@ -292,6 +292,21 @@ aside {
   min-height: 160px;
 }
 
+#mystatus {
+  
+}
+
+.postlink {
+  width: 100%;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-top: 0px;
+}
+
+#postlinkbutton {
+
+}
+
 textarea {
   margin: 5px 0px;
   width: 100%;

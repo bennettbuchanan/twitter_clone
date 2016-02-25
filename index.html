@@ -7,7 +7,7 @@
     <title>The Twitter Clone</title>
   </head>
   <body>
-    <script src="behavior.js"></script>
+    <script src="post_a_status.js"></script>
     <!-- Outermost container -->
     <div class="outercontainer flex-item">
       <!-- Header -->
@@ -31,7 +31,11 @@
       <div class="contentoverwrap flex-item">
         <!--Content -->
         <div class="statuscontentcontainer">
-          <div class="poststatus">
+
+
+
+          <a class="button postlink flex-item" id="postlinkbutton" href="javascript:toggleFormVisibility();">Post a status!</a>
+          <div class="poststatus" id="subscribe_frm" style="display: none">
             <form action="demo_form.asp" method="get">
             <textarea name="status">What is your status?</textarea>
             <div class="locationdiv flex-item">
@@ -43,6 +47,9 @@
             </div>
             </form>
           </div>
+
+
+
           <section class="statuscontent">
             <img src="http://s19.postimg.org/t38mrbb0f/gus.jpg " alt="Gus image" class="userimage">
             <h1 class="username">Gus</h1>
