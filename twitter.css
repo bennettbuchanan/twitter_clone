@@ -219,13 +219,13 @@ aside {
   position: relative;
   border: none;
   color: white;
-  padding: 10px 32px;
+  padding: 10px 0px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   margin: 5px 15px 10px 0px;
-  width: 100px;
+  width: 100%;
   cursor: pointer;
   border-radius: 4px;
   background:  #e7969c; /* For browsers that do not support gradients */
@@ -252,6 +252,14 @@ aside {
   -o-transition: all 0s;
   -webkit-transition: all 0s;
   transition: all 0s;
+}
+
+#postbutton {
+  margin-top: 5px;
+}
+
+#replybutton {
+  margin-top: 5px;
 }
 
 /* begin styles for mystatuses page */
@@ -303,11 +311,21 @@ aside {
   margin-top: 0px;
 }
 
-#postlinkbutton {
+
+.reply_frm {
+  border: 1px solid black;
+  border-radius: 4px;
+  background: gray;
+  margin-bottom: 20px;
+  padding: 20px 20px 10px 20px;
 
 }
 
-textarea {
+.user_id {
+
+}
+
+ textarea {
   margin: 5px 0px;
   width: 100%;
   height: 150px;
@@ -318,6 +336,10 @@ textarea {
   background-color: #f8f8f8;
   font-size: 16px;
   resize: none;
+}
+
+.reply_frm textarea {
+  height: 80px;
 }
 
 .locationdiv {

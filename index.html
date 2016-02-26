@@ -34,7 +34,7 @@
 
 
 
-          <a class="button postlink flex-item" id="postlinkbutton" href="javascript:toggleFormVisibility();">Post a status!</a>
+          <a class="button postlink flex-item" href="javascript:toggleFormVisibility();">Post a status!</a>
           <div class="poststatus" id="subscribe_frm" style="display: none">
             <form action="demo_form.asp" method="get">
             <textarea name="status">What is your status?</textarea>
@@ -55,7 +55,19 @@
             <h1 class="username">Gus</h1>
             <p class="date">Feb 01</p>
             <p class="usertxt">Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra.
-              <p class="usertxt"><a href="http://www.google.com" class="button">Link Button</a></p>
+              <p class="usertxt"><a href="javascript:toggleReplyFormVisibility();" class="button" id="user_id">Reply</a></p>
+            <div class="reply_frm" id="user_id" style="display: relative">
+              <form action="demo_form.asp" method="get">
+              <textarea name="status">Respond with a comment</textarea>
+              <div class="locationdiv flex-item">
+                <div>
+                  <input id="location" type="checkbox" name="location" value="yes">
+                  Add Emoji
+                </div>
+                <input id="replybutton" type="submit" value="Reply">
+              </div>
+              </form>
+            </div>
           </section>
           <section class="statuscontent">
             <img src="http://s19.postimg.org/br8a5vhj3/marine.jpg " alt="Marine image" class="userimage">
