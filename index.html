@@ -5,9 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Twitter Clone</title>
+    <script type="text/javascript" src="post_a_status.js" defer></script>
+    <script type="text/javascript" src="reply.js" defer></script>
   </head>
   <body>
-    <script src="post_a_status.js"></script>
     <!-- Outermost container -->
     <div class="outercontainer flex-item">
       <!-- Header -->
@@ -35,7 +36,7 @@
 
 
           <a class="button postlink flex-item" href="javascript:toggleFormVisibility();">Post a status!</a>
-          <div class="poststatus" id="subscribe_frm" style="display: none">
+          <div class="poststatus" id="post_frm" style="display: none">
             <form action="demo_form.asp" method="get">
             <textarea name="status">What is your status?</textarea>
             <div class="locationdiv flex-item">
@@ -55,8 +56,14 @@
             <h1 class="username">Gus</h1>
             <p class="date">Feb 01</p>
             <p class="usertxt">Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra.
-              <p class="usertxt"><a href="javascript:toggleReplyFormVisibility();" class="button" id="user_id">Reply</a></p>
-            <div class="reply_frm" id="user_id" style="display: relative">
+
+
+              <p class="usertxt">
+              <a class="button" id="user_id" href="javascript:toggleReplyFormVisibility();">Reply</a>
+              </p>
+
+
+            <div class="replypost" id="user" data-user_id="001">
               <form action="demo_form.asp" method="get">
               <textarea name="status">Respond with a comment</textarea>
               <div class="locationdiv flex-item">
@@ -68,6 +75,9 @@
               </div>
               </form>
             </div>
+
+
+
           </section>
           <section class="statuscontent">
             <img src="http://s19.postimg.org/br8a5vhj3/marine.jpg " alt="Marine image" class="userimage">

@@ -290,7 +290,7 @@ aside {
   min-height: 160px;
 }
 
-/* Set styles for form */
+/* Set styles for main post form */
 .poststatus {
   border: 1px solid black;
   border-radius: 4px;
@@ -311,17 +311,17 @@ aside {
   margin-top: 0px;
 }
 
-
-.reply_frm {
+/* Set styles for reply form */
+.replypost {
   border: 1px solid black;
   border-radius: 4px;
   background: gray;
   margin-bottom: 20px;
   padding: 20px 20px 10px 20px;
-
+  display: none;
 }
 
-.user_id {
+#user {
 
 }
 

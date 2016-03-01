@@ -1,6 +1,6 @@
 function toggleFormVisibility()
 {
-  var frm_element = document.getElementById('subscribe_frm'); 
+  var frm_element = document.getElementById('post_frm'); 
 
   var vis = frm_element.style;
   
@@ -10,4 +10,3 @@ function toggleFormVisibility()
 	  vis.display = 'none';
   }
 }
-
