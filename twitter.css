@@ -36,6 +36,7 @@ footer, header, hgroup, menu, nav, section {
 body {
   line-height: 1;
   background-color: #f1f4f7;
+  font-size: .8em;
 }
 
 ol, ul {
@@ -91,7 +92,7 @@ table {
 
 /* Begin header styles */
 header {
-  padding: 10px 10px 20px 10px;
+  padding: 0px 10px 0px 10px;
   justify-content: space-between;
   align-items: flex-start;
   background: white;
@@ -100,29 +101,31 @@ header {
 }
 
 header img {
-  height: 130px;
+  padding-top: 5px;
+  height: 25px;
+  width: 25px;
 }
 
 .logocontainer {
   width: 215px;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 /* Set flex-end to align element to the right of the outermost div and set display inline-block to arrange horizontally */
 .toprightmenu {
   width: 215px;
   justify-content: flex-end;
+  padding: 10px 0px 10px 0px;
+}
+
+.centernav {
+  padding: 10px 0px 10px 0px;
 }
 
 /* Add pipe character after li with id of firstitem, add padding for equal spacing */
 #firstitem:after {
   content: " |";
   padding-right: 5px;
-}
-
-/* Center main nav */
-.centernav {
-  align-self: flex-end;
 }
 
 /* Target individual menu items to create appropriate spacing and styling */ 
@@ -133,10 +136,8 @@ header img {
 
 /* Target the tagline with an id and assign some margins to align based */ 
 #tagline {
-  margin-top: 10px;
-  padding: 0px;
+  padding: 10px 0px 10px 10px;
   width: 215px;
-  text-align: center;
 }
 
 /* begin homepage CSS */
@@ -226,7 +227,6 @@ aside {
   border: 1px solid #314354;
   text-align: center;
   display: inline-block;
-  font-size: 14px;
   margin: 5px 15px 10px 0px;
   width: 100px;
   cursor: pointer;
@@ -458,10 +458,6 @@ textarea {
 a {
   color: #557594;
   text-decoration: none;
-  -moz-transition: all .1s;
-  -o-transition: all .1s;
-  -webkit-transition: all .1s;
-  transition: all .1s;
 }
 
 a:hover {
@@ -472,15 +468,11 @@ a:hover {
 .toprightmenu a {
   color: #557594;
   text-decoration: none;
-  -moz-transition: all .1s;
-  -o-transition: all .1s;
-  -webkit-transition: all .1s;
-  transition: all .1s;
-  text-decoration: none;
 }
 
-.centernav li a:hover, .toprightmenu a:hover {
-  padding-bottom: 3px;
+.centernav li a:hover, 
+.toprightmenu a:hover {
+  padding-bottom: 7px;
   border-bottom: 3px solid #6889a8;
   color: #6889a8;
   /*color: #3182BD;*/
@@ -612,6 +604,7 @@ img {
   .centernav {
     order: 1;
     align-self: center;
+    padding-top: 0px;
   }
 
   .centernav li a {
@@ -622,7 +615,7 @@ img {
   /* redefine margin, width, and padding for proper layout */ 
   #tagline {
     margin: 0px;
-    padding: 10px 10px 0px 10px;
+    padding: 0px 10px 0px 10px;
     max-width: 200px;
     text-align: center;
   }
@@ -687,17 +680,35 @@ img {
     width: 99%;
     margin: 0px 5px 20px 10px;
   }
-
+  
   .statuspost {
-    width: 99%; 
+    width: 99%;
     margin: 0px 0px 20px 0px;
   }
-
   /* adjust to 99% relative to container add margin for spacing*/
+  
   .alluserswrapper {
     padding: 0 10px 0 10px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+  }
+  
+  .centernav li a:hover,
+  .toprightmenu a:hover {
+    padding-bottom: 3px;
+    border-bottom: 3px solid #6889a8;
+    color: #6889a8;
+    /*color: #3182BD;*/
+  }
+
+  .logocontainer {
+    width: 215px;
+    flex-direction: column;
+  }
+
+  header img {
+    align-self: center;
+    padding-bottom: 10px;
   }
 }
