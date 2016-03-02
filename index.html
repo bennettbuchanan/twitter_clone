@@ -7,6 +7,7 @@
   <title>The Twitter Clone</title>
   <script type="text/javascript" src="post_a_status.js" defer></script>
   <script type="text/javascript" src="reply.js" defer></script>
+  <script type="text/javascript" src="toggle.js" defer></script>
 </head>
 <body>
   <!-- Outermost container -->
@@ -32,7 +33,7 @@
     <div class="contentoverwrap flex-item">
       <!--Content -->
       <div class="statuscontentcontainer">
-        <a class="button postlink flex-item" href="javascript:toggleFormVisibility();">Post a status!</a>
+        <a class="button postlink flex-item" href="javascript:postStatusForm();">Post a status!</a>
         <div class="poststatus" id="post_frm" style="display: none">
           <form action="demo_form.asp" method="get">
             <textarea name="status">What is your status?</textarea>
@@ -52,7 +53,7 @@
           <p class="usertxt">
             <a class="button replyLink" id="reply_0" data-tag="0" href="javascript:;">Reply</a>
           </p>
-          <div class="replypost">
+          <div class="replypost" id="user0">
             <form action="demo_form.asp" method="get">
               <textarea name="status">Respond with a comment</textarea>
               <div class="locationdiv flex-item">
@@ -72,7 +73,7 @@
           <p class="usertxt">
             <a class="button replyLink" id="reply_1" data-tag="1" href="javascript:;">Reply</a>
           </p>
-          <div class="replypost">
+          <div class="replypost" id="user1">
             <form action="demo_form.asp" method="get">
               <textarea name="status">Respond with a comment</textarea>
               <div class="locationdiv flex-item">
@@ -92,7 +93,7 @@
           <p class="usertxt">
             <a class="button replyLink" id="reply_2" data-tag="2" href="javascript:;">Reply</a>
           </p>
-          <div class="replypost">
+          <div class="replypost" id="user2">
             <form action="demo_form.asp" method="get">
               <textarea name="status">Respond with a comment</textarea>
               <div class="locationdiv flex-item">
@@ -113,7 +114,7 @@
           <p class="usertxt">
             <a class="button replyLink" id="reply_3" data-tag="3" href="javascript:;">Reply</a>
           </p>
-          <div class="replypost">
+          <div class="replypost" id="user3">
             <form action="demo_form.asp" method="get">
               <textarea name="status">Respond with a comment</textarea>
               <div class="locationdiv flex-item">

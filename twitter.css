@@ -295,7 +295,7 @@ aside {
 .poststatus {
   border: 1px solid black;
   border-radius: 4px;
-  background: white;
+  background: gray;
   margin-bottom: 20px;
   padding: 20px 20px 10px 20px;
   min-height: 160px;

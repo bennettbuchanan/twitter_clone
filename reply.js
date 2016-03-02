@@ -12,14 +12,7 @@ replyButton.addEventListener("click",function(e) {
 		changeReply();
 
 		function changeReply() {
-			// Store the corresponding indexed replyPost in a variable
-		    var replyForm = replyPost[thisReply].style;
-		    // Change the display property based on the predefined style
-		   	if (replyForm.display == '' || replyForm.display == 'none') {
-		   	      replyForm.display = 'block';
-	   	    } else {
-		   	      replyForm.display = 'none';
-	        }
+			toggle(id="user" + thisReply);
 		}
 	}
 });
