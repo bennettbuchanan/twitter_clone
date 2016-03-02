@@ -158,9 +158,11 @@ header img {
 }
 
 aside {
+  padding-top: 20px;
   width: 415px;
   background: white;
   border-radius: 4px;
+  flex-direction: column;
 }
 
 .asidetxt {
@@ -192,19 +194,18 @@ aside {
   border-radius: 4px;
   margin-bottom: 20px;
   background: white;
-  margin: 20px;
+  margin: 0px 20px 20px 20px;
   padding: 20px 20px 10px 20px;
 }
 
 .beta {
   position:fixed;
-  width: 30%;
   height: auto;
-  background:#e7cb94;
+  background:white;
   bottom: 0px;
   right: 0px;
   padding: 10px 10px 10px 0px;
-  opacity: .9;
+  opacity: .8;
   border: 1px solid #ccc;
   border-radius: 2px;
   z-index: 2;
@@ -223,6 +224,7 @@ aside {
   border: none;
   color: white;
   padding: 10px 0px;
+  border: 1px solid #314354;
   text-align: center;
   display: inline-block;
   font-size: 14px;
@@ -299,6 +301,7 @@ aside {
   padding-left: 0px;
   padding-right: 0px;
   margin: 0px 0px 20px 0px;
+  width: 555px;
 }
 
 /* Set styles for reply form */
@@ -339,6 +342,7 @@ textarea {
 /* end styles for form */
 .statuscontentcontainer {
   width:555px;
+  flex-direction: column;
 }
 
 .profile {
@@ -356,9 +360,9 @@ textarea {
   background: white;
 }
 
-.profile .background{
+.background{
   height: 100px;
-  width: 100%;
+  background-color: #ddd;
 }
 
 .minipic {
@@ -374,12 +378,16 @@ textarea {
 }
 
 .userinfo {
-  padding: 5px 0px 5px 90px;
+  padding: 5px 0px 5px 0px;
   font-size: 16px;
   font-weight: bolder;
   font-family: Arial;
   width: 100%;
   background: white;
+}
+
+.userinfo p {
+  padding-left: 90px;
 }
 
 .useraddress {
@@ -390,10 +398,13 @@ textarea {
 }
 
 .userstats {
-  text-align: center;
-  width: 300px;
-  padding: 10px 0px 10px 0px;
   background: white;
+}
+
+.userstats ul {
+  text-align: center;
+  max-width: 300px;
+  padding: 10px 0px 10px 0px;
 }
 
 .userstats li {
@@ -477,6 +488,14 @@ img {
 @media (max-width: 992px) {
    
    /* begin CSS for homepage */
+
+  .postlink {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px 0px 20px 0px;
+    align-self: center;
+  }
+
   .outercontainer {
     position: relative;
     overflow: hidden;
@@ -503,7 +522,7 @@ img {
     flex-direction: row;
     align-items: flex-start;
     width: 100%;
-    background: #ddd;
+    padding-top: 0px;
     border-radius: 0px;
   }
 
@@ -529,11 +548,6 @@ img {
   .featureduser {
     width: 25%;
     margin: 20px 0px 20px 20px;
-  }
-
-  /* reduce width to not overlay with aside features */
-  .beta {
-    margin: 20px;
   }
 
   /* begin user status page */
@@ -608,6 +622,10 @@ img {
     width: auto;
   }
 
+  .postlink {
+    width: 358px;
+  }
+
   .featureduser {
     width: auto;
     margin: 20px 20px 0px 20px;
@@ -624,7 +642,6 @@ img {
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    background: #ddd;
     border-radius: 0px;
   }
 
