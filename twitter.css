@@ -35,6 +35,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
+  background-color: #f1f4f7;
 }
 
 ol, ul {
@@ -58,7 +59,6 @@ table {
 
 .flex-item {
   display: flex;
-  margin-bottom: 20px;
 }
 
 /* begin container styles */
@@ -94,6 +94,8 @@ header {
   padding: 10px 10px 20px 10px;
   justify-content: space-between;
   align-items: flex-start;
+  background: white;
+  margin-bottom: 20px
 }
 
 header img {
@@ -125,7 +127,7 @@ header img {
 .centernav li a {
   padding: 1px 15px;
   margin: 0px 1px;
-  border: 1px solid black;
+  border: 1px solid #ccc;
   text-decoration: none;
   border-radius: 4px;
 }
@@ -143,10 +145,10 @@ header img {
 /* add margins and padding to user image */
 .userimage {
   margin: 0px 15px 10px 0px;
-  border: 1px solid black;
+  border: 1px solid #ccc;
   float: left;
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
 }
 
 /* Set the text margin and padding in user status paragraphs */
@@ -157,7 +159,7 @@ header img {
 
 aside {
   width: 415px;
-  background: #ddd;
+  background: white;
   border-radius: 4px;
 }
 
@@ -166,10 +168,10 @@ aside {
 }
 
 .asideimage{
-  width: 125px;
-  height: 125px;
+  width: 100px;
+  height: 100px;
   margin: 0px 15px 10px 0px;
-  border: 1px solid black;
+  border: 1px solid #ccc;
   float: left;
 }
 
@@ -179,14 +181,14 @@ aside {
   text-align: center;
   background: white;
   padding: 10px;
-  border: 1px solid black;
+  border: 1px solid #ccc;
   border-radius: 4px;
   margin-bottom: 20px;
   display: none;
 }
 
 .featureduser {
-  border: 1px solid black;
+  border: 1px solid #ccc;
   border-radius: 4px;
   margin-bottom: 20px;
   background: white;
@@ -203,7 +205,7 @@ aside {
   right: 0px;
   padding: 10px 10px 10px 0px;
   opacity: .9;
-  border: 1px solid black;
+  border: 1px solid #ccc;
   border-radius: 2px;
   z-index: 2;
 }
@@ -222,37 +224,29 @@ aside {
   color: white;
   padding: 10px 0px;
   text-align: center;
-  text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 14px;
   margin: 5px 15px 10px 0px;
-  width: 100%;
+  width: 100px;
   cursor: pointer;
   border-radius: 4px;
-  background:  #e7969c; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient( #e7969c, #ad494a); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient( #e7969c, #ad494a); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient( #e7969c, #ad494a); /* For Firefox 3.6 to 15 */
-  background: linear-gradient( #e7969c, #ad494a); /* Standard syntax */
+  background: #6889a8; /* For browsers that do not support gradients */
+  -moz-transition: all .3s;
+  -o-transition: all .3s;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 /* Add hover pseudo class to button to change gradient */
 .button:hover{
   color: white;
-  background:  #ad494a; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient( #ad494a, #e7969c); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient( #ad494a, #e7969c); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient( #ad494a, #e7969c); /* For Firefox 3.6 to 15 */
-  background: linear-gradient( #ad494a, #e7969c); /* Standard syntax */
+  text-decoration: none;
+  background:  #4e6b88; /* For browsers that do not support gradients */
 }
 
 /* Add active pseudo to change colors when a user clicks on the button */
 .button:active {
-  background:  #ad494a; 
-  -moz-transition: all 0s;
-  -o-transition: all 0s;
-  -webkit-transition: all 0s;
-  transition: all 0s;
+  background:  #47617c; 
 }
 
 #postbutton {
@@ -283,38 +277,36 @@ aside {
 }
 
 .statuscontent {
-  border: 1px solid black;
+  border: 1px solid #ccc;
   border-radius: 4px;
   background: white;
   margin-bottom: 20px;
   padding: 20px 20px 10px 20px;
-  min-height: 160px;
 }
 
 /* Set styles for main post form */
 .poststatus {
-  border: 1px solid black;
   border-radius: 4px;
-  background: gray;
+  background: #eee  ;
   margin-bottom: 20px;
   padding: 20px 20px 10px 20px;
   min-height: 160px;
+  border: 1px solid #ccc;
 }
 
 .postlink {
   width: 100%;
   padding-left: 0px;
   padding-right: 0px;
-  margin-top: 0px;
+  margin: 0px 0px 20px 0px;
 }
 
 /* Set styles for reply form */
 .replypost {
-  border: 1px solid black;
   border-radius: 4px;
-  background: gray;
-  margin-bottom: 20px;
-  padding: 20px 20px 10px 20px;
+  background: #ddd;
+  margin: 10px 0px;
+  padding: 20px 20px 20px 20px;
   display: none;
 }
 
@@ -324,11 +316,12 @@ textarea {
   height: 150px;
   padding: 12px 12px;
   box-sizing: border-box;
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
   border-radius: 4px;
-  background-color: #f8f8f8;
+  background-color: white;
   font-size: 16px;
   resize: none;
+  color: #3182bd;
 }
 
 .reply_frm textarea {
@@ -353,13 +346,14 @@ textarea {
   position: relative;
   overflow: hidden;
   width: 300px;
-  border: 1px solid black;
+  border: 1px solid #ccc;
   border-radius: 4px;
   margin: 0px 10px 20px 10px;
 }
 
 .profile .bio {
   padding: 10px;
+  background: white;
 }
 
 .profile .background{
@@ -380,11 +374,12 @@ textarea {
 }
 
 .userinfo {
-  margin: 0px 5px 5px 90px;
+  padding: 5px 0px 5px 90px;
   font-size: 16px;
   font-weight: bolder;
-  font-family: Arial; 
-  width: 190px;
+  font-family: Arial;
+  width: 100%;
+  background: white;
 }
 
 .useraddress {
@@ -397,7 +392,8 @@ textarea {
 .userstats {
   text-align: center;
   width: 300px;
-  margin: 10px 0px 10px 15px;
+  padding: 10px 0px 10px 0px;
+  background: white;
 }
 
 .userstats li {
@@ -430,7 +426,7 @@ textarea {
 .statuspost {
   width: 46%;
   margin: 0px 20px 20px 0px;
-  border: 1px solid black;
+  border: 1px solid #ccc;
   border-radius: 4px;
 }
 
@@ -442,22 +438,36 @@ textarea {
 
 .postcontent {
   padding: 10px;
+  background: white;
 }
 
-/* Keep anchor tags at bottom to define color styles */
 a {
-  color: #d6616b;
+  color: #557594;
   text-decoration: none;
-  -moz-transition: all 2s;
-  -o-transition: all 2s;
-  -webkit-transition: all 2s;
-  transition: all 2s;
+  -moz-transition: all .1s;
+  -o-transition: all .1s;
+  -webkit-transition: all .1s;
+  transition: all .1s;
 }
 
 a:hover {
-  color: #5254a3;
   text-decoration: underline;
-  background-color: #cedb9c;
+}
+
+/* Keep anchor tags at bottom to define color styles */
+.toprightmenu a {
+  color: #557594;
+  text-decoration: none;
+  -moz-transition: all .1s;
+  -o-transition: all .1s;
+  -webkit-transition: all .1s;
+  transition: all .1s;
+  text-decoration: none;
+}
+
+.toprightmenu a:hover {
+  padding-bottom: 3px;
+  border-bottom: 3px solid #557594;
 }
 
 img {
@@ -550,6 +560,11 @@ img {
     align-content: center;
     justify-content: center;
   }
+
+  .poststatus {
+    margin: 0px 20px 20px 20px;
+  }
+
 }
 
 @media (max-width: 768px) {
