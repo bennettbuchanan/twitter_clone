@@ -1,3 +1,3 @@
 function postStatusForm () {
-	toggle('post_frm');
+	toggle('post_form');
 };

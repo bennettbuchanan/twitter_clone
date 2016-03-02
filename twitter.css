@@ -304,11 +304,15 @@ aside {
 }
 
 /* Set styles for reply form */
-.replypost {
+.reply_form {
   border-radius: 4px;
   background: #ddd;
   margin: 10px 0px;
   padding: 20px 20px 20px 20px;
+  display: none;
+}
+
+#post_form{
   display: none;
 }
 
@@ -326,7 +330,7 @@ textarea {
   color: #3182bd;
 }
 
-.reply_frm textarea {
+.reply_form textarea {
   height: 80px;
 }
 
