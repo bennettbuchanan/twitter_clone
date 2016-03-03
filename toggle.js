@@ -1,3 +1,4 @@
+// define toggle function for use in other functions
 function toggle(id) {
     var elem = document.getElementById(id).style;
     if (elem.display == '' || elem.display == "none") {
@@ -7,30 +8,41 @@ function toggle(id) {
     }
 }
 
+// hide menu when scrolling down, and show it when scrolling up
 window.addEventListener("scroll", function scrollDirection() {
-	var header = document.getElementsByTagName('header')[0].style;
-
-    var diffY=scrollDirection.y-window.pageYOffset;
+    var header = document.getElementsByTagName('header')[0];
+    var diffY = scrollDirection.y - window.pageYOffset;
 
     // do not change header on mobile view
     if (window.innerWidth > 768) {
-	    if (diffY < 0) {
-	        header.height = "0px";
-	    } else if (diffY > 0) {
-	        header.height = "43px";
-	    }
-   	}
-    scrollDirection.y=window.pageYOffset;
+        if (diffY < 0) {
+            header.className = 'header-hide';
+        } else if (diffY > 0) {
+            if (header.className == 'header-hide') {
+                header.className = '';
+            }
+        }
+    }
+    scrollDirection.y = window.pageYOffset;
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-  document.getElementById('nav-button').addEventListener('click', function(){
-    var body = document.getElementsByTagName('body')[0];
-    if (body.className == 'nav-show') {
-      body.className = '';
+// show header at regular size if window is below 768 pixels
+window.addEventListener("resize", function() {
+    var header = document.getElementsByTagName('header')[0];
+    var w = window.innerWidth;
+    if (w < 768) {
+        if (header.className == 'header-hide') {
+            header.className = '';
+        }
     }
-    else {
-      body.className = 'nav-show';
-    }
-  })
 });
+
+// show show menu when button is clicked
+document.getElementById('nav-button').addEventListener('click', function() {
+    var nav = document.getElementsByTagName('nav')[0];
+    if (nav.className == 'nav-show') {
+        nav.className = '';
+    } else {
+        nav.className = 'nav-show';
+    }
+})
