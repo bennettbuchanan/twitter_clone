@@ -123,16 +123,14 @@ header {
 
 nav {
   display: flex;
+  width: 100%;
+  justify-content: inherit;
 }
 
 header img {
   padding-top: 10px;
   height: 25px;
-}
-
-.logocontainer {
-  width: 215px;
-  flex-direction: row;
+  margin-right: 15px;
 }
 
 /* Set flex-end to align element to the right of the outermost div and set display inline-block to arrange horizontally */
@@ -528,10 +526,12 @@ img {
     margin-right: 20px;
   }
 
-  .logocontainer {
+  header img {
+    align-self: center;
+    padding-bottom: 10px;
     margin-left: 20px;
   }
-   
+
    /* begin CSS for homepage */
 
   .postlink {
@@ -657,11 +657,16 @@ img {
   }
 
   .nav-show {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
   }
-  
-  header {
-    /*min-height: 43px;*/
+
+  .nav-show ul li {
+    padding-top: 10px;
   }
 
   #mobile_view_header {
@@ -677,27 +682,29 @@ img {
     flex-direction: row;
   }
 
-  header img {
-    align-self: center;
-    padding-bottom: 10px;
-  }
-
   .headercontainer {
     flex-direction: column;
   }
 
   /* Set justify-content to center */
   .toprightmenu {
-    padding: 10px 0px;
+    padding: 0px;
     margin: 0px;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: auto;
+  }
+
+  #firstitem:after {
+    content: none;
+    padding-right: 0px;
   }
 
   /* Center main nav, keep center nav on bottom */
   .centernav {
-    order: 1;
-    align-self: center;
-    padding-top: 0px;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
   }
 
   .centernav li a {
