@@ -68,6 +68,7 @@ table {
   margin-left: auto;
   margin-right: auto;
   flex-direction: column;
+  padding-top: 62.727px;
 }
 
 .contentoverwrap {
@@ -92,18 +93,29 @@ table {
 
 /* Begin header styles */
 header {
-  padding: 0px 10px 0px 10px;
-  justify-content: space-between;
-  align-items: flex-start;
   background: white;
   margin-bottom: 20px;
-  border-bottom: 1px solid #e1e8ed;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  box-shadow: 0px 1px 5px #ccc;
+  height: 43px;
+  overflow-y: hidden;
+  transition-property: all;
+  transition-duration: .5s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.headercontainer {
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 992px;
+  margin: auto;
 }
 
 header img {
-  padding-top: 5px;
+  padding-top: 10px;
   height: 25px;
-  width: 25px;
 }
 
 .logocontainer {
@@ -115,11 +127,11 @@ header img {
 .toprightmenu {
   width: 215px;
   justify-content: flex-end;
-  padding: 10px 0px 10px 0px;
+  padding: 15px 0px 15px 0px;
 }
 
 .centernav {
-  padding: 10px 0px 10px 0px;
+  padding: 15px 0px 15px 0px;
 }
 
 /* Add pipe character after li with id of firstitem, add padding for equal spacing */
@@ -132,11 +144,15 @@ header img {
 .centernav li a {
   margin: 0px 15px;
   text-decoration: none;
+  -moz-transition: all .1s;
+  -o-transition: all .1s;
+  -webkit-transition: all .1s;
+  transition: all .1s;
 }
 
 /* Target the tagline with an id and assign some margins to align based */ 
 #tagline {
-  padding: 10px 0px 10px 10px;
+  padding: 15px 0px 15px 10px;
   width: 215px;
 }
 
@@ -223,12 +239,12 @@ aside {
   position: relative;
   border: none;
   color: white;
-  padding: 10px 0px;
+  padding: 5px 0px;
   border: 1px solid #314354;
   text-align: center;
   display: inline-block;
   margin: 5px 15px 10px 0px;
-  width: 100px;
+  width: 75px;
   cursor: pointer;
   border-radius: 4px;
   background: #6889a8; /* For browsers that do not support gradients */
@@ -297,8 +313,6 @@ aside {
 
 .postlink {
   width: 100%;
-  padding-left: 0px;
-  padding-right: 0px;
   margin: 0px 0px 20px 0px;
   width: 555px;
 }
@@ -407,7 +421,7 @@ textarea {
 .userstats ul {
   text-align: center;
   max-width: 300px;
-  padding: 10px 0px 10px 0px;
+  padding: 15px 0px 15px 0px;
 }
 
 .userstats li {
@@ -465,17 +479,21 @@ a:hover {
 }
 
 /* Keep anchor tags at bottom to define color styles */
+
 .toprightmenu a {
   color: #557594;
   text-decoration: none;
+  -moz-transition: all .1s;
+  -o-transition: all .1s;
+  -webkit-transition: all .1s;
+  transition: all .1s;
 }
 
 .centernav li a:hover, 
 .toprightmenu a:hover {
-  padding-bottom: 7px;
-  border-bottom: 3px solid #6889a8;
+  padding-bottom: 11px;
+  border-bottom: 4px solid #6889a8;
   color: #6889a8;
-  /*color: #3182BD;*/
 }
 
 img {
@@ -483,6 +501,24 @@ img {
 }
 
 @media (max-width: 992px) {
+
+  /* begin CSS for header */
+
+  .headercontainer {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .toprightmenu {
+    margin-right: 20px;
+  }
+
+  .logocontainer {
+    margin-left: 20px;
+  }
    
    /* begin CSS for homepage */
 
@@ -499,7 +535,6 @@ img {
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-    flex-direction: column;
   }
 
   .contentoverwrap {
@@ -589,7 +624,18 @@ img {
     margin-right: auto;
   }
 
-  header {
+  .logocontainer {
+    width: 215px;
+    margin: 0px;
+    flex-direction: column;
+  }
+
+  header img {
+    align-self: center;
+    padding-bottom: 10px;
+  }
+
+  .headercontainer {
     flex-direction: column;
     align-items: center;
   }
@@ -597,6 +643,7 @@ img {
   /* Set justify-content to center */
   .toprightmenu {
     padding: 10px 0px;
+    margin: 0px;
     justify-content: center;
   }
 
@@ -699,16 +746,5 @@ img {
     padding-bottom: 3px;
     border-bottom: 3px solid #6889a8;
     color: #6889a8;
-    /*color: #3182BD;*/
-  }
-
-  .logocontainer {
-    width: 215px;
-    flex-direction: column;
-  }
-
-  header img {
-    align-self: center;
-    padding-bottom: 10px;
   }
 }

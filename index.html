@@ -5,27 +5,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Twitter Clone</title>
-  <script type="text/javascript" src="post_a_status.js" defer></script>
-  <script type="text/javascript" src="reply.js" defer></script>
-  <script type="text/javascript" src="toggle.js" defer></script>
-</head>
+</head> 
 <body>
   <!-- Outermost container -->
     <!-- Header -->
-    <header class="flex-item">
-      <div class="logocontainer flex-item">
-        <img id="logo" src="https://maxcdn.icons8.com/wp-content/uploads/2014/01/octopus-128.png" alt="Impossible Octopus Fitness Club Logo">
-        <p id="tagline">Impossible Octopus Fitness</p>
+    <header>
+      <div class="headercontainer flex-item">
+        <div class="logocontainer flex-item">
+          <img id="logo" src="https://maxcdn.icons8.com/wp-content/uploads/2014/01/octopus-128.png" alt="Impossible Octopus Fitness Club Logo">
+          <p id="tagline">Impossible Octopus Fitness</p>
+        </div>
+        <ul class="centernav flex-item">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="mystatuses.html">My statuses</a></li>
+          <li><a href="allusers.html">All users</a></li>
+        </ul>
+        <ul class="toprightmenu flex-item">
+          <li id="firstitem"><a href="#">Edit my profile</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
       </div>
-      <ul class="centernav flex-item">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="mystatuses.html">My statuses</a></li>
-        <li><a href="allusers.html">All users</a></li>
-      </ul>
-      <ul class="toprightmenu flex-item">
-        <li id="firstitem"><a href="#">Edit my profile</a></li>
-        <li><a href="#">Logout</a></li>
-      </ul>
     </header>
     <!-- End Header -->
     <!-- Content Overwrap-->
@@ -153,5 +152,8 @@
   <div class="beta">
     <p>Welcome! Please bear in mind that this application is in beta.</p>
   </div>
+  <script type="text/javascript" src="post_a_status.js" defer></script>
+  <script type="text/javascript" src="reply.js" defer></script>
+  <script type="text/javascript" src="toggle.js" defer></script>
 </body>
 </html>
