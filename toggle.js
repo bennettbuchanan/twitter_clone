@@ -86,26 +86,30 @@ function imageTable() {
 	body.appendChild(div);
 	body.appendChild(table);
 
-	var j = 0;
-	while (j < 7){
+	var images = document.getElementsByTagName('img');
+	imageCount = images.length;
+
+	for(j = 0; j < imageCount; j++) {
 		var tr = document.createElement("tr");
-    	table.appendChild(tr);
-    	var th = document.createElement("th");
-    	tr.appendChild(th);
-    	var img = document.getElementsByTagName('img')[j];
-    	var clone = img.cloneNode(true);
-	    th.appendChild(clone);
-		j++;
+		table.appendChild(tr);
+		for(k = 0; k < 3; k++) {
+			var th = document.createElement("th");
+			tr.appendChild(th);
+			if (k == 0) {
+		    	var img = document.getElementsByTagName('img')[j];
+		    	var clone = img.cloneNode(true);
+			    th.appendChild(clone);
+			} else if (k == 1) {
+				var imgsrc = document.getElementsByTagName('img')[j].src;
+				var node = document.createTextNode(imgsrc);
+				th.appendChild(node);
+			} else if (k == 2) {
+				var alt = document.getElementsByTagName('img')[j].alt;
+				var node = document.createTextNode(alt);
+				th.appendChild(node);
+			}
+		}
 	}
-
-	// // get the alt text
-	// var alt = document.images[0].alt;
- //    document.getElementsByTagName('img').innerHTML = alt;
-
- //    // get the image source
-	// var src = document.images[0].src;
- //    document.getElementsByTagName('img').innerHTML = src;
-
 
 	// loop through child elements of body and append to the div
 	while (body.childNodes.length > 0) {
