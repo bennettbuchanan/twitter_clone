@@ -12,7 +12,7 @@ replyButton.addEventListener("click",function(e) {
 
 		function changeReply() {
 			// target the corresponding unique user id number
-			var status_post = document.getElementById('status_post_' + thisReply);
+			var status_post = document.getElementById('user_reply_' + thisReply);
 			status_post.toggle();
 		}
 	}

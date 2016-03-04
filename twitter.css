@@ -248,8 +248,8 @@ aside {
 .button {
   position: relative;
   border: none;
-  color: white;
   padding: 5px 0px;
+  color: white;
   border: 1px solid #314354;
   text-align: center;
   display: inline-block;
@@ -325,6 +325,7 @@ aside {
   width: 100%;
   margin: 0px 0px 20px 0px;
   width: 555px;
+  color: white;
 }
 
 /* Set styles for reply form */
