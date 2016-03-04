@@ -527,8 +527,6 @@ img {
   }
 
   header img {
-    align-self: center;
-    padding-bottom: 10px;
     margin-left: 20px;
   }
 
@@ -644,12 +642,29 @@ img {
     display: block;
     height: 25px;
     width: 25px;
-    margin: 10px 20px 10px 0px;
+    margin: 9px 20px 9px 0px;
     background-color: white;
     border-color: #ddd;
     align-self: flex-end;
-    border-radius: 4px; 
+    border-radius: 4px;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    cursor: pointer;
+    border: 1px solid #aeaeae;
   }
+
+  #nav-button:hover {
+    border: 1px solid #555555;
+  }
+
+  button {
+    border: 1px solid black;
+  }
+
+  /* remove blue focus outline */
+  button:focus {outline:0;}
 
   nav {
     display: none;

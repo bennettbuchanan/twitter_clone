@@ -5,38 +5,38 @@
   <link rel="stylesheet" type="text/css" href="twitter.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Twitter Clone</title>
+  <title>Impossible Octopus Fitness</title>
+  <link rel="shortcut icon" href="https://maxcdn.icons8.com/wp-content/uploads/2014/01/octopus-128.png" type="image/x-icon"/>
 </head>
-
-<body>
   <!-- Outermost container -->
   <!-- Header -->
-  <header>
-    <div class="headercontainer flex-item">
-      <div id="mobile_view_header">
-        <button id="nav-button"></button> 
-          <img id="logo" src="https://maxcdn.icons8.com/wp-content/uploads/2014/01/octopus-128.png" alt="Impossible Octopus Fitness Club Logo">
-      </div>
-      <nav>
-        <ul class="centernav flex-item">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="mystatuses.html">My statuses</a></li>
-          <li><a href="allusers.html">All users</a></li>
-        </ul>
-        <ul class="toprightmenu flex-item">
-          <li id="firstitem"><a href="#">Edit my profile</a></li>
-          <li><a href="#">Logout</a></li>
-        </ul>
-      </nav>
+<header>
+  <div class="headercontainer flex-item">
+    <div id="mobile_view_header">
+      <button id="nav-button"><span style="color: #aeaeae">&#9776;</span></button> 
+        <img id="logo" src="https://maxcdn.icons8.com/wp-content/uploads/2014/01/octopus-128.png" alt="Impossible Octopus Fitness Club Logo">
     </div>
-  </header>
+    <nav>
+      <ul class="centernav flex-item">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mystatuses.html">My statuses</a></li>
+        <li><a href="allusers.html">All users</a></li>
+      </ul>
+      <ul class="toprightmenu flex-item">
+        <li id="firstitem"><a href="#">Edit my profile</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<body>
     <!-- End Header -->
     <!-- Content Overwrap-->
   <div class="outercontainer flex-item">
     <div class="contentoverwrap flex-item">
       <!--Content -->
       <div class="statuscontentcontainer flex-item">
-        <a class="button postlink flex-item" href="javascript:postStatusForm();">Post a status!</a>
+        <a class="button postlink flex-item" href="javascript:post_form.toggle();">Post a status!</a>
         <div class="poststatus" id="post_form">
           <form method="get">
             <textarea name="status">What is your status?</textarea>
@@ -129,6 +129,7 @@
             </form>
           </div>
         </section>
+      <a style="margin-bottom: 20px" href="javascript: imageTable();">All images on this page</a>
       </div>
       <!--End Content Overwrap-->
       <!-- Aside -->

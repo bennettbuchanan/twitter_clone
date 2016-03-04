@@ -1,3 +1,1 @@
-function postStatusForm () {
-	toggle('post_form');
-};
+var post_form = document.getElementById('post_form');
