@@ -200,7 +200,7 @@ aside {
 .beta {
   position:fixed;
   height: auto;
-  background:white;
+  background:#6889a8;
   bottom: 0px;
   right: 0px;
   padding: 10px 10px 10px 0px;
@@ -215,6 +215,7 @@ aside {
   margin-right: 0px;
   margin-left: 10px;
   font-size: 80%;
+  color: white;
 }
 
 /* add button styles */
@@ -237,6 +238,9 @@ aside {
   -webkit-transition: all .3s;
   transition: all .3s;
 }
+
+/* remove blue focus outline */
+button:focus {outline:0;}
 
 /* Add hover pseudo class to button to change gradient */
 .button:hover{
@@ -308,7 +312,7 @@ aside {
   border-radius: 4px;
   background: #ddd;
   margin: 10px 0px;
-  padding: 20px 20px 20px 20px;
+  padding: 20px 20px 15px 20px;
   display: none;
 }
 

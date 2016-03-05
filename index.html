@@ -5,9 +5,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Twitter Clone</title>
-  <script type="text/javascript" src="post_a_status.js" defer></script>
-  <script type="text/javascript" src="reply.js" defer></script>
-  <script type="text/javascript" src="toggle.js" defer></script>
 </head>
 <body>
   <!-- Outermost container -->
@@ -33,7 +30,7 @@
     <div class="contentoverwrap flex-item">
       <!--Content -->
       <div class="statuscontentcontainer flex-item">
-        <a class="button postlink flex-item" href="javascript:postStatusForm();">Post a status!</a>
+        <button class="button postlink flex-item" id="post_button">Post a status!</button>
         <div class="poststatus" id="post_form">
           <form method="get">
             <textarea name="status">What is your status?</textarea>
@@ -51,9 +48,9 @@
           <p class="date">Feb 01</p>
           <p class="usertxt">Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra.</p>
           <p class="usertxt">
-            <a class="button reply_link" data-tag="0" href="javascript:;">Reply</a>
+            <button class="button reply_link" data-tag="0">Reply</button>
           </p>
-          <div class="reply_form" id="status_post_0">
+          <div class="reply_form" id="user_reply_0">
             <form method="get">
               <textarea name="status">Respond with a comment</textarea>
               <div class="locationdiv flex-item">
@@ -71,9 +68,9 @@
           <p class="date">Feb 01</p>
           <p class="usertxt">Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis. orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus cidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis. orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis.</p>
           <p class="usertxt">
-            <a class="button reply_link" data-tag="1" href="javascript:;">Reply</a>
+            <button class="button reply_link" data-tag="1">Reply</button>
           </p>
-          <div class="reply_form" id="status_post_1">
+          <div class="reply_form" id="user_reply_1">
             <form method="get">
               <textarea name="status">Respond with a comment</textarea>
               <div class="locationdiv flex-item">
@@ -91,9 +88,9 @@
           <p class="date">Feb 01</p>
           <p class="usertxt">Lorem ipsum netus aptent enim justo tincidunt proin.</p>
           <p class="usertxt">
-            <a class="button reply_link" data-tag="2" href="javascript:;">Reply</a>
+            <button class="button reply_link" data-tag="2">Reply</button>
           </p>
-          <div class="reply_form" id="status_post_2">
+          <div class="reply_form" id="user_reply_2">
             <form method="get">
               <textarea name="status">Respond with a comment</textarea>
               <div class="locationdiv flex-item">
@@ -112,9 +109,9 @@
           <p class="usertxt">Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis. orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis. orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla tor enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis. orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis
           </p>
           <p class="usertxt">
-            <a class="button reply_link" data-tag="3" href="javascript:;">Reply</a>
+            <button class="button reply_link" data-tag="3">Reply</button>
           </p>
-          <div class="reply_form" id="status_post_3">
+          <div class="reply_form" id="user_reply_3">
             <form method="get">
               <textarea name="status">Respond with a comment</textarea>
               <div class="locationdiv flex-item">
@@ -153,5 +150,8 @@
   <div class="beta">
     <p>Welcome! Please bear in mind that this application is in beta.</p>
   </div>
+  <script type="text/javascript" src="post_a_status.js"></script>
+  <script type="text/javascript" src="reply.js"></script>
+  <script type="text/javascript" src="toggle.js"></script>
 </body>
 </html>

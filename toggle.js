@@ -1,8 +1,8 @@
-function toggle(id) {
-    var elem = document.getElementById(id).style;
-    if (elem.display == '' || elem.display == "none") {
-        elem.display = "block";
+// define the prototype for the toggle function
+HTMLElement.prototype.toggle = function() {
+	if (this.style.display == '' || this.style.display == "none") {
+        this.style.display = "block";
     } else {
-        elem.display = "none";
+        this.style.display = "none";
     }
 }

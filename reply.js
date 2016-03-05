@@ -11,8 +11,9 @@ replyButton.addEventListener("click",function(e) {
 		changeReply();
 
 		function changeReply() {
-			// target the corresponding unique user id number 
-			toggle("status_post_" + thisReply);
+			// target the corresponding unique user id number
+			var status_post = document.getElementById('user_reply_' + thisReply);
+			status_post.toggle();
 		}
 	}
 });
