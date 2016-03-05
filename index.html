@@ -38,13 +38,14 @@
       <div class="statuscontentcontainer flex-item">
         <button class="button postlink flex-item" id="post_button">Post a status!</button>
         <div class="poststatus" id="post_form">
-          <form method="get">
+          <form method="get" id="post_status">
             <textarea name="status">What is your status?</textarea>
             <div class="locationdiv flex-item">
               <div>
-                <input class="location" type="checkbox" name="location" value="yes"> Include Location
+                <input class="location" type="checkbox" name="location" value="true"> Include Location
               </div>
-              <input id="postbutton" type="submit" value="Post">
+              <input id="submit_button" type="submit" value="Post">
+
             </div>
           </form>
         </div>
@@ -63,7 +64,7 @@
                 <div>
                   <input class="location" type="checkbox" name="location" value="yes"> Add Emoji
                 </div>
-                <input class="replybutton" type="submit" value="Reply">
+                <input class="replybutton" id="testy" type="submit" value="Reply">
               </div>
             </form>
           </div>

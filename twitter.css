@@ -264,6 +264,9 @@ aside {
   transition: all .3s;
 }
 
+/* remove blue focus outline */
+button:focus {outline:0;}
+
 /* Add hover pseudo class to button to change gradient */
 .button:hover{
   color: white;
@@ -671,9 +674,6 @@ img {
   button {
     border: 1px solid black;
   }
-
-  /* remove blue focus outline */
-  button:focus {outline:0;}
 
   nav {
     display: none;
