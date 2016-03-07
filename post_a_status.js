@@ -25,7 +25,7 @@ document.getElementById('post_status').onsubmit = function() {
 
 		function showPosition(position) {
 		    var y = "Latitude: " + position.coords.latitude + 
-		    "Longitude: " + position.coords.longitude;	
+		    " Longitude: " + position.coords.longitude;	
 		    alert("Your status was posted from " + y + "!");
 		}
 	    
