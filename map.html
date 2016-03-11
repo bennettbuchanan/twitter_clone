@@ -43,6 +43,15 @@
     // Show default controls as well as the Context Menu control
     var ui = H.ui.UI.createDefault(map, defaultLayers);
 
+    // Add zoomrectangle UI feature
+    var name = 'zoomrectangle';
+    var control = new H.ui.ZoomRectangle;
+    ui.addControl(name, control);
+
+    var zoomrectangle = ui.getControl('zoomrectangle');
+
+    zoomrectangle.setAlignment('right-middle');
+
     // convert screen coordinates to latitude and longitude
   
     map.addEventListener('contextmenu', function (evt) {
