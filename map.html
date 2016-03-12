@@ -25,6 +25,9 @@
     'app_code': 'uCOn-OvM4sk1JUxyb7BYuA'
     });
 
+    // Retrieve the target element for the map:
+    var targetElement = document.getElementById('mapContainer');
+
     // Get the default map types from the Platform object:
     var defaultLayers = platform.createDefaultLayers();
 
@@ -44,26 +47,54 @@
     var ui = H.ui.UI.createDefault(map, defaultLayers);
 
     // Add zoomrectangle UI feature
-    var name = 'zoomrectangle';
-    var control = new H.ui.ZoomRectangle;
-    ui.addControl(name, control);
+    ui.addControl('zoomrectangle', new H.ui.ZoomRectangle);
 
     var zoomrectangle = ui.getControl('zoomrectangle');
-
     zoomrectangle.setAlignment('right-middle');
 
-    // convert screen coordinates to latitude and longitude
-  
-    map.addEventListener('contextmenu', function (evt) {
-      var coord = map.screenToGeo(evt.viewportX,
-              evt.viewportY);
-      console.log('Clicked at ' + Math.abs(coord.lat.toFixed(4)) +
-          ((coord.lat > 0) ? 'N' : 'S') +
-          ' ' + Math.abs(coord.lng.toFixed(4)) +
-           ((coord.lng > 0) ? 'E' : 'W'));
-    });
+    map.addEventListener('contextmenu', onContextMenuRequested);
 
-    
+    function onContextMenuRequested(e) {
+
+      e.items.push(new H.util.ContextItem({
+        label: 'Zoom in',
+        callback: function() {
+          map.setZoom(map.getZoom() + 1);
+        }
+      }));
+
+      var coord = map.screenToGeo(e.viewportX, e.viewportY);
+      var gc = platform.getGeocodingService()
+      var rgcParams = {
+          prox: Math.abs(coord.lat.toFixed(4)) +
+          ',-' + Math.abs(coord.lng.toFixed(4)),
+          mode: 'retrieveAddresses',
+          maxresults: 1
+      };
+
+      var contextMenuEvent = new H.mapevents.ContextMenuEvent;
+      var currentTarget = H.map.Object;
+
+      /**
+       * Processes reverse geocoder response and
+       * adds a context menu item showing the associated address.
+       */
+      function onRGCResult(result, contextMenuEvent) {
+        var addressLabel = result.Response.View[0].Result[0]; // TODO: find the response JSON path to get the address label.
+        console.log(addressLabel.Location.Address.Label);
+        contextMenuEvent.items.push(addressLabel); // TODO: add the address label as a context menu item.
+        // Dispatch the context menu event again for all attached listeners to act with new added item(s).
+        contextMenuEvent.currentTarget.dispatchEvent(contextMenuEvent);
+      }
+
+      // Send the RGC request over.
+      gc.reverseGeocode(rgcParams, function(result) {
+        onRGCResult(result, contextMenuEvent);
+      }, function(error) {
+        console.log(error);
+      });
+    };
+
     window.addEventListener('resize', function () {
     map.getViewPort().resize(); 
     });
