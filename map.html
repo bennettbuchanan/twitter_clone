@@ -82,7 +82,7 @@
       function onRGCResult(result, contextMenuEvent) {
         var addressLabel = result.Response.View[0].Result[0]; // TODO: find the response JSON path to get the address label.
         console.log(addressLabel.Location.Address.Label);
-        contextMenuEvent.items.push(addressLabel); // TODO: add the address label as a context menu item.
+        contextMenuEvent.items.push(addressLabel.Location.Address.Label); // TODO: add the address label as a context menu item.
         // Dispatch the context menu event again for all attached listeners to act with new added item(s).
         contextMenuEvent.currentTarget.dispatchEvent(contextMenuEvent);
       }
