@@ -1,0 +1,70 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#3556cc",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#5a7bd3",
+        "fill-opacity": 0.5
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.4253749847412,
+              37.80442672408664
+            ],
+            [
+              -122.4258041381836,
+              37.80659678769507
+            ],
+            [
+              -122.42752075195314,
+              37.8080208572836
+            ],
+            [
+              -122.4290657043457,
+              37.8080208572836
+            ],
+            [
+              -122.43035316467285,
+              37.80659678769507
+            ],
+            [
+              -122.43198394775389,
+              37.805783021314504
+            ],
+            [
+              -122.43155479431152,
+              37.80361293379383
+            ],
+            [
+              -122.4253749847412,
+              37.80442672408664
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#5d88e2",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "description": "98 Battery Street #402 San Francisco, CA 94111"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.399582862854,
+          37.792070557153494
+        ]
+      }
+    }
+  ]
+}
