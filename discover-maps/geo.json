@@ -1,1 +1,70 @@
-{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"id":"marker-ilqxfvyy0","title":"","description":"98 Battery Street #402 San Francisco, CA 94111","marker-size":"medium","marker-color":"#1087bf","marker-symbol":""},"geometry":{"coordinates":[-122.399609,37.792062],"type":"Point"},"id":"45a73a7979cc3703fafc3418d8477248"},{"type":"Feature","properties":{"title":"","description":"","stroke":"#1087bf","stroke-width":4,"stroke-opacity":1,"fill":"#1087bf","fill-opacity":0.20000000298023224},"geometry":{"coordinates":[[[-122.431983,37.805443],[-122.429924,37.806562],[-122.429451,37.807851],[-122.42825,37.808359],[-122.426705,37.808054],[-122.426018,37.806698],[-122.425417,37.804358],[-122.43164,37.803545],[-122.431983,37.805443]]],"type":"Polygon"},"id":"b8eb4c2674833c16224fd6166970e267"}],"id":"bennettbuchanan.pda7285b"}
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#3556cc",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#5a7bd3",
+        "fill-opacity": 0.5
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -122.4253749847412,
+              37.80442672408664
+            ],
+            [
+              -122.4258041381836,
+              37.80659678769507
+            ],
+            [
+              -122.42752075195314,
+              37.8080208572836
+            ],
+            [
+              -122.4290657043457,
+              37.8080208572836
+            ],
+            [
+              -122.43035316467285,
+              37.80659678769507
+            ],
+            [
+              -122.43198394775389,
+              37.805783021314504
+            ],
+            [
+              -122.43155479431152,
+              37.80361293379383
+            ],
+            [
+              -122.4253749847412,
+              37.80442672408664
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#5d88e2",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "Address": "98 Battery Street #402 San Francisco, CA 94111"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.399582862854,
+          37.792070557153494
+        ]
+      }
+    }
+  ]
+}
