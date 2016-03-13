@@ -56,7 +56,7 @@
         "marker-color": "#5d88e2",
         "marker-size": "medium",
         "marker-symbol": "",
-        "description": "98 Battery Street #402 San Francisco, CA 94111"
+        "98 Battery Street #402 San Francisco, CA 94111": ""
       },
       "geometry": {
         "type": "Point",
