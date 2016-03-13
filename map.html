@@ -56,13 +56,6 @@
 
     function onContextMenuRequested(e) {
 
-      e.items.push(new H.util.ContextItem({
-        label: 'Zoom in',
-        callback: function() {
-          map.setZoom(map.getZoom() + 1);
-        }
-      }));
-
       var coord = map.screenToGeo(e.viewportX, e.viewportY);
       var gc = platform.getGeocodingService()
       var rgcParams = {
@@ -72,28 +65,38 @@
           maxresults: 1
       };
 
-      var contextMenuEvent = new H.mapevents.ContextMenuEvent;
-      var currentTarget = H.map.Object;
+      var contextMenuEvent = new H.mapevents.ContextMenuEvent(e.viewportX, e.viewportY);
+
+      contextMenuEvent.currentTarget = map;
+
+      // Send the RGC request over.
+        gc.reverseGeocode(rgcParams, function(result)  {
+          onRGCResult(result, contextMenuEvent); 
+        }, function(error) {
+          console.log(error);
+        });
+      };
 
       /**
        * Processes reverse geocoder response and
        * adds a context menu item showing the associated address.
        */
       function onRGCResult(result, contextMenuEvent) {
+
+        // var currentTarget = result;
+
         var addressLabel = result.Response.View[0].Result[0]; // TODO: find the response JSON path to get the address label.
-        console.log(addressLabel.Location.Address.Label);
-        contextMenuEvent.items.push(addressLabel.Location.Address.Label); // TODO: add the address label as a context menu item.
+        
+        contextMenuEvent.items.push(new H.util.ContextItem({
+        label: addressLabel.Location.Address.Label,
+        })); // TODO: add the address label as a context menu item.
+
         // Dispatch the context menu event again for all attached listeners to act with new added item(s).
         contextMenuEvent.currentTarget.dispatchEvent(contextMenuEvent);
+        contextMenuEvent.stopPropagation();
       }
 
-      // Send the RGC request over.
-      gc.reverseGeocode(rgcParams, function(result) {
-        onRGCResult(result, contextMenuEvent);
-      }, function(error) {
-        console.log(error);
-      });
-    };
+
 
     window.addEventListener('resize', function () {
     map.getViewPort().resize(); 
