@@ -1,106 +1,144 @@
 <!doctype html>
 <html>
   <head>
-  <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-  <script src="http://js.api.here.com/v3/3.0/mapsjs-core.js"
-  type="text/javascript" charset="utf-8"></script>
-  <script src="http://js.api.here.com/v3/3.0/mapsjs-service.js"
-  type="text/javascript" charset="utf-8"></script>
-  <script src="http://js.api.here.com/v3/3.0/mapsjs-ui.js" 
-  type="text/javascript" charset="utf-8"></script>
-  <script type="text/javascript" charset="UTF-8"
-  src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
-  <link rel="stylesheet" type="text/css" 
-  href="http://js.api.here.com/v3/3.0/mapsjs-ui.css" />
-  <link rel="stylesheet" type="text/css" href="mapstyles.css" />
-
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <script src="http://js.api.here.com/v3/3.0/mapsjs-core.js"
+    type="text/javascript" charset="utf-8"></script>
+    <script src="http://js.api.here.com/v3/3.0/mapsjs-service.js"
+    type="text/javascript" charset="utf-8"></script>
+    <script src="http://js.api.here.com/v3/3.0/mapsjs-ui.js" 
+    type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="UTF-8"
+    src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
+    <link rel="stylesheet" type="text/css" 
+    href="http://js.api.here.com/v3/3.0/mapsjs-ui.css" />
+    <link rel="stylesheet" type="text/css" href="mapstyles.css" />
   </head>
-
   <body>
-  <div id="mapContainer"></div>
-  <script>
-    // Initialize the platform object:
-    var platform = new H.service.Platform({
-    'app_id': 'BnxbMebCVHCQiMmCvjRo',
-    'app_code': 'uCOn-OvM4sk1JUxyb7BYuA'
-    });
+    <div id="mapContainer"></div>
+    <script>
+      // Initialize the platform object:
+      var platform = new H.service.Platform({
+      'app_id': 'BnxbMebCVHCQiMmCvjRo',
+      'app_code': 'uCOn-OvM4sk1JUxyb7BYuA'
+      });
 
-    // Retrieve the target element for the map:
-    var targetElement = document.getElementById('mapContainer');
+      // Retrieve the target element for the map:
+      var targetElement = document.getElementById('mapContainer');
 
-    // Get the default map types from the Platform object:
-    var defaultLayers = platform.createDefaultLayers();
+      // Get the default map types from the Platform object:
+      var defaultLayers = platform.createDefaultLayers();
 
-    // Instantiate the map:
-    var map = new H.Map(
-    document.getElementById('mapContainer'),
-    defaultLayers.normal.map,
-    {
-      zoom: 16,
-      center: { lat: 37.792331, lng: -122.399314 }
-    });
+      // Instantiate the map:
+      var map = new H.Map(
+      document.getElementById('mapContainer'),
+      defaultLayers.normal.map,
+      {
+        zoom: 16,
+        center: { lat: 37.792331, lng: -122.399314 }
+      });
 
-    // Enable map events, like "contextmenu"
-    var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+      // Enable map events, like "contextmenu"
+      var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
 
-    // Show default controls as well as the Context Menu control
-    var ui = H.ui.UI.createDefault(map, defaultLayers);
+      // Show default controls as well as the Context Menu control
+      var ui = H.ui.UI.createDefault(map, defaultLayers);
 
-    // Add zoomrectangle UI feature
-    ui.addControl('zoomrectangle', new H.ui.ZoomRectangle);
+      // Add zoomrectangle UI feature
+      ui.addControl('zoomrectangle', new H.ui.ZoomRectangle);
 
-    var zoomrectangle = ui.getControl('zoomrectangle');
-    zoomrectangle.setAlignment('right-middle');
+      var zoomrectangle = ui.getControl('zoomrectangle');
+      zoomrectangle.setAlignment('right-middle');
 
-    map.addEventListener('contextmenu', onContextMenuRequested);
+      /*
+       * Processes reverse geocoder response and
+       * adds a context menu item showing the associated address.
+       */
+      function onRGCResult(result, e) {
+        var addressLabel = result.Response.View[0].Result[0];         
+        e.items.push(new H.util.ContextItem({
+        label: addressLabel.Location.Address.Label,
+        }));
 
-    function onContextMenuRequested(e) {
+        // Dispatch the context menu event again for all attached listeners
+        e.currentTarget.dispatchEvent(e);
+        e.stopPropagation();
+      }
 
-      var coord = map.screenToGeo(e.viewportX, e.viewportY);
-      var gc = platform.getGeocodingService()
-      var rgcParams = {
-          prox: Math.abs(coord.lat.toFixed(4)) +
-          ',-' + Math.abs(coord.lng.toFixed(4)),
-          mode: 'retrieveAddresses',
-          maxresults: 1
-      };
+      function onContextMenuRequested(e) {
+        var coord = map.screenToGeo(e.viewportX, e.viewportY);
+        var gc = platform.getGeocodingService();
+        var rgcParams = {
+            prox: coord.lat + ", " + coord.lng,
+            mode: 'retrieveAddresses',
+            maxresults: 1
+        };
 
-      var contextMenuEvent = new H.mapevents.ContextMenuEvent(e.viewportX, e.viewportY);
-
-      contextMenuEvent.currentTarget = map;
-
-      // Send the RGC request over.
+        // Send the RGC request over.
         gc.reverseGeocode(rgcParams, function(result)  {
-          onRGCResult(result, contextMenuEvent); 
+          onRGCResult(result, e); 
         }, function(error) {
           console.log(error);
         });
       };
 
-      /**
-       * Processes reverse geocoder response and
-       * adds a context menu item showing the associated address.
-       */
-      function onRGCResult(result, contextMenuEvent) {
+      // Add eventlistener for contextmenu event.
+      map.addEventListener('contextmenu', onContextMenuRequested);
 
-        // var currentTarget = result;
+      function onMapTap(e) {
+        var coord = map.screenToGeo(e.currentPointer.viewportX, e.currentPointer.viewportY);
 
-        var addressLabel = result.Response.View[0].Result[0]; // TODO: find the response JSON path to get the address label.
-        
-        contextMenuEvent.items.push(new H.util.ContextItem({
-        label: addressLabel.Location.Address.Label,
-        })); // TODO: add the address label as a context menu item.
+        // Create the parameters for the routing request:
+        var routingParams = {
+          'mode': 'fastest;pedestrian',
+          'start': coord.lat + ", " + coord.lng,
+          'time': 'PT0H10M',
+        };
 
-        // Dispatch the context menu event again for all attached listeners to act with new added item(s).
-        contextMenuEvent.currentTarget.dispatchEvent(contextMenuEvent);
-        contextMenuEvent.stopPropagation();
-      }
+        // Define a callback function to process the isoline response.
+        var onResult = function(result) {
+        var center = new H.geo.Point(
+          result.Response.Center.Latitude,
+          result.Response.Center.Longitude),
+          isolineCoords = result.Response.isolines[0].value,
+          strip = new H.geo.Strip(),
+          isolinePolygon,
+          isolineCenter;
 
+        // Add the returned isoline coordinates to a strip:
+        isolineCoords.forEach(function(coords) {
+        strip.pushLatLngAlt.apply(strip, coords.split(','));
+        });
 
+        // Create a polygon and a marker representing the isoline:
+        isolinePolygon = new H.map.Polygon(strip);
+        isolineCenter = new H.map.Marker(center);
 
-    window.addEventListener('resize', function () {
-    map.getViewPort().resize(); 
-    });
-  </script>
+        // Add the polygon and marker to the map:
+        map.addObjects([isolineCenter, isolinePolygon]);
+        // Center and zoom the map so that the whole isoline polygon is
+        // in the viewport:
+        map.setViewBounds(isolinePolygon.getBounds());
+        };
+
+        // Get an instance of the enterprise routing service:
+        var enterpriseRouter = platform.getEnterpriseRoutingService();
+
+        // Call the Enterprise Routing API to calculate an isoline:
+        enterpriseRouter.calculateIsoline(
+          routingParams,
+          onResult,
+          function(error) {
+          alert(error.message);
+          });
+      };
+
+      // Add event listener to add isoline routing.
+      map.addEventListener('tap', onMapTap);
+
+      window.addEventListener('resize', function () {
+      map.getViewPort().resize(); 
+      });
+    </script>
   </body>
 </html>
