@@ -3,7 +3,7 @@ window.addEventListener("scroll", function scrollDirection() {
     var header = document.getElementsByTagName('header')[0];
     var diffY = scrollDirection.y - window.pageYOffset;
     // do not change header on mobile view
-    if (window.pageYOffset > 0 && window.innerWidth > 768) {
+    if (window.pageYOffset > 40 && window.innerWidth > 768) {
         if (diffY < 0) {
             header.className = 'header-hide';
         } else if (diffY > 0) {

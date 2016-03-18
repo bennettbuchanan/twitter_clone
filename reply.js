@@ -6,14 +6,14 @@ content_container.addEventListener("click",function(e) {
   	if (e.target.matches(".reply_link")) {
 	  	// store this clicked element in a numerical variable
 	  	var thisReply = e.target.dataset.tag;
-  		// call changeReply function
-		changeReply();
 
 		function changeReply() {
 			// target the corresponding unique user id number
 			var status_post = document.getElementById('user_reply_' + thisReply);
 			status_post.toggle();
 		}
+    // call changeReply function
+    changeReply();
 	}
 });
 
