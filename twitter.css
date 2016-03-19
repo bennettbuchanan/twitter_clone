@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
 v2.0 | 20110126
 License: none (public domain)
 */
@@ -12,8 +12,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
@@ -23,12 +23,12 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
   /* change font from default */
-  font-family: Verdana, sans-serif; 
+  font-family: Verdana, sans-serif;
   color: #222222;
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
@@ -63,7 +63,7 @@ table {
 }
 
 /* begin container styles */
-.outercontainer { 
+.outercontainer {
   width: 992px;
   margin-left: auto;
   margin-right: auto;
@@ -118,14 +118,14 @@ header {
 }
 
 #nav-button {
-  display: none;  
+  display: none;
 }
 
 nav {
   display: flex;
   width: 100%;
   justify-content: inherit;
-  
+
 }
 
 header img {
@@ -151,7 +151,7 @@ header img {
   padding-right: 5px;
 }
 
-/* Target individual menu items to create appropriate spacing and styling */ 
+/* Target individual menu items to create appropriate spacing and styling */
 .centernav li a {
   margin: 0px 15px;
   text-decoration: none;
@@ -161,7 +161,7 @@ header img {
   transition: all .1s;
 }
 
-/* Target the tagline with an id and assign some margins to align based */ 
+/* Target the tagline with an id and assign some margins to align based */
 #tagline {
   padding: 15px 0px 15px 10px;
   width: 215px;
@@ -278,7 +278,22 @@ button:focus {outline:0;}
 
 /* Add active pseudo to change colors when a user clicks on the button */
 .button:active {
-  background:  #47617c; 
+  background:  #47617c;
+}
+
+.call_to_action {
+  width: 200px;
+  background: #FF7679;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+
+.call_to_action:hover {
+  background: #D16163;
+}
+
+.call_to_action:active {
+  background: #B85557;
 }
 
 #postbutton {
@@ -346,7 +361,7 @@ button:focus {outline:0;}
   display: none;
 }
 
-#geolocation, 
+#geolocation,
 #geolocation_text {
   display: inline!important;
 }
@@ -511,7 +526,7 @@ a:hover {
   transition: all .1s;
 }
 
-.centernav li a:hover, 
+.centernav li a:hover,
 .toprightmenu a:hover {
   padding-bottom: 11px;
   border-bottom: 4px solid #6889a8;
@@ -616,7 +631,7 @@ img {
     margin: 0px 5px 20px 10px;
   }
 
-  .statuspost { 
+  .statuspost {
     width: 99%;
     margin: 0px 0px 20px 0px;
   }
@@ -641,6 +656,9 @@ img {
     margin-left: 20px;
   }
 
+  .call_to_action {
+    margin-left: 20px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -746,7 +764,7 @@ img {
     text-decoration: none;
   }
 
-  /* redefine margin, width, and padding for proper layout */ 
+  /* redefine margin, width, and padding for proper layout */
   #tagline {
     margin: 0px;
     padding: 0px 10px 0px 10px;
@@ -767,7 +785,7 @@ img {
     width: auto;
     margin: 20px 20px 0px 20px;
   }
-  
+
   /* add bottom margin to push profile image down */
   .beta {
     margin: 0px;
@@ -809,25 +827,25 @@ img {
     overflow: hidden;
     width: 99%;
   }
-  
+
   .postcontainer {
     width: 99%;
     margin: 0px 5px 20px 10px;
   }
-  
+
   .statuspost {
     width: 99%;
     margin: 0px 0px 20px 0px;
   }
   /* adjust to 99% relative to container add margin for spacing*/
-  
+
   .alluserswrapper {
     padding: 0 10px 0 10px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
   }
-  
+
   .centernav li a:hover,
   .toprightmenu a:hover {
     padding-bottom: 3px;
