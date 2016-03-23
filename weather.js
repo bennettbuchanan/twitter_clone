@@ -6,7 +6,7 @@ function getData(data) {
 
 var weather_button = document.getElementById('update_weather');
 weather_button.addEventListener("click", function() {
-  // Remove default content of weather span. 
+  // Remove default content of weather span.
   var myNode = document.getElementById("weather");
   myNode.innerHTML = '';
   // Append script to DOM for fetching data with callback.
