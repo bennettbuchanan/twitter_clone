@@ -341,6 +341,11 @@ button:focus {outline:0;}
   border: 1px solid #ccc;
 }
 
+.weather {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .postlink {
   width: 100%;
   margin: 0px 0px 20px 0px;

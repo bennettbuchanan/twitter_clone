@@ -35,7 +35,6 @@
     <div class="contentoverwrap flex-item">
       <!--Content -->
       <div class="statuscontentcontainer flex-item">
-        <p>It's <span id="weather"></span> today!</p>
         <button class="button postlink flex-item" id="post_button">Post a status!</button>
         <div class="poststatus" id="post_form">
           <form method="get" id="post_status">
@@ -48,6 +47,7 @@
             </div>
           </form>
         </div>
+        <p class="weather">It's <span id="weather"></span> today!</p>
         <section class="statuscontent">
           <img src="http://s19.postimg.org/t38mrbb0f/gus.jpg" alt="Gus image" class="userimage">
           <h1 class="username">Gus</h1>
@@ -293,9 +293,9 @@
             <p class="usertxt">{{post_text}}
             </p>
             <p class="usertxt">
-              <button class="button reply_link" data-tag="11">Reply</button>
+              <button class="button reply_link" data-tag="{{data_tag}}">Reply</button>
             </p>
-            <div class="reply_form" id="user_reply_11">
+            <div class="reply_form" id="user_reply_{{data_tag}}">
               <form method="get">
                 <textarea name="status">Respond with a comment</textarea>
                 <div class="locationdiv flex-item">
