@@ -23,6 +23,12 @@ document.body.appendChild(script);
 
     console.log(contextObject.statuses[0])
     console.log(contextObject.statuses);
+    console.log(contextObject.last_page);
+
+    if(contextObject.last_page == true) {
+      var moreButton = document.getElementById('extra_statuses_button');
+      moreButton.style.display = "none";
+    }
 
     // Loop through each item in the JSON array and create new div for a post.
     for (var i = 0; i < contextObject.statuses.length; i++) {
@@ -45,5 +51,24 @@ document.body.appendChild(script);
       xhttp.send();
   }
 
-  // Define our data object
-  var context = locationGet('/statuses-1.json', fetchJSON);
+  // Set variable to count how many pages to load;
+  var i = 1;
+
+  var load_statuses = document.getElementById("extra_statuses_button");
+
+  load_statuses.addEventListener("click", function() {
+    this.style.background = '#9C9898';
+    this.disabled = true;
+    this.style.cursor = 'not-allowed';
+    locationGet('/statuses-' + i + '.json', fetchJSON);
+    revertColor();
+    i++;
+  });
+
+  function revertColor () {
+    setTimeout(function() {
+      load_statuses.style.background = '#FF7679';
+      load_statuses.disabled = false;
+      load_statuses.style.cursor = 'pointer';
+    }, 2000);
+  }
