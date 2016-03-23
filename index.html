@@ -35,6 +35,7 @@
     <div class="contentoverwrap flex-item">
       <!--Content -->
       <div class="statuscontentcontainer flex-item">
+        <p>It's <span id="weather"></span> today!</p>
         <button class="button postlink flex-item" id="post_button">Post a status!</button>
         <div class="poststatus" id="post_form">
           <form method="get" id="post_status">
@@ -277,6 +278,33 @@
         </section>
         <div id="extra_statuses">
         </div>
+        <!--Data will be inserted in its according place, replacing the brackets.-->
+        <script id="user-template" type="text/x-handlebars-template">
+          <section class="statuscontent">
+            <img src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User image" class="userimage">
+            <h1 class="username">{{city}}</h1>
+            <p class="date">Feb 01</p>
+            <p class="usertxt">Lorem ipsum netus aptent enim justo lobortis orci ac volutpat nisl quis. orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus tincidunttis, lobortis
+            </p>
+            <p class="usertxt">
+              <button class="button reply_link" data-tag="11">Reply</button>
+            </p>
+            <div class="reply_form" id="user_reply_11">
+              <form method="get">
+                <textarea name="status">Respond with a comment</textarea>
+                <div class="locationdiv flex-item">
+                  <div>
+                    <input class="location" type="checkbox" name="location" value="yes"> Add Emoji
+                  </div>
+                  <input class="replybutton" type="submit" value="Reply">
+                </div>
+              </form>
+            </div>
+          </section>
+        </script>
+
+        <!--Your new content will be displayed in here-->
+        <div id="content-placeholder"></div>
         <button type="button" class="button call_to_action" id="extra_statuses_button">See more statuses</button>
         <!-- <a id="image_table" href="#">All images on this page</a> -->
       </div>
@@ -306,14 +334,17 @@
   <div class="beta">
     <p>Welcome! Please bear in mind that this application is in beta.</p>
   </div>
-  <script type="text/javascript" src="all_images_data.js" defer></script>
+  <!-- <script type="text/javascript" src="all_images_data.js" defer></script> -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
   <script type="text/javascript" src="ajax.js" defer></script>
   <script type="text/javascript" src="load_more.js" defer></script>
   <script type="text/javascript" src="post_a_status.js" defer></script>
   <script type="text/javascript" src="sticky_smart_header.js" defer></script>
   <script type="text/javascript" src="geolocation.js" defer></script>
+  <script type="text/javascript" src="weather.js" defer></script>
   <script type="text/javascript" src="reply.js" defer></script>
   <script type="text/javascript" src="toggle.js" defer></script>
   <script type="text/javascript" src="geolocation_progressive_enhancement.js" defer></script>
+  <script type="text/javascript" src="statuses-1.json"</script>
 </body>
 </html>
