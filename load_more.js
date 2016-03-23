@@ -1,17 +1,19 @@
 var load_statuses = document.getElementById("extra_statuses_button");
 
+// Change button to loading state styles.
 load_statuses.addEventListener("click", function() {
-  this.style.background = '#9C9898';
+  this.classList.add('load_button');
+  this.classList.remove('call_to_action');
   this.disabled = true;
-  this.style.cursor = 'not-allowed';
   ajaxGet('/statuses-1.html', onSuccess);
   revertColor();
 });
 
+// Remove loading state styles once content is loaded.
 function revertColor () {
   setTimeout(function() {
-    load_statuses.style.background = '#FF7679';
+    load_statuses.classList.add('call_to_action');
+    load_statuses.classList.remove('load_button');
     load_statuses.disabled = false;
-    load_statuses.style.cursor = 'pointer';
   }, 2000);
 }

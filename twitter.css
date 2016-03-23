@@ -281,6 +281,16 @@ button:focus {outline:0;}
   background:  #47617c;
 }
 
+.load_button,
+.load_button:hover,
+.load_button:active {
+  width: 200px;
+  background: #9C9898;
+  margin-bottom: 20px;
+  margin-top: 0px;
+  cursor: not-allowed;
+}
+
 .call_to_action {
   width: 200px;
   background: #FF7679;

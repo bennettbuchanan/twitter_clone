@@ -1,8 +1,10 @@
+// Add file contents to DOM. 
 function onSuccess(content) {
   console.log(typeof content);
   document.getElementById("extra_statuses").innerHTML = content;
 }
 
+// Make Ajax GET request to file.
 function ajaxGet(url, onSuccess) {
   setTimeout(function() {
     var xhttp;
