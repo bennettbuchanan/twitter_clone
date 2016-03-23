@@ -4,16 +4,19 @@
   <link rel="stylesheet" type="text/css" href="twitter.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Twitter Clone</title>
+  <title>Impossible Octopus Fitness</title>
+  <link rel="shortcut icon" href="https://maxcdn.icons8.com/wp-content/uploads/2014/01/octopus-128.png" type="image/x-icon"/>
 </head>
 <body>
   <!-- Outermost container -->
-    <!-- Header -->
-    <header class="flex-item">
-      <div class="logocontainer flex-item">
-        <img id="logo" src="http://m.rgbimg.com/cache1nUobR/users/r/re/redfloor/600/mlDwaD2.jpg" alt="Impossible Octopus Fitness Club Logo">
-        <p id="tagline">Impossible Octopus Fitness</p>
-      </div>
+  <!-- Header -->
+<header id="temp">
+  <div class="headercontainer flex-item">
+    <div id="mobile_view_header">
+      <button id="nav-button"><span style="color: #aeaeae">&#9776;</span></button>
+        <img id="logo" src="https://maxcdn.icons8.com/wp-content/uploads/2014/01/octopus-128.png" alt="Impossible Octopus Fitness Club Logo">
+    </div>
+    <nav class="nav-background">
       <ul class="centernav flex-item">
         <li><a href="index.html">Home</a></li>
         <li><a href="mystatuses.html">My statuses</a></li>
@@ -23,7 +26,9 @@
         <li id="firstitem"><a href="#">Edit my profile</a></li>
         <li><a href="#">Logout</a></li>
       </ul>
-    </header>
+    </nav>
+  </div>
+</header>
     <!-- End Header -->
     <!-- Content Overwrap-->
   <div class="outercontainer flex-item">
@@ -32,18 +37,18 @@
       <div class="statuscontentcontainer flex-item">
         <button class="button postlink flex-item" id="post_button">Post a status!</button>
         <div class="poststatus" id="post_form">
-          <form method="get">
+          <form method="get" id="post_status">
             <textarea name="status">What is your status?</textarea>
             <div class="locationdiv flex-item">
               <div>
-                <input class="location" type="checkbox" name="location" value="yes"> Include Location
+                <input class="location" type="checkbox" id="geolocation" name="location" value="true"><span id="geolocation_text">Include Location</span>
               </div>
-              <input id="postbutton" type="submit" value="Post">
+              <input id="submit_button" type="submit" value="Post">
             </div>
           </form>
         </div>
         <section class="statuscontent">
-          <img src="http://s19.postimg.org/t38mrbb0f/gus.jpg " alt="Gus image" class="userimage">
+          <img src="http://s19.postimg.org/t38mrbb0f/gus.jpg" alt="Gus image" class="userimage">
           <h1 class="username">Gus</h1>
           <p class="date">Feb 01</p>
           <p class="usertxt">Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra.</p>
@@ -57,7 +62,7 @@
                 <div>
                   <input class="location" type="checkbox" name="location" value="yes"> Add Emoji
                 </div>
-                <input class="replybutton" type="submit" value="Reply">
+                <input class="replybutton" id="testy" type="submit" value="Reply">
               </div>
             </form>
           </div>
@@ -123,6 +128,157 @@
             </form>
           </div>
         </section>
+        <section class="statuscontent">
+          <img src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User image" class="userimage">
+          <h1 class="username">User</h1>
+          <p class="date">Feb 01</p>
+          <p class="usertxt">Lorem ipsum netus aptent enim justo tincidunttis, lobortis
+          </p>
+          <p class="usertxt">
+            <button class="button reply_link" data-tag="4">Reply</button>
+          </p>
+          <div class="reply_form" id="user_reply_4">
+            <form method="get">
+              <textarea name="status">Respond with a comment</textarea>
+              <div class="locationdiv flex-item">
+                <div>
+                  <input class="location" type="checkbox" name="location" value="yes"> Add Emoji
+                </div>
+                <input class="replybutton" type="submit" value="Reply">
+              </div>
+            </form>
+          </div>
+        </section>
+        <section class="statuscontent">
+          <img src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User image" class="userimage">
+          <h1 class="username">User</h1>
+          <p class="date">Feb 01</p>
+          <p class="usertxt">Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis. orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis. orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla tor enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis. orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis
+          </p>
+          <p class="usertxt">
+            <button class="button reply_link" data-tag="5">Reply</button>
+          </p>
+          <div class="reply_form" id="user_reply_5">
+            <form method="get">
+              <textarea name="status">Respond with a comment</textarea>
+              <div class="locationdiv flex-item">
+                <div>
+                  <input class="location" type="checkbox" name="location" value="yes"> Add Emoji
+                </div>
+                <input class="replybutton" type="submit" value="Reply">
+              </div>
+            </form>
+          </div>
+        </section>
+        <section class="statuscontent">
+          <img src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User image" class="userimage">
+          <h1 class="username">User</h1>
+          <p class="date">Feb 01</p>
+          <p class="usertxt">Lorem ipsum netus aptent enim m odio euismod eu ac volutpat nisl quis. orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla tor enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis. orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis
+          </p>
+          <p class="usertxt">
+            <button class="button reply_link" data-tag="6">Reply</button>
+          </p>
+          <div class="reply_form" id="user_reply_6">
+            <form method="get">
+              <textarea name="status">Respond with a comment</textarea>
+              <div class="locationdiv flex-item">
+                <div>
+                  <input class="location" type="checkbox" name="location" value="yes"> Add Emoji
+                </div>
+                <input class="replybutton" type="submit" value="Reply">
+              </div>
+            </form>
+          </div>
+        </section>
+        <section class="statuscontent">
+          <img src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User image" class="userimage">
+          <h1 class="username">User</h1>
+          <p class="date">Feb 01</p>
+          <p class="usertxt">Lorem ipsum netus aptent enim justo tincidunt proin, dio euismod eu ac volutpat nisl quis. orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis. orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla tor enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis. orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis
+          </p>
+          <p class="usertxt">
+            <button class="button reply_link" data-tag="7">Reply</button>
+          </p>
+          <div class="reply_form" id="user_reply_7">
+            <form method="get">
+              <textarea name="status">Respond with a comment</textarea>
+              <div class="locationdiv flex-item">
+                <div>
+                  <input class="location" type="checkbox" name="location" value="yes"> Add Emoji
+                </div>
+                <input class="replybutton" type="submit" value="Reply">
+              </div>
+            </form>
+          </div>
+        </section>
+        <section class="statuscontent">
+          <img src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User image" class="userimage">
+          <h1 class="username">User</h1>
+          <p class="date">Feb 01</p>
+          <p class="usertxt">Lorem ipsum netus aptea placerat erat mattis, lobortis Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis. orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla tor enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis. orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis
+          </p>
+          <p class="usertxt">
+            <button class="button reply_link" data-tag="8">Reply</button>
+          </p>
+          <div class="reply_form" id="user_reply_8">
+            <form method="get">
+              <textarea name="status">Respond with a comment</textarea>
+              <div class="locationdiv flex-item">
+                <div>
+                  <input class="location" type="checkbox" name="location" value="yes"> Add Emoji
+                </div>
+                <input class="replybutton" type="submit" value="Reply">
+              </div>
+            </form>
+          </div>
+        </section>
+        <section class="statuscontent">
+          <img src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User image" class="userimage">
+          <h1 class="username">User</h1>
+          <p class="date">Feb 01</p>
+          <p class="usertxt">mod eu ac volut erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis. orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla tor enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis. orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis
+          </p>
+          <p class="usertxt">
+            <button class="button reply_link" data-tag="9">Reply</button>
+          </p>
+          <div class="reply_form" id="user_reply_9">
+            <form method="get">
+              <textarea name="status">Respond with a comment</textarea>
+              <div class="locationdiv flex-item">
+                <div>
+                  <input class="location" type="checkbox" name="location" value="yes"> Add Emoji
+                </div>
+                <input class="replybutton" type="submit" value="Reply">
+              </div>
+            </form>
+          </div>
+        </section>
+        <section class="statuscontent">
+          <img src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User image" class="userimage">
+          <h1 class="username">User</h1>
+          <p class="date">Feb 01</p>
+          <p class="usertxt">Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis. orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis Lorem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis. orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla tor enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis orci pharetra habitant scelerisque donec etiam odio euismod eu ac volutpat nisl quis. orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus fringilla torquent magna placerat erat mattis, lobortis
+          </p>
+          <p class="usertxt">
+            <button class="button reply_link" data-tag="10">Reply</button>
+          </p>
+          <div class="reply_form" id="user_reply_10">
+            <form method="get">
+              <textarea name="status">Respond with a comment</textarea>
+              <div class="locationdiv flex-item">
+                <div>
+                  <input class="location" type="checkbox" name="location" value="yes"> Add Emoji
+                </div>
+                <input class="replybutton" type="submit" value="Reply">
+              </div>
+            </form>
+          </div>
+        </section>
+        <div id="extra_statuses">
+        </div>
+        <button type="button" class="button call_to_action" id="extra_statuses_button">See more statuses</button>
+        <!-- <a id="image_table" href="#">All images on this page</a> -->
       </div>
       <!--End Content Overwrap-->
       <!-- Aside -->
@@ -150,8 +306,14 @@
   <div class="beta">
     <p>Welcome! Please bear in mind that this application is in beta.</p>
   </div>
+  <script type="text/javascript" src="all_images_data.js" defer></script>
+  <script type="text/javascript" src="ajax.js" defer></script>
+  <script type="text/javascript" src="load_more.js" defer></script>
   <script type="text/javascript" src="post_a_status.js" defer></script>
+  <script type="text/javascript" src="sticky_smart_header.js" defer></script>
+  <script type="text/javascript" src="geolocation.js" defer></script>
   <script type="text/javascript" src="reply.js" defer></script>
   <script type="text/javascript" src="toggle.js" defer></script>
+  <script type="text/javascript" src="geolocation_progressive_enhancement.js" defer></script>
 </body>
 </html>
