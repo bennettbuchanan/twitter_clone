@@ -278,13 +278,19 @@
         </section>
         <div id="extra_statuses">
         </div>
+
+
+
+
+
+
         <!--Data will be inserted in its according place, replacing the brackets.-->
         <script id="user-template" type="text/x-handlebars-template">
           <section class="statuscontent">
-            <img src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User image" class="userimage">
-            <h1 class="username">{{city}}</h1>
-            <p class="date">Feb 01</p>
-            <p class="usertxt">Lorem ipsum netus aptent enim justo lobortis orci ac volutpat nisl quis. orem ipsum netus aptent enim justo tincidunt proin, auctor dapibus tincidunttis, lobortis
+            <img src="{{image_path}}" alt="User image" class="userimage">
+            <h1 class="username">{{user_name}}</h1>
+            <p class="date">{{post_date}}</p>
+            <p class="usertxt">{{post_text}}
             </p>
             <p class="usertxt">
               <button class="button reply_link" data-tag="11">Reply</button>
@@ -303,8 +309,24 @@
           </section>
         </script>
 
+
+
+
+
+
+
+
         <!--Your new content will be displayed in here-->
         <div id="content-placeholder"></div>
+
+
+
+
+
+
+
+
+
         <button type="button" class="button call_to_action" id="extra_statuses_button">See more statuses</button>
         <!-- <a id="image_table" href="#">All images on this page</a> -->
       </div>

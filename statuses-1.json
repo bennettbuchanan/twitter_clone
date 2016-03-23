@@ -1,5 +1,18 @@
+
 {
-  "city": "London",
-  "street": "Baker Street",
-  "number": "221B"
+  "last_page": false,
+  "statuses": [
+    {
+      "user_name" : "Rose Taylor",
+      "image_path" : "http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg",
+      "post_date" : "Feb 1",
+      "post_text": "Feeling like a bad wolf today."
+    },
+    {
+      "user_name" : "Clara Oswald",
+      "image_path" : "http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg",
+      "post_date" : "Feb 2",
+      "post_text": "Feeling like a bad wolf today and that's not cool."
+    }
+  ]
 }

@@ -12,13 +12,6 @@ document.body.appendChild(script);
 
 
 
-
-
-
-
-
-
-
   // Grab the template script
   var theTemplateScript = document.getElementById("user-template");
   var content = theTemplateScript.innerHTML;
@@ -27,8 +20,17 @@ document.body.appendChild(script);
   function fetchJSON(xhttp) {
     contextString = xhttp.responseText;
     var contextObject = JSON.parse(contextString);
-    var theCompiledHtml = theTemplate(contextObject);
-    document.getElementById('content-placeholder').innerHTML = theCompiledHtml;
+
+    console.log(contextObject.statuses[0])
+    console.log(contextObject.statuses);
+
+    // Loop through each item in the JSON array and create new div for a post.
+    for (var i = 0; i < contextObject.statuses.length; i++) {
+      var theCompiledHtml = theTemplate(contextObject.statuses[i]);
+      var div = document.createElement("div");
+      var element = document.getElementById("content-placeholder");
+      element.appendChild(div).innerHTML = theCompiledHtml;
+    }
   }
 
   function locationGet(url, fetchJSON) {
