@@ -351,6 +351,16 @@ button:focus {outline:0;}
   border: 1px solid #ccc;
 }
 
+.weather {
+  margin-bottom: 20px;
+}
+
+.weather_button {
+  width: 150px;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+
 .postlink {
   width: 100%;
   margin: 0px 0px 20px 0px;
@@ -572,6 +582,9 @@ img {
   }
 
    /* begin CSS for homepage */
+   .weather {
+     margin-left: 20px;
+   }
 
   .postlink {
     padding-left: 0px;

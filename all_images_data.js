@@ -1,5 +1,5 @@
 document.getElementById("image_table").addEventListener("click", function imageTable() {
-	
+
 	// create a div with an id all_images_data_other
     var div = document.createElement("div");
     div.setAttribute("id", "all_images_data_other");
