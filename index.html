@@ -313,6 +313,23 @@
   <div class="beta">
     <p>Welcome! Please bear in mind that this application is in beta.</p>
   </div>
+  <noscript>
+    <style type="text/css">
+        .pagecontainer {display:none;}
+    </style>
+    <div class="noscriptmsg">
+        <form method="get" id="post_status">
+          <textarea name="status">What is your status?</textarea>
+          <div class="locationdiv flex-item">
+            <div>
+              <input class="location" type="checkbox" id="geolocation" name="location" value="true"><span id="geolocation_text">Include Location</span>
+            </div>
+            <input id="submit_button" type="submit" value="Post">
+          </div>
+        </form>
+      <p>You don't have javascript enabled.  Good luck with that.</p>
+    </div>
+  </noscript>
   <!-- <script type="text/javascript" src="all_images_data.js" defer></script> -->
   <script type="text/javascript" src="/node_modules/handlebars/dist/handlebars.min.js" defer></script>
   <script type="text/javascript" src="ajax.js" defer></script>
