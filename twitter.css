@@ -125,7 +125,6 @@ nav {
   display: flex;
   width: 100%;
   justify-content: inherit;
-
 }
 
 header img {
@@ -143,6 +142,40 @@ header img {
 
 .centernav {
   padding: 15px 0px 15px 0px;
+}
+
+footer {
+  width: 100%;
+  background: url("./images/footer_background.jpg") repeat;
+  padding: 20px 20px;
+}
+
+.footercontent {
+  width: 1032px;
+  margin-left: auto;
+  margin-right: auto;
+  color: whitesmoke;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footercontent a {
+  color: whitesmoke;
+}
+
+.footercontent i {
+  color: whitesmoke;
+  font-size: 2em;
+}
+
+.footercontent ul {
+  align-content: flex-start;
+  justify-content: space-between;;
+  width: 500px;
+}
+
+.footercontent ul li {
+  justify-content: space-around;
 }
 
 /* Add pipe character after li with id of firstitem, add padding for equal spacing */
@@ -581,6 +614,17 @@ img {
     margin-left: 20px;
   }
 
+  footer {
+    width: inherit;;
+  }
+
+  .footercontent {
+    width: 100%;
+    margin: 0px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
    /* begin CSS for homepage */
    .weather {
      margin-left: 20px;
@@ -874,5 +918,25 @@ img {
     padding-bottom: 3px;
     border-bottom: 3px solid #6889a8;
     color: #6889a8;
+  }
+
+  footer {
+    width: inherit;;
+  }
+
+  .footercontent {
+    flex-direction: column;
+  }
+
+  .footercontent ul {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+
+  .footercontent ul li {
+    padding-bottom: 5px;
   }
 }
