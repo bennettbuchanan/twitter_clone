@@ -167,6 +167,16 @@ header img {
   width: 215px;
 }
 
+/* Id for use with label for accessibility */
+#emoji {
+
+}
+
+/* Id for use with label for accessibility */
+#rbutton {
+
+}
+
 /* begin homepage CSS */
 
 /* add margins and padding to user image */
