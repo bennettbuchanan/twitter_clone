@@ -147,6 +147,7 @@ header img {
 footer {
   width: 100%;
   background: url("./images/footer_background.jpg") repeat;
+  background-color: #222222; /* add background color in case images disabled */
   padding: 20px 20px;
 }
 
@@ -473,6 +474,7 @@ textarea {
 }
 
 .minipic {
+  background: white; /* add background in case images disabled */
   position: absolute;
   border: solid white 5px;
   border-radius: 10px;
