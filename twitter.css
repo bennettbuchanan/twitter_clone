@@ -293,7 +293,7 @@ aside {
   width: 75px;
   cursor: pointer;
   border-radius: 4px;
-  background: #6889a8; /* For browsers that do not support gradients */
+  background: #354A7B; /* For browsers that do not support gradients */
   -moz-transition: all .3s;
   -o-transition: all .3s;
   -webkit-transition: all .3s;
@@ -304,12 +304,12 @@ aside {
 .button:hover{
   color: white;
   text-decoration: none;
-  background:  #4e6b88; /* For browsers that do not support gradients */
+  background:  #2B3C64; /* For browsers that do not support gradients */
 }
 
 /* Add active pseudo to change colors when a user clicks on the button */
 .button:active {
-  background:  #47617c;
+  background:  #212E4D;
 }
 
 .load_button,
@@ -324,17 +324,17 @@ aside {
 
 .call_to_action {
   width: 200px;
-  background: #FF7679;
+  background: #C33113;
   margin-bottom: 20px;
   margin-top: 0px;
 }
 
 .call_to_action:hover {
-  background: #D16163;
+  background: #B12C12;
 }
 
 .call_to_action:active {
-  background: #B85557;
+  background: #92240F;
 }
 
 #postbutton {
