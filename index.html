@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Impossible Octopus Fitness</title>
   <link rel="shortcut icon" href="https://maxcdn.icons8.com/wp-content/uploads/2014/01/octopus-128.png" type="image/x-icon"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <body>
   <!-- Outermost container -->
@@ -41,14 +42,30 @@
             <textarea name="status">What is your status?</textarea>
             <div class="locationdiv flex-item">
               <div>
-                <label for="geolocation">Location Checkbox</label>
-                <input class="location" type="checkbox" id="geolocation" name="location" value="true"><span id="geolocation_text">Include Location</span>
+                <label for="geolocation">Include Location</label>
+                <input class="location" type="checkbox" id="geolocation" name="location" value="true"><span id="geolocation_text"></span>
               </div>
-              <label for="submit_button">Post Button</label>
               <input id="submit_button" type="submit" value="Post">
             </div>
           </form>
         </div>
+        <!-- display post status field for users without JavaScript -->
+        <noscript>
+          <div class="statuscontentcontainer flex-item">
+            <div class="poststatus" id="post_form" style="display: block">
+              <form method="get" id="post_status">
+                <textarea name="status">What is your status?</textarea>
+                <div class="locationdiv flex-item">
+                  <div>
+                    <label for="geolocation">Include Location</label>
+                    <input class="location" type="checkbox" id="geolocation" name="location" value="true"><span id="geolocation_text"></span>
+                  </div>
+                  <input id="submit_button" type="submit" value="Post">
+                </div>
+              </form>
+            </div>
+          </div>
+        </noscript>
         <p class="weather">It's <span id="weather">an unknown weather</span> today!</p>
         <button type="button" class="button weather_button" id="update_weather">Update Weather</button>
         <section class="statuscontent">
@@ -64,11 +81,11 @@
               <textarea name="status">Respond with a comment</textarea>
               <div class="locationdiv flex-item">
                 <div>
-                  <label for="emoji">Emoji Checkbox</label>
-                  <input class="location" id="emoji" type="checkbox" name="location" value="yes"> Add Emoji
+                  <label for="emoji">Add Emoji</label>
+                  <input class="location" type="checkbox" name="location" value="true">
                 </div>
                 <label for="rbutton">Reply Button</label>
-                <input class="replybutton" id="rbutton" type="submit" value="Reply">
+                <input class="replybutton" id="testy" type="submit" value="Reply">
               </div>
             </form>
           </div>
@@ -86,11 +103,11 @@
               <textarea name="status">Respond with a comment</textarea>
               <div class="locationdiv flex-item">
                 <div>
-                  <label for="emoji">Emoji Checkbox</label>
-                  <input class="location" id="emoji" type="checkbox" name="location" value="yes"> Add Emoji
+                  <label for="emoji">Add Emoji</label>
+                  <input class="location" type="checkbox" name="location" value="true">
                 </div>
                 <label for="rbutton">Reply Button</label>
-                <input class="replybutton" id="rbutton" type="submit" value="Reply">
+                <input class="replybutton" type="submit" value="Reply">
               </div>
             </form>
           </div>
@@ -108,11 +125,11 @@
               <textarea name="status">Respond with a comment</textarea>
               <div class="locationdiv flex-item">
                 <div>
-                  <label for="emoji">Emoji Checkbox</label>
-                  <input class="location" id="emoji" type="checkbox" name="location" value="yes"> Add Emoji
+                  <label for="emoji">Add Emoji</label>
+                  <input class="location" type="checkbox" name="location" value="true">
                 </div>
                 <label for="rbutton">Reply Button</label>
-                <input class="replybutton" id="rbutton" type="submit" value="Reply">
+                <input class="replybutton" type="submit" value="Reply">
               </div>
             </form>
           </div>
@@ -131,11 +148,12 @@
               <textarea name="status">Respond with a comment</textarea>
               <div class="locationdiv flex-item">
                 <div>
-                  <label for="emoji">Emoji Checkbox</label>
-                  <input class="location" id="emoji" type="checkbox" name="location" value="yes"> Add Emoji
+                  <label for="emoji">Add Emoji</label>
+                  <input class="location" type="checkbox" name="location" value="true">
                 </div>
                 <label for="rbutton">Reply Button</label>
-                <input class="replybutton" id="rbutton" type="submit" value="Reply">
+                <input class="replybutton" type="submit" value="Reply">
+              </div>
             </form>
           </div>
         </section>
@@ -153,11 +171,11 @@
               <textarea name="status">Respond with a comment</textarea>
               <div class="locationdiv flex-item">
                 <div>
-                  <label for="emoji">Emoji Checkbox</label>
-                  <input class="location" id="emoji" type="checkbox" name="location" value="yes"> Add Emoji
+                  <label for="emoji">Add Emoji</label>
+                  <input class="location" type="checkbox" name="location" value="true">
                 </div>
                 <label for="rbutton">Reply Button</label>
-                <input class="replybutton" id="rbutton" type="submit" value="Reply">
+                <input class="replybutton" type="submit" value="Reply">
               </div>
             </form>
           </div>
@@ -176,11 +194,11 @@
               <textarea name="status">Respond with a comment</textarea>
               <div class="locationdiv flex-item">
                 <div>
-                  <label for="emoji">Emoji Checkbox</label>
-                  <input class="location" id="emoji" type="checkbox" name="location" value="yes"> Add Emoji
+                  <label for="emoji">Add Emoji</label>
+                  <input class="location" type="checkbox" name="location" value="true">
                 </div>
                 <label for="rbutton">Reply Button</label>
-                <input class="replybutton" id="rbutton" type="submit" value="Reply">
+                <input class="replybutton" type="submit" value="Reply">
               </div>
             </form>
           </div>
@@ -199,11 +217,12 @@
               <textarea name="status">Respond with a comment</textarea>
               <div class="locationdiv flex-item">
                 <div>
-                  <label for="emoji">Emoji Checkbox</label>
-                  <input class="location" id="emoji" type="checkbox" name="location" value="yes"> Add Emoji
+                  <label for="emoji">Add Emoji</label>
+                  <input class="location" type="checkbox" name="location" value="true">
                 </div>
                 <label for="rbutton">Reply Button</label>
-                <input class="replybutton" id="rbutton" type="submit" value="Reply">
+                <input class="replybutton" type="submit" value="Reply">
+              </div>
             </form>
           </div>
         </section>
@@ -221,11 +240,11 @@
               <textarea name="status">Respond with a comment</textarea>
               <div class="locationdiv flex-item">
                 <div>
-                  <label for="emoji">Emoji Checkbox</label>
-                  <input class="location" id="emoji" type="checkbox" name="location" value="yes"> Add Emoji
+                  <label for="emoji">Add Emoji</label>
+                  <input class="location" type="checkbox" name="location" value="true">
                 </div>
                 <label for="rbutton">Reply Button</label>
-                <input class="replybutton" id="rbutton" type="submit" value="Reply">
+                <input class="replybutton" type="submit" value="Reply">
               </div>
             </form>
           </div>
@@ -244,11 +263,11 @@
               <textarea name="status">Respond with a comment</textarea>
               <div class="locationdiv flex-item">
                 <div>
-                  <label for="emoji">Emoji Checkbox</label>
-                  <input class="location" id="emoji" type="checkbox" name="location" value="yes"> Add Emoji
+                  <label for="emoji">Add Emoji</label>
+                  <input class="location" type="checkbox" name="location" value="true">
                 </div>
                 <label for="rbutton">Reply Button</label>
-                <input class="replybutton" id="rbutton" type="submit" value="Reply">
+                <input class="replybutton" type="submit" value="Reply">
               </div>
             </form>
           </div>
@@ -267,11 +286,11 @@
               <textarea name="status">Respond with a comment</textarea>
               <div class="locationdiv flex-item">
                 <div>
-                 <label for="emoji">Emoji Checkbox</label>
-                  <input class="location" id="emoji" type="checkbox" name="location" value="yes"> Add Emoji
+                  <label for="emoji">Add Emoji</label>
+                  <input class="location" type="checkbox" name="location" value="true">
                 </div>
                 <label for="rbutton">Reply Button</label>
-                <input class="replybutton" id="rbutton" type="submit" value="Reply">
+                <input class="replybutton" type="submit" value="Reply">
               </div>
             </form>
           </div>
@@ -294,11 +313,11 @@
                 <textarea name="status">Respond with a comment</textarea>
                 <div class="locationdiv flex-item">
                   <div>
-                    <label for="emoji">Emoji Checkbox</label>
-                  <input class="location" id="emoji" type="checkbox" name="location" value="yes"> Add Emoji
-                </div>
-                <label for="rbutton">Reply Button</label>
-                <input class="replybutton" id="rbutton" type="submit" value="Reply">
+                    <label for="emoji">Add Emoji</label>
+                    <input class="location" type="checkbox" name="location" value="true">
+                  </div>
+                  <label for="rbutton">Reply Button</label>
+                  <input class="replybutton" type="submit" value="Reply">
                 </div>
               </form>
             </div>
@@ -332,28 +351,27 @@
     <!-- End Content Overwrap -->
   </div>
   <!-- End Outermost container -->
-  <div class="beta">
+  <!-- <div class="beta">
     <p>Welcome! Please bear in mind that this application is in beta.</p>
-  </div>
-  <noscript>
-    <style type="text/css">
-        .pagecontainer {display:none;}
-    </style>
-    <div class="noscriptmsg">
-        <form method="get" id="post_status">
-          <textarea name="status">What is your status?</textarea>
-          <div class="locationdiv flex-item">
-            <div>
-              <label for="geolocation">Location Checkbox</label>
-                <input class="location" type="checkbox" id="geolocation" name="location" value="true"><span id="geolocation_text">Include Location</span>
-              </div>
-              <label for="submit_button">Post Button</label>
-              <input id="submit_button" type="submit" value="Post">
-          </div>
-        </form>
-      <p>You don't have javascript enabled.  Good luck with that.</p>
+  </div> -->
+  <footer>
+    <div class="footercontent flex-item">
+      <ul class="flex-item">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mystatuses.html">My statuses</a></li>
+        <li><a href="allusers.html">All users</a></li>
+        <li><a href="#">Edit my profile</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+      <div>
+        <i class="fa fa-twitter-square"></i>
+        <i class="fa fa-facebook-square"></i>
+        <i class="fa fa-github-square"></i>
+        <i class="fa fa-linkedin-square"></i>
+        <i class="fa fa-youtube-square"></i>
+      </div>
     </div>
-  </noscript>
+  </footer>
   <!-- <script type="text/javascript" src="all_images_data.js" defer></script> -->
   <script type="text/javascript" src="/node_modules/handlebars/dist/handlebars.min.js" defer></script>
   <script type="text/javascript" src="ajax.js" defer></script>
