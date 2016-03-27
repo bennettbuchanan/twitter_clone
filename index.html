@@ -51,15 +51,14 @@
         </div>
         <!-- display post status field for users without JavaScript -->
         <noscript>
+          <style type="text/css">
+            #post_button {display:none;}
+          </style>
           <div class="statuscontentcontainer flex-item">
             <div class="poststatus" id="post_form" style="display: block">
               <form method="get" id="post_status">
                 <textarea name="status">What is your status?</textarea>
                 <div class="locationdiv flex-item">
-                  <div>
-                    <label for="geolocation">Include Location</label>
-                    <input class="location" type="checkbox" id="geolocation" name="location" value="true"><span id="geolocation_text"></span>
-                  </div>
                   <input id="submit_button" type="submit" value="Post">
                 </div>
               </form>
