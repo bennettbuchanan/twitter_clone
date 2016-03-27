@@ -164,6 +164,10 @@ footer {
   color: whitesmoke;
 }
 
+.footercontent a:hover {
+  color: whitesmoke;
+}
+
 .footercontent i {
   color: whitesmoke;
   font-size: 2em;
@@ -360,7 +364,7 @@ aside {
 
 /* Set style elements for date */
 .date {
-  color: #aeaeae;
+  color: #222222;
   display: inline-block;
 }
 
@@ -402,7 +406,7 @@ aside {
 /* Set styles for reply form */
 .reply_form {
   border-radius: 4px;
-  background: #ddd;
+  background: #eee;
   margin: 10px 0px;
   padding: 20px 20px 15px 20px;
   display: none;
@@ -429,7 +433,7 @@ textarea {
   background-color: white;
   font-size: 16px;
   resize: none;
-  color: #3182bd;
+  color: #1D4E71;
 }
 
 .reply_form textarea {
@@ -499,7 +503,7 @@ textarea {
 .useraddress {
   font-size: 12px;
   font-family: Arial;
-  color: #979797;
+  color: #222222;
   margin: 3px 20px 0px 0px;
 }
 
@@ -518,7 +522,7 @@ textarea {
   text-align: center;
   font-size: 15px;
   font-family: Arial;
-  color: #979797;
+  color: #222222;
   background: white;
   display: inline-block;
 }
@@ -559,18 +563,19 @@ textarea {
 }
 
 a {
-  color: #557594;
+  color: #3C5873;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
+  color: #3C5873;
 }
 
 /* Keep anchor tags at bottom to define color styles */
 
 .toprightmenu a {
-  color: #557594;
+  color: #3C5873;
   text-decoration: none;
   -moz-transition: all .1s;
   -o-transition: all .1s;
@@ -581,8 +586,8 @@ a:hover {
 .centernav li a:hover,
 .toprightmenu a:hover {
   padding-bottom: 11px;
-  border-bottom: 4px solid #6889a8;
-  color: #6889a8;
+  border-bottom: 4px solid #3C5873;
+  color: #3C5873;
 }
 
 img {
