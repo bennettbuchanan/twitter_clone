@@ -172,9 +172,8 @@ footer {
   color: whitesmoke;
 }
 
-.footercontent i {
-  color: whitesmoke;
-  font-size: 2em;
+.footercontent .icon {
+  font-size: 1.25em;
 }
 
 .footercontent ul {
