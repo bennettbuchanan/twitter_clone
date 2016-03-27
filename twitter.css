@@ -300,9 +300,6 @@ aside {
   transition: all .3s;
 }
 
-/* remove blue focus outline */
-button:focus {outline:0;}
-
 /* Add hover pseudo class to button to change gradient */
 .button:hover{
   color: white;
