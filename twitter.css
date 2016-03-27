@@ -127,6 +127,10 @@ nav {
   justify-content: inherit;
 }
 
+.visuallyhidden {
+  display: none;
+}
+
 header img {
   padding-top: 10px;
   height: 25px;
