@@ -15,13 +15,18 @@ window.addEventListener("scroll", function scrollDirection() {
     scrollDirection.y = window.pageYOffset;
 });
 
+var nav = document.getElementsByTagName('nav')[0];
+
+// hide the nav for accessibility without JS
+window.onload = function() {
+  nav.className = 'nav-hide';
+}
+
 // show header at regular size if window is below 768 pixels
 window.addEventListener("resize", function() {
     var header = document.getElementsByTagName('header')[0];
-    var nav = document.getElementsByTagName('nav')[0];
     var w = window.innerWidth;
     if (w < 768) {
-        nav.className = 'nav-background';
         if (header.className == 'header-hide') {
             header.className = '';
         }
@@ -30,10 +35,12 @@ window.addEventListener("resize", function() {
 
 // show show menu when button is clicked
 document.getElementById('nav-button').addEventListener('click', function() {
-    var nav = document.getElementsByTagName('nav')[0];
     if (nav.className == 'nav-show') {
-        nav.className = '';
-        this.style.background = 'white';
+        nav.classList.remove("nav-show");
+        nav.classList.add('nav-hide');
+    } else if (nav.className == 'nav-hide') {
+        nav.classList.remove("nav-hide");
+        nav.classList.add('nav-show');
     } else {
         nav.className = 'nav-show';
         this.style.background = '#eee';
