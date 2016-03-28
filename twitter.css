@@ -172,8 +172,9 @@ footer {
   color: whitesmoke;
 }
 
-.footercontent .icon {
-  font-size: 1.25em;
+.footercontent p {
+  color: whitesmoke;
+  font-size: 2em;
 }
 
 .footercontent ul {
@@ -330,18 +331,20 @@ aside {
 }
 
 .call_to_action {
+  color: black;
   width: 200px;
-  background: #C33113;
+  background: #FFE1E1;
   margin-bottom: 20px;
   margin-top: 0px;
 }
 
 .call_to_action:hover {
-  background: #B12C12;
+  color: black;
+  background: #FFE1E1;
 }
 
 .call_to_action:active {
-  background: #92240F;
+  background: #FFE1E1;
 }
 
 #postbutton {
@@ -424,7 +427,6 @@ aside {
 #geolocation_text {
   display: inline!important;
 }
-
 
 textarea {
   margin: 5px 0px;
