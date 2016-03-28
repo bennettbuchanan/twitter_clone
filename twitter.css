@@ -162,6 +162,7 @@ footer {
   color: whitesmoke;
   justify-content: space-between;
   align-items: center;
+  background: black; /* add background for WCAG2AAA specs */
 }
 
 .footercontent a {
