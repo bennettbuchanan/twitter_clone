@@ -43,7 +43,7 @@
             <textarea aria-live="polite" name="status" id="textarea_0"></textarea>
             <div class="locationdiv flex-item">
               <div>
-                <label for="geolocation">Include Location</label>
+                <label role="option" for="geolocation">Include Location</label>
                 <input class="location" type="checkbox" id="geolocation" name="location" value="true"><span id="geolocation_text"></span>
               </div>
               <input id="submit_button" type="submit" value="Post">
@@ -79,7 +79,7 @@
                 <textarea aria-live="polite" name="status" id="responsearea_0"></textarea>
                 <div class="locationdiv flex-item">
                   <div class="reply_checkbox visuallyhidden">
-                    <label for="emoji_0">Add Emoji</label>
+                    <label role="option" for="emoji_0">Add Emoji</label>
                     <input class="location" id="emoji_0" type="checkbox" name="location" value="true">
                   </div>
                   <input class="replybutton" type="submit" value="Post">
@@ -101,7 +101,7 @@
                 <textarea aria-live="polite" name="status" id="responsearea_1"></textarea>
                 <div class="locationdiv flex-item">
                   <div class="reply_checkbox visuallyhidden">
-                    <label for="emoji_1">Add Emoji</label>
+                    <label role="option" for="emoji_1">Add Emoji</label>
                     <input class="location" id="emoji_1" type="checkbox" name="location" value="true">
                   </div>
                   <input class="replybutton" type="submit" value="Post">
@@ -123,7 +123,7 @@
                 <textarea aria-live="polite" name="status" id="responsearea_2"></textarea>
                 <div class="locationdiv flex-item">
                   <div class="reply_checkbox visuallyhidden">
-                    <label for="emoji_2">Add Emoji</label>
+                    <label role="option" for="emoji_2">Add Emoji</label>
                     <input class="location" id="emoji_2" type="checkbox" name="location" value="true">
                   </div>
                   <input class="replybutton" type="submit" value="Post">
@@ -146,7 +146,7 @@
                 <textarea aria-live="polite" name="status" id="responsearea_3"></textarea>
                 <div class="locationdiv flex-item">
                   <div class="reply_checkbox visuallyhidden">
-                    <label for="emoji_3">Add Emoji</label>
+                    <label role="option" for="emoji_3">Add Emoji</label>
                     <input class="location" id="emoji_3" type="checkbox" name="location" value="true">
                   </div>
                   <input class="replybutton" type="submit" value="Post">
@@ -169,7 +169,7 @@
                 <textarea aria-live="polite" name="status" id="responsearea_4"></textarea>
                 <div class="locationdiv flex-item">
                   <div class="reply_checkbox visuallyhidden">
-                    <label for="emoji_4">Add Emoji</label>
+                    <label role="option" for="emoji_4">Add Emoji</label>
                     <input class="location" id="emoji_4" type="checkbox" name="location" value="true">
                   </div>
                   <input class="replybutton" type="submit" value="Post">
@@ -192,7 +192,7 @@
                 <textarea aria-live="polite" name="status" id="responsearea_5"></textarea>
                 <div class="locationdiv flex-item">
                   <div class="reply_checkbox visuallyhidden">
-                    <label for="emoji_5">Add Emoji</label>
+                    <label role="option" for="emoji_5">Add Emoji</label>
                     <input class="location" id="emoji_5" type="checkbox" name="location" value="true">
                   </div>
                   <input class="replybutton" type="submit" value="Post">
@@ -215,7 +215,7 @@
                 <textarea name="status" id="responsearea_6"></textarea>
                 <div class="locationdiv flex-item">
                   <div class="reply_checkbox visuallyhidden">
-                    <label for="emoji_6">Add Emoji</label>
+                    <label role="option" for="emoji_6">Add Emoji</label>
                     <input class="location" id="emoji_6" type="checkbox" name="location" value="true">
                   </div>
                   <input class="replybutton" type="submit" value="Post">
@@ -238,7 +238,7 @@
                 <textarea aria-live="polite" name="status" id="responsearea_7"></textarea>
                 <div class="locationdiv flex-item">
                   <div class="reply_checkbox visuallyhidden">
-                    <label for="emoji_7">Add Emoji</label>
+                    <label role="option" for="emoji_7">Add Emoji</label>
                     <input class="location" id="emoji_7" type="checkbox" name="location" value="true">
                   </div>
                   <input class="replybutton" type="submit" value="Post">
@@ -261,7 +261,7 @@
                 <textarea aria-live="polite" name="status" id="responsearea_8"></textarea>
                 <div class="locationdiv flex-item">
                   <div class="reply_checkbox visuallyhidden">
-                    <label for="emoji_8">Add Emoji</label>
+                    <label role="option" for="emoji_8">Add Emoji</label>
                     <input class="location" id="emoji_8" type="checkbox" name="location" value="true">
                   </div>
                   <input class="replybutton" type="submit" value="Post">
@@ -284,7 +284,7 @@
                 <textarea aria-live="polite" name="status" id="responsearea_9"></textarea>
                 <div class="locationdiv flex-item">
                   <div class="reply_checkbox visuallyhidden">
-                    <label for="emoji_9">Add Emoji</label>
+                    <label role="option" for="emoji_9">Add Emoji</label>
                     <input class="location" id="emoji_9" type="checkbox" name="location" value="true">
                   </div>
                   <input class="replybutton" type="submit" value="Post">
@@ -297,7 +297,7 @@
         </div>
         <!--Data will be inserted in its according place, replacing the brackets.-->
         <script id="user-template" type="text/x-handlebars-template">
-          <section class="statuscontent" role="region">
+          <section class="statuscontent">
             <img src="{{image_path}}" alt="User image" class="userimage">
             <h2 class="username">{{user_name}}</h2>
             <p class="date">{{post_date}}</p>
@@ -306,12 +306,12 @@
             <p class="usertxt">
               <button class="button reply_link" data-tag="{{data_tag}}">Reply</button>
             </p>
-            <div class="reply_form" id="user_reply_{{data_tag}}">
-              <form method="get" role="form">
+            <div class="reply_form visuallyhidden" id="user_reply_{{data_tag}}">
+              <form method="get">
                 <label for="responsearea_{{data_tag}}">Reply to this post:</label>
-                <textarea aria-live="polite" name="status" id="responsearea_{{data_tag}}"></textarea>
+                <textarea name="status" id="responsearea_{{data_tag}}"></textarea>
                 <div class="locationdiv flex-item">
-                  <div class="reply_checkbox visuallyhidden">
+                  <div>
                     <label for="emoji_{{data_tag}}">Add Emoji</label>
                     <input class="location" id="emoji_{{data_tag}}" type="checkbox" name="location" value="true">
                   </div>
