@@ -393,6 +393,10 @@ aside {
   border: 1px solid #ccc;
 }
 
+.noscriptPost {
+  display: block;
+}
+
 .weather {
   margin-bottom: 20px;
 }
