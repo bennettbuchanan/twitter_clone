@@ -297,7 +297,6 @@ aside {
   color: white;
   border: 1px solid #314354;
   text-align: center;
-  display: inline-block;
   margin: 5px 15px 10px 0px;
   width: 75px;
   cursor: pointer;
@@ -413,6 +412,7 @@ aside {
   margin: 0px 0px 20px 0px;
   width: 555px;
   color: white;
+  justify-content: center;
 }
 
 /* Set styles for reply form */
