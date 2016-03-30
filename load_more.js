@@ -35,10 +35,11 @@ function locationGet(url, fetchJSON) {
 }
 
 var load_statuses = document.getElementById("extra_statuses_button");
+load_statuses.classList.remove('visuallyhidden');
 
-// Set variable to count how many pages to load;
-var i = 1;
+// Set variable to count how many pages to load, use j instead of i;
+var j = 1;
 load_statuses.addEventListener("click", function() {
-  locationGet('/statuses-' + i + '.json', fetchJSON);
-  i++;
+  locationGet('/statuses-' + j + '.json', fetchJSON);
+  j++;
 });

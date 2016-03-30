@@ -11,13 +11,13 @@
 <body>
   <!-- Outermost container -->
   <!-- Header -->
-<header id="temp">
+<header id="temp" role="banner">
   <div class="headercontainer flex-item">
     <div id="mobile_view_header">
       <button id="nav-button">&#9776;</button>
         <h1><img id="logo" src="https://maxcdn.icons8.com/wp-content/uploads/2014/01/octopus-128.png" alt="Impossible Octopus Fitness Club Logo"> <span class="visuallyhidden">Impossible Octopus Fitness</span> </h1>
     </div>
-    <nav class="nav-background">
+    <nav role="navigation">
       <ul class="centernav flex-item">
         <li><a href="index.html">Home</a></li>
         <li><a href="mystatuses.html">My statuses</a></li>
@@ -37,13 +37,13 @@
       <!--Content -->
       <div class="statuscontentcontainer flex-item">
         <button class="button postlink flex-item" id="post_button">Post a status!</button>
-        <div class="poststatus" id="post_form">
-          <form method="get" id="post_status">
+        <div class="poststatus" id="post_form" aria-live="polite">
+          <form method="get" id="post_status" role="form">
             <label for="textarea_0">What is your status?</label>
-            <textarea name="status" id="textarea_0"></textarea>
+            <textarea aria-live="polite" name="status" id="textarea_0"></textarea>
             <div class="locationdiv flex-item">
               <div>
-                <label for="geolocation">Include Location</label>
+                <label role="option" for="geolocation">Include Location</label>
                 <input class="location" type="checkbox" id="geolocation" name="location" value="true"><span id="geolocation_text"></span>
               </div>
               <input id="submit_button" type="submit" value="Post">
@@ -56,7 +56,7 @@
             <div class="poststatus noscriptPost">
               <form method="get">
                 <label for="textarea_1">What is your status?</label>
-                <textarea name="status" id="textarea_1"></textarea>
+                <textarea aria-live="polite" name="status" id="textarea_1"></textarea>
                 <div class="locationdiv flex-item">
                   <input type="submit" value="Post">
                 </div>
@@ -65,7 +65,7 @@
           </div>
         </noscript>
         <div>
-          <section class="statuscontent">
+          <section class="statuscontent" role="region">
             <img src="http://s19.postimg.org/t38mrbb0f/gus.jpg" alt="Gus image" class="userimage">
             <h2 class="username">Gus</h2>
             <p class="date">March 2nd</p>
@@ -73,13 +73,13 @@
             <p class="usertxt">
               <button class="button reply_link" data-tag="0">Reply</button>
             </p>
-            <div class="reply_form" id="user_reply_0">
-              <form method="get">
+            <div class="reply_form" id="user_reply_0" aria-expanded="false">
+              <form method="get" role="form">
                 <label for="responsearea_0">Reply to this post:</label>
-                <textarea name="status" id="responsearea_0"></textarea>
+                <textarea aria-live="polite" name="status" id="responsearea_0"></textarea>
                 <div class="locationdiv flex-item">
-                  <div>
-                    <label for="emoji_0">Add Emoji</label>
+                  <div class="reply_checkbox visuallyhidden">
+                    <label role="option" for="emoji_0">Add Emoji</label>
                     <input class="location" id="emoji_0" type="checkbox" name="location" value="true">
                   </div>
                   <input class="replybutton" type="submit" value="Post">
@@ -87,7 +87,7 @@
               </form>
             </div>
           </section>
-          <section class="statuscontent">
+          <section class="statuscontent" role="region">
             <img src="http://s19.postimg.org/br8a5vhj3/marine.jpg " alt="Marine image" class="userimage">
             <h2 class="username">Marine</h2>
             <p class="date">March 2nd</p>
@@ -95,13 +95,13 @@
             <p class="usertxt">
               <button class="button reply_link" data-tag="1">Reply</button>
             </p>
-            <div class="reply_form" id="user_reply_1">
-              <form method="get">
+            <div class="reply_form" id="user_reply_1" aria-expanded="false">
+              <form method="get" role="form">
                 <label for="responsearea_1">Reply to this post:</label>
-                <textarea name="status" id="responsearea_1"></textarea>
+                <textarea aria-live="polite" name="status" id="responsearea_1"></textarea>
                 <div class="locationdiv flex-item">
-                  <div>
-                    <label for="emoji_1">Add Emoji</label>
+                  <div class="reply_checkbox visuallyhidden">
+                    <label role="option" for="emoji_1">Add Emoji</label>
                     <input class="location" id="emoji_1" type="checkbox" name="location" value="true">
                   </div>
                   <input class="replybutton" type="submit" value="Post">
@@ -109,7 +109,7 @@
               </form>
             </div>
           </section>
-          <section class="statuscontent">
+          <section class="statuscontent" role="region">
             <img src="http://s19.postimg.org/c1b7bh6rj/bilal.jpg " alt="Bilal image" class="userimage">
             <h2 class="username">Bilal</h2>
             <p class="date">March 2nd</p>
@@ -117,13 +117,13 @@
             <p class="usertxt">
               <button class="button reply_link" data-tag="2">Reply</button>
             </p>
-            <div class="reply_form" id="user_reply_2">
-              <form method="get">
+            <div class="reply_form" id="user_reply_2" aria-expanded="false">
+              <form method="get" role="form">
                 <label for="responsearea_2">Reply to this post:</label>
-                <textarea name="status" id="responsearea_2"></textarea>
+                <textarea aria-live="polite" name="status" id="responsearea_2"></textarea>
                 <div class="locationdiv flex-item">
-                  <div>
-                    <label for="emoji_2">Add Emoji</label>
+                  <div class="reply_checkbox visuallyhidden">
+                    <label role="option" for="emoji_2">Add Emoji</label>
                     <input class="location" id="emoji_2" type="checkbox" name="location" value="true">
                   </div>
                   <input class="replybutton" type="submit" value="Post">
@@ -131,7 +131,7 @@
               </form>
             </div>
           </section>
-          <section class="statuscontent">
+          <section class="statuscontent" role="region">
             <img src="https://holbertonschool.s3.amazonaws.com/quotes/photos/000/000/012/larger/bennett2.jpg?1449535775" alt="Bennett image" class="userimage">
             <h2 class="username">Bennett</h2>
             <p class="date">March 2nd</p>
@@ -140,13 +140,13 @@
             <p class="usertxt">
               <button class="button reply_link" data-tag="3">Reply</button>
             </p>
-            <div class="reply_form" id="user_reply_3">
-              <form method="get">
+            <div class="reply_form" id="user_reply_3" aria-expanded="false">
+              <form method="get" role="form">
                 <label for="responsearea_3">Reply to this post:</label>
-                <textarea name="status" id="responsearea_3"></textarea>
+                <textarea aria-live="polite" name="status" id="responsearea_3"></textarea>
                 <div class="locationdiv flex-item">
-                  <div>
-                    <label for="emoji_3">Add Emoji</label>
+                  <div class="reply_checkbox visuallyhidden">
+                    <label role="option" for="emoji_3">Add Emoji</label>
                     <input class="location" id="emoji_3" type="checkbox" name="location" value="true">
                   </div>
                   <input class="replybutton" type="submit" value="Post">
@@ -154,7 +154,7 @@
               </form>
             </div>
           </section>
-          <section class="statuscontent">
+          <section class="statuscontent" role="region">
             <img src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User image" class="userimage">
             <h2 class="username">User</h2>
             <p class="date">March 2nd</p>
@@ -163,13 +163,13 @@
             <p class="usertxt">
               <button class="button reply_link" data-tag="4">Reply</button>
             </p>
-            <div class="reply_form" id="user_reply_4">
-              <form method="get">
+            <div class="reply_form" id="user_reply_4" aria-expanded="false">
+              <form method="get" role="form">
                 <label for="responsearea_4">Reply to this post:</label>
-                <textarea name="status" id="responsearea_4"></textarea>
+                <textarea aria-live="polite" name="status" id="responsearea_4"></textarea>
                 <div class="locationdiv flex-item">
-                  <div>
-                    <label for="emoji_4">Add Emoji</label>
+                  <div class="reply_checkbox visuallyhidden">
+                    <label role="option" for="emoji_4">Add Emoji</label>
                     <input class="location" id="emoji_4" type="checkbox" name="location" value="true">
                   </div>
                   <input class="replybutton" type="submit" value="Post">
@@ -177,7 +177,7 @@
               </form>
             </div>
           </section>
-          <section class="statuscontent">
+          <section class="statuscontent" role="region">
             <img src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User image" class="userimage">
             <h2 class="username">User</h2>
             <p class="date">March 2nd</p>
@@ -186,13 +186,13 @@
             <p class="usertxt">
               <button class="button reply_link" data-tag="5">Reply</button>
             </p>
-            <div class="reply_form" id="user_reply_5">
-              <form method="get">
+            <div class="reply_form" id="user_reply_5" aria-expanded="false">
+              <form method="get" role="form">
                 <label for="responsearea_5">Reply to this post:</label>
-                <textarea name="status" id="responsearea_5"></textarea>
+                <textarea aria-live="polite" name="status" id="responsearea_5"></textarea>
                 <div class="locationdiv flex-item">
-                  <div>
-                    <label for="emoji_5">Add Emoji</label>
+                  <div class="reply_checkbox visuallyhidden">
+                    <label role="option" for="emoji_5">Add Emoji</label>
                     <input class="location" id="emoji_5" type="checkbox" name="location" value="true">
                   </div>
                   <input class="replybutton" type="submit" value="Post">
@@ -200,7 +200,7 @@
               </form>
             </div>
           </section>
-          <section class="statuscontent">
+          <section class="statuscontent" role="region">
             <img src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User image" class="userimage">
             <h2 class="username">User</h2>
             <p class="date">March 2nd</p>
@@ -209,13 +209,13 @@
             <p class="usertxt">
               <button class="button reply_link" data-tag="6">Reply</button>
             </p>
-            <div class="reply_form" id="user_reply_6">
-              <form method="get">
-                <label for="responsearea_6">Reply to this post:</label>
+            <div class="reply_form" id="user_reply_6" aria-expanded="false">
+              <form method="get" role="form">
+                <label aria-live="polite" for="responsearea_6">Reply to this post:</label>
                 <textarea name="status" id="responsearea_6"></textarea>
                 <div class="locationdiv flex-item">
-                  <div>
-                    <label for="emoji_6">Add Emoji</label>
+                  <div class="reply_checkbox visuallyhidden">
+                    <label role="option" for="emoji_6">Add Emoji</label>
                     <input class="location" id="emoji_6" type="checkbox" name="location" value="true">
                   </div>
                   <input class="replybutton" type="submit" value="Post">
@@ -223,7 +223,7 @@
               </form>
             </div>
           </section>
-          <section class="statuscontent">
+          <section class="statuscontent" role="region">
             <img src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User image" class="userimage">
             <h2 class="username">User</h2>
             <p class="date">March 2nd</p>
@@ -232,13 +232,13 @@
             <p class="usertxt">
               <button class="button reply_link" data-tag="7">Reply</button>
             </p>
-            <div class="reply_form" id="user_reply_7">
-              <form method="get">
+            <div class="reply_form" id="user_reply_7" aria-expanded="false">
+              <form method="get" role="form">
                 <label for="responsearea_7">Reply to this post:</label>
-                <textarea name="status" id="responsearea_7"></textarea>
+                <textarea aria-live="polite" name="status" id="responsearea_7"></textarea>
                 <div class="locationdiv flex-item">
-                  <div>
-                    <label for="emoji_7">Add Emoji</label>
+                  <div class="reply_checkbox visuallyhidden">
+                    <label role="option" for="emoji_7">Add Emoji</label>
                     <input class="location" id="emoji_7" type="checkbox" name="location" value="true">
                   </div>
                   <input class="replybutton" type="submit" value="Post">
@@ -246,7 +246,7 @@
               </form>
             </div>
           </section>
-          <section class="statuscontent">
+          <section class="statuscontent" role="region">
             <img src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User image" class="userimage">
             <h2 class="username">User</h2>
             <p class="date">March 2nd</p>
@@ -255,13 +255,13 @@
             <p class="usertxt">
               <button class="button reply_link" data-tag="8">Reply</button>
             </p>
-            <div class="reply_form" id="user_reply_8">
-              <form method="get">
+            <div class="reply_form" id="user_reply_8" aria-expanded="false">
+              <form method="get" role="form">
                 <label for="responsearea_8">Reply to this post:</label>
-                <textarea name="status" id="responsearea_8"></textarea>
+                <textarea aria-live="polite" name="status" id="responsearea_8"></textarea>
                 <div class="locationdiv flex-item">
-                  <div>
-                    <label for="emoji_8">Add Emoji</label>
+                  <div class="reply_checkbox visuallyhidden">
+                    <label role="option" for="emoji_8">Add Emoji</label>
                     <input class="location" id="emoji_8" type="checkbox" name="location" value="true">
                   </div>
                   <input class="replybutton" type="submit" value="Post">
@@ -269,7 +269,7 @@
               </form>
             </div>
           </section>
-          <section class="statuscontent">
+          <section class="statuscontent" role="region">
             <img src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User image" class="userimage">
             <h2 class="username">User</h2>
             <p class="date">March 2nd</p>
@@ -278,13 +278,13 @@
             <p class="usertxt">
               <button class="button reply_link" data-tag="9">Reply</button>
             </p>
-            <div class="reply_form" id="user_reply_9">
-              <form method="get">
+            <div class="reply_form" id="user_reply_9" aria-expanded="false">
+              <form method="get" role="form">
                 <label for="responsearea_9">Reply to this post:</label>
-                <textarea name="status" id="responsearea_9"></textarea>
+                <textarea aria-live="polite" name="status" id="responsearea_9"></textarea>
                 <div class="locationdiv flex-item">
-                  <div>
-                    <label for="emoji_9">Add Emoji</label>
+                  <div class="reply_checkbox visuallyhidden">
+                    <label role="option" for="emoji_9">Add Emoji</label>
                     <input class="location" id="emoji_9" type="checkbox" name="location" value="true">
                   </div>
                   <input class="replybutton" type="submit" value="Post">
@@ -306,7 +306,7 @@
             <p class="usertxt">
               <button class="button reply_link" data-tag="{{data_tag}}">Reply</button>
             </p>
-            <div class="reply_form" id="user_reply_{{data_tag}}">
+            <div class="reply_form visuallyhidden" id="user_reply_{{data_tag}}">
               <form method="get">
                 <label for="responsearea_{{data_tag}}">Reply to this post:</label>
                 <textarea name="status" id="responsearea_{{data_tag}}"></textarea>
@@ -322,22 +322,22 @@
           </section>
         </script>
         <!-- New statuses are displayed here upon AJAX call.-->
-        <div id="content-placeholder"></div>
-        <button type="button" class="button call_to_action" id="extra_statuses_button">See more statuses</button>
+        <div id="content-placeholder" aria-live="polite"></div>
+        <button aria-live="assertive" type="button" class="button call_to_action visuallyhidden" id="extra_statuses_button">See more statuses</button>
         <!-- <a id="image_table" href="#">All images on this page</a> -->
       </div>
       <!--End Content Overwrap-->
       <!-- Aside -->
       <div>
-        <aside class="flex-item">
-          <section class="featureduser">
+        <aside class="flex-item" role="complementary">
+          <section class="featureduser" role="region">
             <div>
               <img src="http://d.gr-assets.com/authors/1429114964p5/9810.jpg" alt="Albert image" class="asideimage">
               <h2 class="featuredusername">Albert</h2>
               <p class="asidetxt">Albert Einstein was a German-born theoretical physicist. He developed the general theory of relativity, one of the two pillars of modern physics. Einstein's work is also known for its influence on the philosophy of science. Actively involved on this site from the spirit realm.
             </div>
           </section>
-          <section class="featureduser" id="bottomfeature">
+          <section class="featureduser" id="bottomfeature" role="region">
             <div>
               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Feynman_at_Los_Alamos.jpg/220px-Feynman_at_Los_Alamos.jpg" alt="Robert image" class="asideimage">
               <h2 class="featuredusername">Robert</h2>
@@ -354,7 +354,7 @@
   <!-- <div class="beta">
     <p>Welcome! Please bear in mind that this application is in beta.</p>
   </div> -->
-  <footer>
+  <footer	role="contentinfo">
     <div class="footercontent flex-item">
       <ul class="flex-item">
         <li><a href="index.html">Home</a></li>

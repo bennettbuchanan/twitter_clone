@@ -162,6 +162,7 @@ footer {
   color: whitesmoke;
   justify-content: space-between;
   align-items: center;
+  background: black; /* add background for WCAG2AAA specs */
 }
 
 .footercontent a {
@@ -296,7 +297,6 @@ aside {
   color: white;
   border: 1px solid #314354;
   text-align: center;
-  display: inline-block;
   margin: 5px 15px 10px 0px;
   width: 75px;
   cursor: pointer;
@@ -412,6 +412,7 @@ aside {
   margin: 0px 0px 20px 0px;
   width: 555px;
   color: white;
+  justify-content: center;
 }
 
 /* Set styles for reply form */
@@ -420,7 +421,6 @@ aside {
   background: #eee;
   margin: 10px 0px;
   padding: 20px 20px 15px 20px;
-  display: none;
 }
 
 #post_form{
@@ -778,16 +778,18 @@ img {
     border: 1px solid #555555;
   }
 
+  .noscriptPost {
+    margin-top: 100px;
+  }
+
   button {
     border: 1px solid black;
   }
 
   nav {
-    display: none;
     align-self: center;
-  }
-
-  .nav-show {
+    height: 110px;
+    background: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -798,7 +800,23 @@ img {
     border-bottom: 1px solid #ccc;
   }
 
-  .nav-show ul li {
+  .nav-hide{
+    display: none;
+  }
+
+  .nav-show {
+    display: flex;
+    flex-direction: column;
+    height: 110px;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+    background: white;
+    border-bottom: 1px solid #ccc;
+  }
+
+  nav ul li {
     padding-top: 10px;
   }
 
