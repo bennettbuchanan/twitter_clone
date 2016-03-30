@@ -175,13 +175,13 @@ footer {
 
 .footercontent p {
   color: whitesmoke;
-  font-size: 2em;
+  font-size: 1em;
 }
 
 .footercontent ul {
   align-content: flex-start;
   justify-content: space-between;;
-  width: 500px;
+  width: 400px;
 }
 
 .footercontent ul li {
@@ -340,11 +340,12 @@ aside {
 
 .call_to_action:hover {
   color: black;
-  background: #FFE1E1;
+  background: #ffc8c8;
 }
 
 .call_to_action:active {
-  background: #FFE1E1;
+  color: black;
+  background: #ffafaf;
 }
 
 #postbutton {
