@@ -385,6 +385,32 @@ aside {
   min-height: 110px;
 }
 
+.login_form {
+  margin: auto;
+  line-height: 2em;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.login_form h1 {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.login_form input {
+  border: 1px solid #aeaeae;
+  height: 20px;
+  width: 50%;
+}
+
+.login_form #submit_button {
+  margin-top: 1em;
+  width: 25%;
+  height: auto;
+  margin-bottom: 0px;
+}
+
 /* Set styles for main post form */
 .poststatus {
   border-radius: 4px;
