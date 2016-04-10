@@ -196,9 +196,14 @@ footer {
 }
 
 #error_message {
-  color: red;
-  padding-left: 10px;
-  border: 0px;
+  color: black;
+  font-size: 1.25em;
+  padding: 10px 10px 10px 10px;
+  background: rgba(255, 182, 193, 0.35);
+  border-radius: 4px;
+  margin: 0px 0px 20px 0px;
+  text-align: center;
+  border: 1px solid red;
 }
 
 /* Target individual menu items to create appropriate spacing and styling */
@@ -699,6 +704,10 @@ img {
     margin-right: auto;
   }
 
+  #error_message {
+    margin: 0px 20px 20px 20px;
+  }
+
   .contentoverwrap {
     flex-direction: column;
     justify-content: space-between;
@@ -816,11 +825,6 @@ img {
 
   #nav-button:hover {
     border: 1px solid #555555;
-  }
-
-  #error_message {
-    padding-left: 0px;
-    padding-bottom: 10px;
   }
 
   .noscriptPost {

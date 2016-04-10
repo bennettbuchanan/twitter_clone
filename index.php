@@ -47,7 +47,7 @@ if ($is_true == true) {
 }
 
 if ($is_true == false && strlen($login) > 0) {
-  $error = "Invalid credentials";
+  $error = '<p id="error_message">Invalid Credentials</p>';
 }
 
 ?>
@@ -67,7 +67,6 @@ if ($is_true == false && strlen($login) > 0) {
       </ul>
       <ul class="toprightmenu flex-item">
         <li><a href="#">Hello, <?echo $login_display;?></a></li>
-        <li id="error_message"><?echo $error;?></li>
       </ul>
     </nav>
   </div>
@@ -75,6 +74,7 @@ if ($is_true == false && strlen($login) > 0) {
 <!-- End Header -->
   <!-- Content Overwrap-->
   <div class="outercontainer flex-item">
+    <?echo $error;?>
     <div class="contentoverwrap flex-item">
       <!--Content -->
       <div class="statuscontentcontainer flex-item">
