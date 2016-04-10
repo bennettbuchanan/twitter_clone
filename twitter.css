@@ -190,9 +190,15 @@ footer {
 }
 
 /* Add pipe character after li with id of firstitem, add padding for equal spacing */
-#firstitem:after {
-  content: " |";
+.seconditem:before {
+  content: "| ";
   padding-right: 5px;
+}
+
+#error_message {
+  color: red;
+  padding-left: 10px;
+  border: 0px;
 }
 
 /* Target individual menu items to create appropriate spacing and styling */
@@ -399,8 +405,9 @@ aside {
 }
 
 .login_form input {
-  border: 1px solid #aeaeae;
-  height: 20px;
+  border: 1px solid #e1e8ed;
+  border-radius: 2px;
+  height: 25px;
   width: 50%;
 }
 
@@ -409,6 +416,7 @@ aside {
   width: 25%;
   height: auto;
   margin-bottom: 0px;
+  border: none;
 }
 
 /* Set styles for main post form */
@@ -810,6 +818,11 @@ img {
     border: 1px solid #555555;
   }
 
+  #error_message {
+    padding-left: 0px;
+    padding-bottom: 10px;
+  }
+
   .noscriptPost {
     margin-top: 100px;
   }
@@ -839,9 +852,9 @@ img {
   .nav-show {
     display: flex;
     flex-direction: column;
-    height: 110px;
+    height: auto;
     align-items: center;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     padding-top: 10px;
     border-top: 1px solid #ccc;
     background: white;

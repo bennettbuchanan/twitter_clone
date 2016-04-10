@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang = "en">
   <body>
     <header>
@@ -17,13 +18,13 @@
     <div class="outercontainer flex-item">
       <div class="login_form">
         <h1>Log in to Impossible Octopus Fitness</h1>
-        <form method="post" name"myemailform" action="index.php">
+        <form method="post" name"loginform" action="index.php">
           <p>
-            <label for="name">Login: </label><br>
+            <label for="name">Login:</label><br>
             <input type="text" name="name">
           </p>
           <p>
-            <label for="password">Password: </label><br>
+            <label for="password">Password:</label><br>
             <input type = "password" class = "form-control" name = "password" placeholder = "******">
           </p>
           <input class="button" id="submit_button" type="submit" value="Submit">

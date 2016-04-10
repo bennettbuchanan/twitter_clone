@@ -12,6 +12,45 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <body>
+  <?php
+
+$login = $_POST["name"];
+$login_display = "there!";
+$password = $_POST["password"];
+$len = strlen($login);
+$encrypted_user_name = str_rot13($login);
+
+$users = [
+    array("id" => 1, "login" => "user1", "password" => "password1", "full_name" => "User 1"),
+    array("id" => 2, "login" => "user2", "password" => "password2", "full_name" => "User 2"),
+    array("id" => 3, "login" => "user3", "password" => "password3", "full_name" => "User 3"),
+  ];
+
+function userExists($login, $password, $users) {
+  foreach ($users as $elem) {
+    if($elem['login'] == $login) {
+      if ($elem['password'] == $password) {
+        return true;
+      }
+      else {
+        return false;
+      }
+    }
+  }
+  return false;
+}
+
+$is_true = userExists($login, $password, $users);
+
+if ($is_true == true) {
+  $login_display = $login;
+}
+
+if ($is_true == false && strlen($login) > 0) {
+  $error = "Invalid credentials";
+}
+
+?>
   <!-- Outermost container -->
   <!-- Header -->
 <header>
@@ -27,8 +66,8 @@
         <li><a href="allusers.html">All users</a></li>
       </ul>
       <ul class="toprightmenu flex-item">
-        <li id="firstitem"><a href="#">Edit my profile</a></li>
-        <li><a href="#">Logout</a></li>
+        <li><a href="#">Hello, <?echo $login_display;?></a></li>
+        <li id="error_message"><?echo $error;?></li>
       </ul>
     </nav>
   </div>
@@ -39,6 +78,10 @@
     <div class="contentoverwrap flex-item">
       <!--Content -->
       <div class="statuscontentcontainer flex-item">
+        <p>Your rot13’d login is: <?echo $encrypted_user_name;?></p>
+        <br>
+        <p>The length of your login is: <?echo $len;?></p>
+        <br>
         <button class="button postlink flex-item" id="post_button">Post a status!</button>
         <div class="poststatus" id="post_form" aria-live="polite">
           <form method="get" id="post_status">
@@ -253,7 +296,7 @@
             <img src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="Impossible Octopus Fitness Fan Image" class="userimage">
             <h2 class="username">Impossible Octopus Fan</h2>
             <p class="date">March 2nd</p>
-            <p class="usertxt">I just love love love this fitness farm, a I think I'll just post it like seven times to make sure it is heard by all. Check out their <a href="http://www.foodnetwork.com/shows/restaurant-impossible/specials/fitness-impossible.html">Impossible Octopus Fitness</a> restaurant too! 
+            <p class="usertxt">I just love love love this fitness farm, a I think I'll just post it like seven times to make sure it is heard by all. Check out their <a href="http://www.foodnetwork.com/shows/restaurant-impossible/specials/fitness-impossible.html">Impossible Octopus Fitness</a> restaurant too!
             </p>
             <p class="usertxt">
               <button class="button reply_link" data-tag="8">Reply</button>
