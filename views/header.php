@@ -16,11 +16,7 @@
             <?php echo $login_display; // Hello David!?>
           </a>
         </li>
-        <li>
-          <a href="index.php">Logout
-            <?php include './model/user.php'; ?>
-          </a>
-        </li>
+
       </ul>
     </nav>
   </div>

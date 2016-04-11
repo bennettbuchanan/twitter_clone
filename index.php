@@ -20,6 +20,10 @@
     return false;
   }
 
+  if ($_COOKIE['login_name']) {
+    $login_display = $_COOKIE['login_name'];
+  }
+
   $is_true = userExists($login, $password, $users);
 
   if ($is_true == true) {
@@ -32,6 +36,7 @@
     setcookie('login_name', $login_display); // 86400 = 1 day
     $error = '<p id="error_message">Invalid Credentials</p>';
   }
+
 ?>
 
 <!doctype html>

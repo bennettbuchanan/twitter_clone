@@ -1,1 +1,5 @@
-<?php setcookie("login_name", "", time() - 3600); ?>
+<?php 
+
+setcookie("login_name", "", time() - 3600);
+
+ ?>

@@ -12,8 +12,8 @@
 <!-- Header -->
 <?php
   include_once './model/user.php';
-  if ($_COOKIE['login_name3']) {
-    $login_display = $_COOKIE['login_name3'];
+  if ($_COOKIE['login_name']) {
+    $login_display = $_COOKIE['login_name'];
   }
 ?>
 <?php include './views/header.php';?>
