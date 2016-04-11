@@ -1,4 +1,41 @@
+<?php
+  include_once './model/user.php';
+  $login = $_POST["name"];
+  $login_display = "there!";
+  $password = $_POST["password"];
+  $len = strlen($login);
+  $encrypted_user_name = str_rot13($login);
+
+  function userExists($login, $password, $users) {
+    foreach ($users as $elem) {
+      if($elem['login'] == $login) {
+        if ($elem['password'] == $password) {
+          return true;
+        }
+        else {
+          return false;
+        }
+      }
+    }
+    return false;
+  }
+
+  $is_true = userExists($login, $password, $users);
+
+  if ($is_true == true) {
+    $login_display = $login;
+    setcookie('login_name', $login); // 86400 = 1 day
+  }
+
+  if ($is_true == false && strlen($login) > 0) {
+    $login_display = 'there!';
+    setcookie('login_name', $login_display); // 86400 = 1 day
+    $error = '<p id="error_message">Invalid Credentials</p>';
+  }
+?>
+
 <!doctype html>
+
 <!-- Microdata markup added by Google Structured Data Markup Helper. -->
 <html lang="en">
 <head>
@@ -14,63 +51,10 @@
 <body>
   <?php
 
-$login = $_POST["name"];
-$login_display = "there!";
-$password = $_POST["password"];
-$len = strlen($login);
-$encrypted_user_name = str_rot13($login);
-
-$users = [
-    array("id" => 1, "login" => "user1", "password" => "password1", "full_name" => "User 1"),
-    array("id" => 2, "login" => "user2", "password" => "password2", "full_name" => "User 2"),
-    array("id" => 3, "login" => "user3", "password" => "password3", "full_name" => "User 3"),
-  ];
-
-function userExists($login, $password, $users) {
-  foreach ($users as $elem) {
-    if($elem['login'] == $login) {
-      if ($elem['password'] == $password) {
-        return true;
-      }
-      else {
-        return false;
-      }
-    }
-  }
-  return false;
-}
-
-$is_true = userExists($login, $password, $users);
-
-if ($is_true == true) {
-  $login_display = $login;
-}
-
-if ($is_true == false && strlen($login) > 0) {
-  $error = '<p id="error_message">Invalid Credentials</p>';
-}
-
+include './views/header.php';
 ?>
   <!-- Outermost container -->
   <!-- Header -->
-<header>
-  <div class="headercontainer flex-item">
-    <div id="mobile_view_header">
-      <button id="nav-button">&#9776;</button>
-        <h1><img id="logo" src="https://maxcdn.icons8.com/wp-content/uploads/2014/01/octopus-128.png" alt="Impossible Octopus Fitness Club Logo"> <span class="visuallyhidden">Impossible Octopus Fitness</span> </h1>
-    </div>
-    <nav>
-      <ul class="centernav flex-item">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="mystatuses.html">My statuses</a></li>
-        <li><a href="allusers.html">All users</a></li>
-      </ul>
-      <ul class="toprightmenu flex-item">
-        <li><a href="#">Hello, <?echo $login_display;?></a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
 <!-- End Header -->
   <!-- Content Overwrap-->
   <div class="outercontainer flex-item">
@@ -400,20 +384,7 @@ if ($is_true == false && strlen($login) > 0) {
   <!-- <div class="beta">
     <p>Welcome! Please bear in mind that this application is in beta.</p>
   </div> -->
-  <footer>
-    <div class="footercontent flex-item">
-      <ul class="flex-item">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="mystatuses.html">My statuses</a></li>
-        <li><a href="allusers.html">All users</a></li>
-        <li><a href="allusers.html">All users</a></li>
-        <li><a href="#">Edit my profile</a></li>
-      </ul>
-      <div>
-        <p> Made by Bennett Buchanan and Naomi Veroczi</p>
-      </div>
-    </div>
-  </footer>
+  <?php include './views/footer.php';?>
   <!-- <script type="text/javascript" src="all_images_data.js" defer></script> -->
   <script type="text/javascript" src="/node_modules/handlebars/dist/handlebars.min.js" defer></script>
   <script type="text/javascript" src="ajax.js" defer></script>
