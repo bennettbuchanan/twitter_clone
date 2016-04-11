@@ -1,4 +1,5 @@
 <?php
+  // Load array of users
   include_once './model/user.php';
   $login = $_POST["name"];
   $login_display = "there!";
@@ -6,6 +7,7 @@
   $len = strlen($login);
   $encrypted_user_name = str_rot13($login);
 
+  // check to see if user exists, and have entered the correct password
   function userExists($login, $password, $users) {
     foreach ($users as $elem) {
       if($elem['login'] == $login) {
@@ -24,13 +26,16 @@
     $login_display = $_COOKIE['login_name'];
   }
 
+  // store return results from function
   $is_true = userExists($login, $password, $users);
 
+  // set a cookie with the username if credentials are valid
   if ($is_true == true) {
     $login_display = $login;
     setcookie('login_name', $login); // 86400 = 1 day
   }
 
+  // if credentials are invalid, display error message to user
   if ($is_true == false && strlen($login) > 0) {
     $login_display = 'there!';
     setcookie('login_name', $login_display); // 86400 = 1 day

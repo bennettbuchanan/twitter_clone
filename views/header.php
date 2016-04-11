@@ -16,7 +16,6 @@
             <?php echo $login_display; // Hello David!?>
           </a>
         </li>
-
       </ul>
     </nav>
   </div>

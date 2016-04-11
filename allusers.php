@@ -9,9 +9,9 @@
   <link rel="shortcut icon" href="https://maxcdn.icons8.com/wp-content/uploads/2014/01/octopus-128.png" type="image/x-icon" />
 </head>
 <body>
-<!-- Header -->
 <?php
   include_once './model/user.php';
+  // if the cookie already exists, update the cookie's value
   if ($_COOKIE['login_name']) {
     $login_display = $_COOKIE['login_name'];
   }
