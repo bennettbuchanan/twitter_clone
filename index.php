@@ -1,6 +1,7 @@
 <?php
   // Load array of users
   include_once './model/user.php';
+
   $login = $_POST["name"];
   $login_display = "there!";
   $password = $_POST["password"];

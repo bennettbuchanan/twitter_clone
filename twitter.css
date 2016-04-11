@@ -189,10 +189,14 @@ footer {
   justify-content: space-around;
 }
 
+.firstitem:after {
+  content: " ";
+  padding-right: 5px;
+}
+
 /* Add pipe character after li with id of firstitem, add padding for equal spacing */
 .seconditem:before {
-  content: "| ";
-  padding-right: 5px;
+  content: "|";
 }
 
 #error_message {

@@ -11,10 +11,13 @@
         <li><a href="allusers.php">All users</a></li>
       </ul>
       <ul class="toprightmenu flex-item">
-        <li>
+        <li class="firstitem">
           <a href="#">Hello,
             <?php echo $login_display; // Hello David!?>
           </a>
+        </li>
+        <li class="seconditem">
+          <a href="logout.php">Logout</a>
         </li>
       </ul>
     </nav>
