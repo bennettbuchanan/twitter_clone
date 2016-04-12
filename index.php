@@ -75,6 +75,8 @@ include './views/header.php';
       <div class="statuscontentcontainer flex-item">
         <p>Your rot13’d login is: <?echo $encrypted_user_name;?></p>
         <br>
+        <p>Username<?echo $users[0]['full_name'];?></p>
+        <br>
         <p>The length of your login is: <?echo $len;?></p>
         <br>
         <button class="button postlink flex-item" id="post_button">Post a status!</button>

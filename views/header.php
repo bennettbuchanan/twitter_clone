@@ -13,7 +13,7 @@
       <ul class="toprightmenu flex-item">
         <li class="firstitem">
           <a href="#">Hello,
-            <?php echo $login_display; // Hello David!?>
+            <?php echo $login_display; // Hello user!?>
           </a>
         </li>
         <li class="seconditem">

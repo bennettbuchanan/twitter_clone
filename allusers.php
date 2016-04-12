@@ -1,3 +1,5 @@
+<?php include_once './model/user.php'; ?>
+
 <!doctype html>
 <html lang="en">
 
@@ -9,14 +11,26 @@
   <link rel="shortcut icon" href="https://maxcdn.icons8.com/wp-content/uploads/2014/01/octopus-128.png" type="image/x-icon" />
 </head>
 <body>
-<?php
-  include_once './model/user.php';
-  // if the cookie already exists, update the cookie's value
-  if ($_COOKIE['login_name']) {
-    $login_display = $_COOKIE['login_name'];
-  }
-?>
-<?php include './views/header.php';?>
+<!-- Header -->
+<header>
+  <div class="headercontainer flex-item">
+    <div id="mobile_view_header">
+      <button id="nav-button"><span style="color: #aeaeae">&#9776;</span></button>
+      <img id="logo" src="https://maxcdn.icons8.com/wp-content/uploads/2014/01/octopus-128.png" alt="Impossible Octopus Fitness Club Logo">
+    </div>
+    <nav>
+      <ul class="centernav flex-item">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mystatuses.html">My statuses</a></li>
+        <li><a href="allusers.html">All users</a></li>
+      </ul>
+      <ul class="toprightmenu flex-item">
+        <li id="firstitem"><a href="#">Edit my profile</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
   <div class="outercontainer flex-item">
     <!-- End Header -->
     <!-- Content Overwrap-->
@@ -27,7 +41,7 @@
         </div>
         <img class="minipic" src="https://pbs.twimg.com/profile_images/671167132147691520/uV8CeWDU_bigger.jpg" alt="User Profile Image">
         <div class="userinfo">
-          <p><a href="https://twitter.com/nbveroczi">Naomi Veroczi</a></p>
+          <p><a href="https://twitter.com/nbveroczi"><?php echo $users[0]['full_name']?></a></p>
           <div>
             <p class="useraddress">@nbveroczi
             </p>
@@ -54,7 +68,7 @@
         </div>
         <img class="minipic" src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User Profile Image">
         <div class="userinfo">
-          <p><a href="https://twitter.com/nbveroczi">User Name</a></p>
+          <p><a href="https://twitter.com/nbveroczi"><?php echo $users[1]['full_name']?></a></p>
           <div>
             <p class="useraddress">@username
             </p>
@@ -81,7 +95,7 @@
         </div>
         <img class="minipic" src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User Profile Image">
         <div class="userinfo">
-          <p><a href="https://twitter.com/nbveroczi">User Name</a></p>
+          <p><a href="https://twitter.com/nbveroczi"><?php echo $users[2]['full_name']?></a></p>
           <div>
             <p class="useraddress">@username
             </p>
@@ -108,7 +122,7 @@
         </div>
         <img class="minipic" src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User Profile Image">
         <div class="userinfo">
-          <p><a href="https://twitter.com/nbveroczi">User Name</a></p>
+          <p><a href="https://twitter.com/nbveroczi"><?php echo $users[3]['full_name']?></a></p>
           <div>
             <p class="useraddress">@username
             </p>
@@ -135,7 +149,7 @@
         </div>
         <img class="minipic" src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User Profile Image">
         <div class="userinfo">
-          <p><a href="https://twitter.com/nbveroczi">User Name</a></p>
+          <p><a href="https://twitter.com/nbveroczi"><?php echo $users[4]['full_name']?></a></p>
           <div>
             <p class="useraddress">@username
             </p>
@@ -162,7 +176,7 @@
         </div>
         <img class="minipic" src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User Profile Image">
         <div class="userinfo">
-          <p><a href="https://twitter.com/nbveroczi">User Name</a></p>
+          <p><a href="https://twitter.com/nbveroczi"><?php echo $users[5]['full_name']?></a></p>
           <div>
             <p class="useraddress">@username
             </p>
@@ -189,7 +203,7 @@
         </div>
         <img class="minipic" src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User Profile Image">
         <div class="userinfo">
-          <p><a href="https://twitter.com/nbveroczi">User Name</a></p>
+          <p><a href="https://twitter.com/nbveroczi"><?php echo $users[6]['full_name']?></a></p>
           <div>
             <p class="useraddress">@username
             </p>
@@ -216,7 +230,7 @@
         </div>
         <img class="minipic" src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User Profile Image">
         <div class="userinfo">
-          <p><a href="https://twitter.com/nbveroczi">User Name</a></p>
+          <p><a href="https://twitter.com/nbveroczi"><?php echo $users[7]['full_name']?></a></p>
           <div>
             <p class="useraddress">@username
             </p>
@@ -243,7 +257,7 @@
         </div>
         <img class="minipic" src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User Profile Image">
         <div class="userinfo">
-          <p><a href="https://twitter.com/nbveroczi">User Name</a></p>
+          <p><a href="https://twitter.com/nbveroczi"><?php echo $users[8]['full_name']?></a></p>
           <div>
             <p class="useraddress">@username
             </p>
@@ -268,7 +282,9 @@
     <!-- End mystatuseswrapper -->
   </div>
   <!-- End Outermost container -->
-  <?php include './views/footer.php';?>
+  <div class="beta">
+    <p>Welcome! Please bear in mind that this application is in beta.</p>
+  </div>
   <script type="text/javascript" src="all_images_data.js" defer></script>
   <script type="text/javascript" src="post_a_status.js" defer></script>
   <script type="text/javascript" src="sticky_smart_header.js" defer></script>
