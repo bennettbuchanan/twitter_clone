@@ -1,6 +1,7 @@
 <?php
   // Load array of users
   include_once './model/user.php';
+  include_once './model/status.php';
 
   $login = $_POST["name"];
   $login_display = "there!";
@@ -74,8 +75,6 @@ include './views/header.php';
       <!--Content -->
       <div class="statuscontentcontainer flex-item">
         <p>Your rot13’d login is: <?echo $encrypted_user_name;?></p>
-        <br>
-        <p>Username<?echo $users[0]['full_name'];?></p>
         <br>
         <p>The length of your login is: <?echo $len;?></p>
         <br>
