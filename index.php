@@ -71,12 +71,12 @@
   ?>
   <!-- Content Overwrap-->
   <div class="outercontainer flex-item">
-    <?echo $error;?>
+    <?php echo $error;?>
     <div class="contentoverwrap flex-item">
       <!--Content -->
       <div class="statuscontentcontainer flex-item">
-        <p class="login_info">Your rot13’d login is: <?echo $encrypted_user_name;?></p>
-        <p class="login_info">The length of your login is: <?echo $len;?></p>
+        <p class="login_info">Your rot13’d login is: <?php echo $encrypted_user_name;?></p>
+        <p class="login_info">The length of your login is: <?php echo $len;?></p>
         <button class="button post_button" id="post_button">Post a status!</button>
         <div class="poststatus" id="post_form" aria-live="polite">
           <form method="get" id="post_status">
