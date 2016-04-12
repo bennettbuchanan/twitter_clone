@@ -9,5 +9,4 @@
     array("id" => 8, "login" => "user8", "password" => "password8", "full_name" => "User", "user_name" => "@anonymous_user", "profile_pic" => "http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg"),
     array("id" => 9, "login" => "user9", "password" => "password9", "full_name" => "User", "user_name" => "@anonymous_user", "profile_pic" => "http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg"),
     array("id" => 9, "login" => "user9", "password" => "password9", "full_name" => "User", "user_name" => "@anonymous_user", "profile_pic" => "http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg")
-  ];
-?>
+  ]; ?>

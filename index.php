@@ -1,15 +1,16 @@
 <?php
-  // Load array of users
+  // load array of users
   include_once './model/user.php';
+  // load array of statuses
   include_once './model/status.php';
-
+  // set variables for credential authenication
   $login = $_POST["name"];
-  $login_display = "there!";
   $password = $_POST["password"];
+  $login_display = "there!";
   $len = strlen($login);
   $encrypted_user_name = str_rot13($login);
 
-  // check to see if user exists, and have entered the correct password
+  // check to see if user exists, and has entered the correct password
   function userExists($login, $password, $users) {
     foreach ($users as $elem) {
       if($elem['login'] == $login) {
@@ -24,12 +25,13 @@
     return false;
   }
 
+  // store return results from function
+  $is_true = userExists($login, $password, $users);
+
+  // if the cookie already exists, update it to new user
   if ($_COOKIE['login_name']) {
     $login_display = $_COOKIE['login_name'];
   }
-
-  // store return results from function
-  $is_true = userExists($login, $password, $users);
 
   // set a cookie with the username if credentials are valid
   if ($is_true == true) {
@@ -39,16 +41,14 @@
 
   // if credentials are invalid, display error message to user
   if ($is_true == false && strlen($login) > 0) {
+    // set variable to default message to replace any preexisting cookie
     $login_display = 'there!';
-    setcookie('login_name', $login_display); // 86400 = 1 day
+    setcookie('login_name', $login_display);
     $error = '<p id="error_message">Invalid Credentials</p>';
   }
-
 ?>
 
 <!doctype html>
-
-<!-- Microdata markup added by Google Structured Data Markup Helper. -->
 <html lang="en">
 <head>
   <link rel="stylesheet" type="text/css" href="twitter.css">
@@ -62,12 +62,9 @@
 </head>
 <body>
   <?php
-
-include './views/header.php';
-?>
-  <!-- Outermost container -->
-  <!-- Header -->
-<!-- End Header -->
+  // include page header
+  include './views/header.php';
+  ?>
   <!-- Content Overwrap-->
   <div class="outercontainer flex-item">
     <?echo $error;?>
@@ -196,10 +193,7 @@ include './views/header.php';
     <!-- End Content Overwrap -->
   </div>
   <!-- End Outermost container -->
-  <!-- <div class="beta">
-    <p>Welcome! Please bear in mind that this application is in beta.</p>
-  </div> -->
-  <?php include './views/footer.php';?>
+  <?php include 'views/footer.php';?>
   <!-- <script type="text/javascript" src="all_images_data.js" defer></script> -->
   <script type="text/javascript" src="/node_modules/handlebars/dist/handlebars.min.js" defer></script>
   <script type="text/javascript" src="ajax.js" defer></script>

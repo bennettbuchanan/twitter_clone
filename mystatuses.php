@@ -9,15 +9,16 @@
   <link rel="shortcut icon" href="https://maxcdn.icons8.com/wp-content/uploads/2014/01/octopus-128.png" type="image/x-icon" />
 </head>
 <body>
-<?php
-  include_once './model/user.php';
-  include_once './model/user.php';
-  // if the cookie already exists, update the cookie's value
-  if ($_COOKIE['login_name']) {
-    $login_display = $_COOKIE['login_name'];
-  }
-?>
-<?php include './views/header.php';?>
+  <?php
+    // if a cookie already exists, update its value
+    if ($_COOKIE['login_name']) {
+      $login_display = $_COOKIE['login_name'];
+    }
+    include_once 'model/user.php';
+    include_once 'model/status.php';
+    // include page header
+    include 'views/header.php';
+  ?>
   <div class="outercontainer flex-item">
     <!-- End Header -->
     <!-- Content Overwrap-->
@@ -121,7 +122,7 @@
     <!-- End Alluserswrapper -->
   </div>
   <!-- End Outermost container -->
-  <?php include './views/footer.php';?>
+  <?php include 'views/footer.php';?>
   <script type="text/javascript" src="all_images_data.js" defer></script>
   <script type="text/javascript" src="post_a_status.js" defer></script>
   <script type="text/javascript" src="sticky_smart_header.js" defer></script>
