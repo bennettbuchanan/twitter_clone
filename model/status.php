@@ -1,6 +1,5 @@
 <?php
-include_once './model/user.php';
-$statuses = [
+$GLOBALS['statuses'] = [
     array("id" => 0, "user_id" => $users[0]['full_name'] , "profile_pic" => $users[0]['profile_pic'], "post_date" => "March 2nd", "post_text" => "Impossible Octopus Fitness really helped me out. When I first came to San Francisco, I didn't know what to do. I thought fitness was impossible. But Impossible Octpus Fitness showed me the way after I went to their farm."),
     array("id" => 1, "user_id" => $users[1]['full_name'] , "profile_pic" => $users[1]['profile_pic'], "post_date" => "March 2nd", "post_text" => "I highly recommend Impossible Octopus Fitness. I know the founders of the farm and they are really great people. Nothing is impossible!!"),
     array("id" => 2, "user_id" => $users[2]['full_name'] , "profile_pic" => $users[2]['profile_pic'], "post_date" => "March 2nd", "post_text" => "After a friend recommended Impossible Octopus Fitness, I knew I had to try. I love to eat healthily and stay active."),

@@ -1,3 +1,4 @@
+<!DOCTYPE HTML>
 <?php
   // load array of users
   include_once './model/user.php';
@@ -44,11 +45,15 @@
     // set variable to default message to replace any preexisting cookie
     $login_display = 'there!';
     setcookie('login_name', $login_display);
-    $error = '<p id="error_message">Invalid Credentials</p>';
+    $error = '<p class="error_message">Invalid Credentials</p>';
   }
-?>
 
-<!doctype html>
+  // display error for a case where the user enters a password but no username
+  if ($login == "" && strlen($password) > 0) {
+    $error = '<p class="error_message">Invalid Credentials</p>';
+  }
+
+?>
 <html lang="en">
 <head>
   <link rel="stylesheet" type="text/css" href="twitter.css">
@@ -63,7 +68,7 @@
 <body>
   <?php
   // include page header
-  include './views/header.php';
+  include_once 'views/header.php';
   ?>
   <!-- Content Overwrap-->
   <div class="outercontainer flex-item">
@@ -193,17 +198,17 @@
     <!-- End Content Overwrap -->
   </div>
   <!-- End Outermost container -->
-  <?php include 'views/footer.php';?>
+  <?php include_once 'views/footer.php';?>
   <!-- <script type="text/javascript" src="all_images_data.js" defer></script> -->
-  <script type="text/javascript" src="/node_modules/handlebars/dist/handlebars.min.js" defer></script>
-  <script type="text/javascript" src="ajax.js" defer></script>
-  <script type="text/javascript" src="post_a_status.js" defer></script>
-  <script type="text/javascript" src="sticky_smart_header.js" defer></script>
-  <script type="text/javascript" src="geolocation.js" defer></script>
-  <script type="text/javascript" src="weather.js" defer></script>
-  <script type="text/javascript" src="load_more.js" defer></script>
-  <script type="text/javascript" src="reply.js" defer></script>
-  <script type="text/javascript" src="toggle.js" defer></script>
-  <script type="text/javascript" src="geolocation_progressive_enhancement.js" defer></script>
+  <script type="text/javascript" src="/node_modules/handlebars/dist/handlebars.min.js"></script>
+  <script type="text/javascript" src="ajax.js"></script>
+  <script type="text/javascript" src="post_a_status.js"></script>
+  <script type="text/javascript" src="sticky_smart_header.js"></script>
+  <script type="text/javascript" src="geolocation.js"></script>
+  <script type="text/javascript" src="weather.js"></script>
+  <script type="text/javascript" src="load_more.js"></script>
+  <script type="text/javascript" src="reply.js"></script>
+  <script type="text/javascript" src="toggle.js"></script>
+  <script type="text/javascript" src="geolocation_progressive_enhancement.js"></script>
 </body>
 </html>

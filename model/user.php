@@ -1,4 +1,5 @@
-<?php $users = [
+<?php
+$GLOBALS['users'] = [
     array("id" => 1, "login" => "user1", "password" => "password1", "full_name" => "Gus", "user_name" => "@gussy", "profile_pic" => "http://s19.postimg.org/t38mrbb0f/gus.jpg"),
     array("id" => 2, "login" => "user2", "password" => "password2", "full_name" => "Marine", "user_name" => "@marine43", "profile_pic" => "http://s19.postimg.org/br8a5vhj3/marine.jpg"),
     array("id" => 3, "login" => "user3", "password" => "password3", "full_name" => "Bilal", "user_name" => "@bilalala", "profile_pic" => "http://s19.postimg.org/c1b7bh6rj/bilal.jpg"),

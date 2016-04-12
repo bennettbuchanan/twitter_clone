@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <link rel="stylesheet" type="text/css" href="twitter.css">
   <meta charset="utf-8">
@@ -17,7 +16,7 @@
     include_once 'model/user.php';
     include_once 'model/status.php';
     // include page header
-    include 'views/header.php';
+    include_once 'views/header.php';
   ?>
   <div class="outercontainer flex-item">
     <!-- End Header -->
@@ -122,7 +121,7 @@
     <!-- End Alluserswrapper -->
   </div>
   <!-- End Outermost container -->
-  <?php include 'views/footer.php';?>
+  <?php include_once 'views/footer.php';?>
   <script type="text/javascript" src="all_images_data.js" defer></script>
   <script type="text/javascript" src="post_a_status.js" defer></script>
   <script type="text/javascript" src="sticky_smart_header.js" defer></script>

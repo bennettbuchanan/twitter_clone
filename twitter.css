@@ -199,7 +199,7 @@ footer {
   content: "|";
 }
 
-#error_message {
+.error_message {
   color: black;
   font-size: 1.25em;
   padding: 10px 10px 10px 10px;
@@ -673,6 +673,10 @@ img {
     margin-left: 20px;
   }
 
+  .firstitem {
+    height:10px
+  }
+
   footer {
     width: inherit;;
   }
@@ -899,7 +903,7 @@ img {
     width: auto;
   }
 
-  #firstitem:after {
+  .seconditem:before {
     content: none;
     padding-right: 0px;
   }
