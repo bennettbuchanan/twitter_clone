@@ -22,249 +22,38 @@
   <!-- End Header -->
   <!-- Content Overwrap-->
   <div class="mystatuseswrapper flex-item">
-    <div class="profile flex-item">
-      <!-- profile -->
-      <div class="background">
-      </div>
-      <img class="minipic" src="https://pbs.twimg.com/profile_images/671167132147691520/uV8CeWDU_bigger.jpg" alt="User Profile Image">
-      <div class="userinfo">
-        <p><a href="https://twitter.com/nbveroczi"><?php echo $users[0]['full_name']?></a></p>
-        <div>
-          <p class="useraddress">@nbveroczi
-          </p>
+    <?php
+      // for each item in the $users array, display their status
+      foreach ($users as $elem) {echo '
+        <div class="profile flex-item">
+          <!-- profile -->
+          <div class="background">
+          </div>
+          <img class="minipic" src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User Profile Image">
+          <div class="userinfo">
+            <p><a href="https://twitter.com/nbveroczi">'.$elem['full_name'].'</a></p>
+            <div>
+              <p class="useraddress">'.$elem['user_name'].'
+              </p>
+            </div>
+          </div>
+          <div class="userstats flex-item">
+            <ul>
+              <li><a href="#">FOLLOWING</a></li>
+              <li><a href="#">FOLLOWERS</a></li>
+              <li class="followstats">20</li>
+              <li class="followstats">134</li>
+            </ul>
+          </div>
+          <div class="bio">
+            <!-- Bio -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio suscipit tempora impedit, consectetur minima, illum molestiae? A facilis sed odio non, molestiae laborum facere esse eligendi eos, dolores officiis soluta.</p>
+          </div>
+          <!-- End Bio -->
         </div>
-      </div>
-      <div class="userstats flex-item">
-        <ul>
-          <li><a href="#">FOLLOWING</a></li>
-          <li><a href="#">FOLLOWERS</a></li>
-          <li class="followstats">20</li>
-          <li class="followstats">134</li>
-        </ul>
-      </div>
-      <div class="bio">
-        <!-- Bio -->
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio suscipit tempora impedit, consectetur minima, illum molestiae? A facilis sed odio non, molestiae laborum facere esse eligendi eos, dolores officiis soluta.</p>
-      </div>
-      <!-- End Bio -->
-    </div>
-    <!-- End profile -->
-    <div class="profile flex-item">
-      <!-- profile -->
-      <div class="background">
-      </div>
-      <img class="minipic" src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User Profile Image">
-      <div class="userinfo">
-        <p><a href="https://twitter.com/nbveroczi"><?php echo $users[1]['full_name']?></a></p>
-        <div>
-          <p class="useraddress">@username
-          </p>
-        </div>
-      </div>
-      <div class="userstats flex-item">
-        <ul>
-          <li><a href="#">FOLLOWING</a></li>
-          <li><a href="#">FOLLOWERS</a></li>
-          <li class="followstats">20</li>
-          <li class="followstats">134</li>
-        </ul>
-      </div>
-      <div class="bio">
-        <!-- Bio -->
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio suscipit tempora impedit, consectetur minima, illum molestiae? A facilis sed odio non, molestiae laborum facere esse eligendi eos, dolores officiis soluta.</p>
-      </div>
-      <!-- End Bio -->
-    </div>
-    <!-- End profile -->
-    <div class="profile flex-item">
-      <!-- profile -->
-      <div class="background">
-      </div>
-      <img class="minipic" src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User Profile Image">
-      <div class="userinfo">
-        <p><a href="https://twitter.com/nbveroczi"><?php echo $users[2]['full_name']?></a></p>
-        <div>
-          <p class="useraddress">@username
-          </p>
-        </div>
-      </div>
-      <div class="userstats flex-item">
-        <ul>
-          <li><a href="#">FOLLOWING</a></li>
-          <li><a href="#">FOLLOWERS</a></li>
-          <li class="followstats">20</li>
-          <li class="followstats">134</li>
-        </ul>
-      </div>
-      <div class="bio">
-        <!-- Bio -->
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio suscipit tempora impedit, consectetur minima, illum molestiae? A facilis sed odio non, molestiae laborum facere esse eligendi eos, dolores officiis soluta.</p>
-      </div>
-      <!-- End Bio -->
-    </div>
-    <!-- End profile -->
-    <div class="profile flex-item">
-      <!-- profile -->
-      <div class="background">
-      </div>
-      <img class="minipic" src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User Profile Image">
-      <div class="userinfo">
-        <p><a href="https://twitter.com/nbveroczi"><?php echo $users[3]['full_name']?></a></p>
-        <div>
-          <p class="useraddress">@username
-          </p>
-        </div>
-      </div>
-      <div class="userstats flex-item">
-        <ul>
-          <li><a href="#">FOLLOWING</a></li>
-          <li><a href="#">FOLLOWERS</a></li>
-          <li class="followstats">20</li>
-          <li class="followstats">134</li>
-        </ul>
-      </div>
-      <div class="bio">
-        <!-- Bio -->
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio suscipit tempora impedit, consectetur minima, illum molestiae? A facilis sed odio non, molestiae laborum facere esse eligendi eos, dolores officiis soluta.</p>
-      </div>
-      <!-- End Bio -->
-    </div>
-    <!-- End profile -->
-    <div class="profile flex-item">
-      <!-- profile -->
-      <div class="background">
-      </div>
-      <img class="minipic" src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User Profile Image">
-      <div class="userinfo">
-        <p><a href="https://twitter.com/nbveroczi"><?php echo $users[4]['full_name']?></a></p>
-        <div>
-          <p class="useraddress">@username
-          </p>
-        </div>
-      </div>
-      <div class="userstats flex-item">
-        <ul>
-          <li><a href="#">FOLLOWING</a></li>
-          <li><a href="#">FOLLOWERS</a></li>
-          <li class="followstats">20</li>
-          <li class="followstats">134</li>
-        </ul>
-      </div>
-      <div class="bio">
-        <!-- Bio -->
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio suscipit tempora impedit, consectetur minima, illum molestiae? A facilis sed odio non, molestiae laborum facere esse eligendi eos, dolores officiis soluta.</p>
-      </div>
-      <!-- End Bio -->
-    </div>
-    <!-- End profile -->
-    <div class="profile flex-item">
-      <!-- profile -->
-      <div class="background">
-      </div>
-      <img class="minipic" src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User Profile Image">
-      <div class="userinfo">
-        <p><a href="https://twitter.com/nbveroczi"><?php echo $users[5]['full_name']?></a></p>
-        <div>
-          <p class="useraddress">@username
-          </p>
-        </div>
-      </div>
-      <div class="userstats flex-item">
-        <ul>
-          <li><a href="#">FOLLOWING</a></li>
-          <li><a href="#">FOLLOWERS</a></li>
-          <li class="followstats">20</li>
-          <li class="followstats">134</li>
-        </ul>
-      </div>
-      <div class="bio">
-        <!-- Bio -->
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio suscipit tempora impedit, consectetur minima, illum molestiae? A facilis sed odio non, molestiae laborum facere esse eligendi eos, dolores officiis soluta.</p>
-      </div>
-      <!-- End Bio -->
-    </div>
-    <!-- End profile -->
-    <div class="profile flex-item">
-      <!-- profile -->
-      <div class="background">
-      </div>
-      <img class="minipic" src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User Profile Image">
-      <div class="userinfo">
-        <p><a href="https://twitter.com/nbveroczi"><?php echo $users[6]['full_name']?></a></p>
-        <div>
-          <p class="useraddress">@username
-          </p>
-        </div>
-      </div>
-      <div class="userstats flex-item">
-        <ul>
-          <li><a href="#">FOLLOWING</a></li>
-          <li><a href="#">FOLLOWERS</a></li>
-          <li class="followstats">20</li>
-          <li class="followstats">134</li>
-        </ul>
-      </div>
-      <div class="bio">
-        <!-- Bio -->
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio suscipit tempora impedit, consectetur minima, illum molestiae? A facilis sed odio non, molestiae laborum facere esse eligendi eos, dolores officiis soluta.</p>
-      </div>
-      <!-- End Bio -->
-    </div>
-    <!-- End profile -->
-    <div class="profile flex-item">
-      <!-- profile -->
-      <div class="background">
-      </div>
-      <img class="minipic" src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User Profile Image">
-      <div class="userinfo">
-        <p><a href="https://twitter.com/nbveroczi"><?php echo $users[7]['full_name']?></a></p>
-        <div>
-          <p class="useraddress">@username
-          </p>
-        </div>
-      </div>
-      <div class="userstats flex-item">
-        <ul>
-          <li><a href="#">FOLLOWING</a></li>
-          <li><a href="#">FOLLOWERS</a></li>
-          <li class="followstats">20</li>
-          <li class="followstats">134</li>
-        </ul>
-      </div>
-      <div class="bio">
-        <!-- Bio -->
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio suscipit tempora impedit, consectetur minima, illum molestiae? A facilis sed odio non, molestiae laborum facere esse eligendi eos, dolores officiis soluta.</p>
-      </div>
-      <!-- End Bio -->
-    </div>
-    <!-- End profile -->
-    <div class="profile flex-item">
-      <!-- profile -->
-      <div class="background">
-      </div>
-      <img class="minipic" src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="User Profile Image">
-      <div class="userinfo">
-        <p><a href="https://twitter.com/nbveroczi"><?php echo $users[8]['full_name']?></a></p>
-        <div>
-          <p class="useraddress">@username
-          </p>
-        </div>
-      </div>
-      <div class="userstats flex-item">
-        <ul>
-          <li><a href="#">FOLLOWING</a></li>
-          <li><a href="#">FOLLOWERS</a></li>
-          <li class="followstats">20</li>
-          <li class="followstats">134</li>
-        </ul>
-      </div>
-      <div class="bio">
-        <!-- Bio -->
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio suscipit tempora impedit, consectetur minima, illum molestiae? A facilis sed odio non, molestiae laborum facere esse eligendi eos, dolores officiis soluta.</p>
-      </div>
-      <!-- End Bio -->
-    </div>
-    <!-- End profile -->
+        <!-- End profile -->
+        '
+    ;} ?>
   </div>
   <!-- End mystatuseswrapper -->
 </div>
