@@ -107,233 +107,36 @@ include './views/header.php';
           </div>
         </noscript>
         <div>
-          <section class="statuscontent">
-            <img src="http://s19.postimg.org/t38mrbb0f/gus.jpg" alt="Impossible Octopus Fitness Fan Image" class="userimage">
-            <h2 class="username">Gus</h2>
-            <p class="date">March 2nd</p>
-            <p class="usertxt">Impossible Octopus Fitness really helped me out. When I first came to San Francisco, I didn't know what to do. I thought fitness was impossible. But Impossible Octpus Fitness showed me the way after I went to their farm.</p>
-            <p class="usertxt">
-              <button class="button reply_link" data-tag="0">Reply</button>
-            </p>
-            <div class="reply_form" id="user_reply_0" role="form" aria-expanded="false">
-              <form method="get">
-                <label for="responsearea_0">Reply to this post:</label>
-                <textarea aria-live="polite" name="status" id="responsearea_0"></textarea>
-                <div class="locationdiv flex-item">
-                  <div class="reply_checkbox visuallyhidden">
-                    <label for="emoji_0">Add Emoji</label>
-                    <input class="location" id="emoji_0" type="checkbox" name="location" value="true">
+          <?php
+            // for each item in the $users array, display their status
+            foreach ($statuses as $elem) {
+              // display each status post, use status post id for data attributes
+              echo
+              '<section class="statuscontent">
+              <img src="'.$elem['profile_pic'].'" alt="Impossible Octopus Fitness Fan Image" class="userimage">
+              <h2 class="username">'.$elem['user_id'].'</h2>
+              <p class="date">'.$elem['post_date'].'</p>
+              <p class="usertxt">'.$elem['post_text'].'
+              </p>
+              <p class="usertxt">
+                <button class="button reply_link" data-tag="'.$elem['id'].'">Reply</button>
+              </p>
+              <div class="reply_form visuallyhidden" id="user_reply_'.$elem['id'].'">
+                <form method="get">
+                  <label for="responsearea_'.$elem['id'].'">Reply to this post:</label>
+                  <textarea name="status" id="responsearea_'.$elem['id'].'"></textarea>
+                  <div class="locationdiv flex-item">
+                    <div>
+                      <label for="emoji_'.$elem['id'].'">Add Emoji</label>
+                      <input class="location" id="emoji_'.$elem['id'].'" type="checkbox" name="location" value="true">
+                    </div>
+                    <input class="replybutton" type="submit" value="Post">
                   </div>
-                  <input class="replybutton" type="submit" value="Post">
-                </div>
-              </form>
-            </div>
-          </section>
-          <section class="statuscontent">
-            <img src="http://s19.postimg.org/br8a5vhj3/marine.jpg " alt="Impossible Octopus Fitness Fan Image" class="userimage">
-            <h2 class="username">Marine</h2>
-            <p class="date">March 2nd</p>
-            <p class="usertxt">I highly recommend Impossible Octopus Fitness. I know the founders of the farm and they are really great people. Nothing is impossible!!</p>
-            <p class="usertxt">
-              <button class="button reply_link" data-tag="1">Reply</button>
-            </p>
-            <div class="reply_form" id="user_reply_1" role="form" aria-expanded="false">
-              <form method="get">
-                <label for="responsearea_1">Reply to this post:</label>
-                <textarea aria-live="polite" name="status" id="responsearea_1"></textarea>
-                <div class="locationdiv flex-item">
-                  <div class="reply_checkbox visuallyhidden">
-                    <label for="emoji_1">Add Emoji</label>
-                    <input class="location" id="emoji_1" type="checkbox" name="location" value="true">
-                  </div>
-                  <input class="replybutton" type="submit" value="Post">
-                </div>
-              </form>
-            </div>
-          </section>
-          <section class="statuscontent">
-            <img src="http://s19.postimg.org/c1b7bh6rj/bilal.jpg " alt="Impossible Octopus Fitness Fan Image" class="userimage">
-            <h2 class="username">Bilal</h2>
-            <p class="date">March 2nd</p>
-            <p class="usertxt">After a friend recommended Impossible Octopus Fitness, I knew I had to try. I love to eat healthily and stay active. There's nothing like farming to get your workout in.</p>
-            <p class="usertxt">
-              <button class="button reply_link" data-tag="2">Reply</button>
-            </p>
-            <div class="reply_form" id="user_reply_2" role="form" aria-expanded="false">
-              <form method="get">
-                <label for="responsearea_2">Reply to this post:</label>
-                <textarea aria-live="polite" name="status" id="responsearea_2"></textarea>
-                <div class="locationdiv flex-item">
-                  <div class="reply_checkbox visuallyhidden">
-                    <label for="emoji_2">Add Emoji</label>
-                    <input class="location" id="emoji_2" type="checkbox" name="location" value="true">
-                  </div>
-                  <input class="replybutton" type="submit" value="Post">
-                </div>
-              </form>
-            </div>
-          </section>
-          <section class="statuscontent">
-            <img src="https://holbertonschool.s3.amazonaws.com/quotes/photos/000/000/012/larger/bennett2.jpg?1449535775" alt="Impossible Octopus Fitness Fan Image" class="userimage">
-            <h2 class="username">Bennett</h2>
-            <p class="date">March 2nd</p>
-            <p class="usertxt">Never doubt yourself. That's what we say at Impossible Octopus Fitness Farm. Come on out to the farm for a free lunch. Meet our farmers and see the fitness in action. Take hold of life by taking hold of a fresh potato.
-            </p>
-            <p class="usertxt">
-              <button class="button reply_link" data-tag="3">Reply</button>
-            </p>
-            <div class="reply_form" id="user_reply_3" role="form" aria-expanded="false">
-              <form method="get">
-                <label for="responsearea_3">Reply to this post:</label>
-                <textarea aria-live="polite" name="status" id="responsearea_3"></textarea>
-                <div class="locationdiv flex-item">
-                  <div class="reply_checkbox visuallyhidden">
-                    <label for="emoji_3">Add Emoji</label>
-                    <input class="location" id="emoji_3" type="checkbox" name="location" value="true">
-                  </div>
-                  <input class="replybutton" type="submit" value="Post">
-                </div>
-              </form>
-            </div>
-          </section>
-          <section class="statuscontent">
-            <img src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="Impossible Octopus Fitness Fan Image" class="userimage">
-            <h2 class="username">Impossible Octopus Fan</h2>
-            <p class="date">March 2nd</p>
-            <p class="usertxt">I just love love love this fitness farm, a I think I'll just post it like seven times to make sure it is heard by all.
-            </p>
-            <p class="usertxt">
-              <button class="button reply_link" data-tag="4">Reply</button>
-            </p>
-            <div class="reply_form" id="user_reply_4" role="form" aria-expanded="false">
-              <form method="get">
-                <label for="responsearea_4">Reply to this post:</label>
-                <textarea aria-live="polite" name="status" id="responsearea_4"></textarea>
-                <div class="locationdiv flex-item">
-                  <div class="reply_checkbox visuallyhidden">
-                    <label for="emoji_4">Add Emoji</label>
-                    <input class="location" id="emoji_4" type="checkbox" name="location" value="true">
-                  </div>
-                  <input class="replybutton" type="submit" value="Post">
-                </div>
-              </form>
-            </div>
-          </section>
-          <section class="statuscontent">
-            <img src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="Impossible Octopus Fitness Fan Image" class="userimage">
-            <h2 class="username">Impossible Octopus Fan</h2>
-            <p class="date">March 2nd</p>
-            <p class="usertxt">I just love love love this fitness farm, a I think I'll just post it like seven times to make sure it is heard by all.
-            </p>
-            <p class="usertxt">
-              <button class="button reply_link" data-tag="5">Reply</button>
-            </p>
-            <div class="reply_form" id="user_reply_5" role="form" aria-expanded="false">
-              <form method="get">
-                <label for="responsearea_5">Reply to this post:</label>
-                <textarea aria-live="polite" name="status" id="responsearea_5"></textarea>
-                <div class="locationdiv flex-item">
-                  <div class="reply_checkbox visuallyhidden">
-                    <label for="emoji_5">Add Emoji</label>
-                    <input class="location" id="emoji_5" type="checkbox" name="location" value="true">
-                  </div>
-                  <input class="replybutton" type="submit" value="Post">
-                </div>
-              </form>
-            </div>
-          </section>
-          <section class="statuscontent">
-            <img src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="Impossible Octopus Fitness Fan Image" class="userimage">
-            <h2 class="username">Impossible Octopus Fan</h2>
-            <p class="date">March 2nd</p>
-            <p class="usertxt">I just love love love this fitness farm, a I think I'll just post it like seven times to make sure it is heard by all.
-            </p>
-            <p class="usertxt">
-              <button class="button reply_link" data-tag="6">Reply</button>
-            </p>
-            <div class="reply_form" id="user_reply_6" role="form" aria-expanded="false">
-              <form method="get">
-                <label aria-live="polite" for="responsearea_6">Reply to this post:</label>
-                <textarea name="status" id="responsearea_6"></textarea>
-                <div class="locationdiv flex-item">
-                  <div class="reply_checkbox visuallyhidden">
-                    <label for="emoji_6">Add Emoji</label>
-                    <input class="location" id="emoji_6" type="checkbox" name="location" value="true">
-                  </div>
-                  <input class="replybutton" type="submit" value="Post">
-                </div>
-              </form>
-            </div>
-          </section>
-          <section class="statuscontent">
-            <img src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="Impossible Octopus Fitness Fan Image" class="userimage">
-            <h2 class="username">Impossible Octopus Fan</h2>
-            <p class="date">March 2nd</p>
-            <p class="usertxt">I just love love love this fitness farm, a I think I'll just post it like seven times to make sure it is heard by all.
-            </p>
-            <p class="usertxt">
-              <button class="button reply_link" data-tag="7">Reply</button>
-            </p>
-            <div class="reply_form" id="user_reply_7" role="form" aria-expanded="false">
-              <form method="get">
-                <label for="responsearea_7">Reply to this post:</label>
-                <textarea aria-live="polite" name="status" id="responsearea_7"></textarea>
-                <div class="locationdiv flex-item">
-                  <div class="reply_checkbox visuallyhidden">
-                    <label for="emoji_7">Add Emoji</label>
-                    <input class="location" id="emoji_7" type="checkbox" name="location" value="true">
-                  </div>
-                  <input class="replybutton" type="submit" value="Post">
-                </div>
-              </form>
-            </div>
-          </section>
-          <section class="statuscontent">
-            <img src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="Impossible Octopus Fitness Fan Image" class="userimage">
-            <h2 class="username">Impossible Octopus Fan</h2>
-            <p class="date">March 2nd</p>
-            <p class="usertxt">I just love love love this fitness farm, a I think I'll just post it like seven times to make sure it is heard by all. Check out their <a href="http://www.foodnetwork.com/shows/restaurant-impossible/specials/fitness-impossible.html">Impossible Octopus Fitness</a> restaurant too!
-            </p>
-            <p class="usertxt">
-              <button class="button reply_link" data-tag="8">Reply</button>
-            </p>
-            <div class="reply_form" id="user_reply_8" role="form" aria-expanded="false">
-              <form method="get">
-                <label for="responsearea_8">Reply to this post:</label>
-                <textarea aria-live="polite" name="status" id="responsearea_8"></textarea>
-                <div class="locationdiv flex-item">
-                  <div class="reply_checkbox visuallyhidden">
-                    <label for="emoji_8">Add Emoji</label>
-                    <input class="location" id="emoji_8" type="checkbox" name="location" value="true">
-                  </div>
-                  <input class="replybutton" type="submit" value="Post">
-                </div>
-              </form>
-            </div>
-          </section>
-          <section class="statuscontent">
-            <img src="http://www-g.eng.cam.ac.uk/reactingflows/images/content/people/placeholder.jpg" alt="Impossible Octopus Fitness Fan Image" class="userimage">
-            <h2 class="username">Impossible Octopus Fan</h2>
-            <p class="date">March 2nd</p>
-            <p class="usertxt">I just love love love this fitness farm, a I think I'll just post it like seven times to make sure it is heard by all.
-            </p>
-            <p class="usertxt">
-              <button class="button reply_link" data-tag="9">Reply</button>
-            </p>
-            <div class="reply_form" id="user_reply_9" role="form" aria-expanded="false">
-              <form method="get">
-                <label for="responsearea_9">Reply to this post:</label>
-                <textarea aria-live="polite" name="status" id="responsearea_9"></textarea>
-                <div class="locationdiv flex-item">
-                  <div class="reply_checkbox visuallyhidden">
-                    <label for="emoji_9">Add Emoji</label>
-                    <input class="location" id="emoji_9" type="checkbox" name="location" value="true">
-                  </div>
-                  <input class="replybutton" type="submit" value="Post">
-                </div>
-              </form>
-            </div>
-          </section>
+                </form>
+              </div>
+            </section>
+          ';} ?>
+
         </div> <!-- end status post section -->
         <div id="extra_statuses">
         </div>
