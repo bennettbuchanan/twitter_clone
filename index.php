@@ -1,4 +1,3 @@
-<!DOCTYPE HTML>
 <?php
   // load array of users
   include_once './model/user.php';
@@ -53,7 +52,7 @@
     $error = '<p class="error_message">Invalid Credentials</p>';
   }
 
-?>
+?><!DOCTYPE HTML>
 <html lang="en">
 <head>
   <link rel="stylesheet" type="text/css" href="twitter.css">
@@ -76,11 +75,9 @@
     <div class="contentoverwrap flex-item">
       <!--Content -->
       <div class="statuscontentcontainer flex-item">
-        <p>Your rot13’d login is: <?echo $encrypted_user_name;?></p>
-        <br>
-        <p>The length of your login is: <?echo $len;?></p>
-        <br>
-        <button class="button postlink flex-item" id="post_button">Post a status!</button>
+        <p class="login_info">Your rot13’d login is: <?echo $encrypted_user_name;?></p>
+        <p class="login_info">The length of your login is: <?echo $len;?></p>
+        <button class="button post_button" id="post_button">Post a status!</button>
         <div class="poststatus" id="post_form" aria-live="polite">
           <form method="get" id="post_status">
             <label for="textarea_0">What is your status?</label>

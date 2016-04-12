@@ -148,6 +148,11 @@ header img {
   padding: 15px 0px 15px 0px;
 }
 
+.login_info {
+  margin: auto;
+  padding-bottom: 20px;
+}
+
 footer {
   width: 100%;
   background: url("./images/footer_background.jpg") repeat;
@@ -346,6 +351,12 @@ aside {
   cursor: not-allowed;
 }
 
+.post_button {
+  width: 100%;
+  margin: 0px 0px 20px 0px;
+  color: white;
+}
+
 .call_to_action {
   color: black;
   width: 200px;
@@ -450,14 +461,6 @@ aside {
   width: 150px;
   margin-bottom: 20px;
   margin-top: 0px;
-}
-
-.postlink {
-  width: 100%;
-  margin: 0px 0px 20px 0px;
-  width: 555px;
-  color: white;
-  justify-content: center;
 }
 
 /* Set styles for reply form */
@@ -697,10 +700,11 @@ img {
      margin-left: 20px;
    }
 
-  .postlink {
+  .post_button {
     padding-left: 0px;
     padding-right: 0px;
     margin: 0px 0px 20px 0px;
+    width: 500px;
     align-self: center;
   }
 
@@ -933,8 +937,8 @@ img {
     width: auto;
   }
 
-  .postlink {
-    width: 358px;
+  .post_button {
+    width: 200px;
   }
 
   .featureduser {
