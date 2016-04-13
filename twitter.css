@@ -419,6 +419,11 @@ aside {
   padding: 20px 20px 10px 20px;
 }
 
+.tempcontent h2 {
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
 .login_form {
   margin: auto;
   line-height: 2em;

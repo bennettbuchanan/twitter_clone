@@ -76,6 +76,7 @@
       <!--Content -->
       <div class="statuscontentcontainer flex-item">
       	<section class="tempcontent">
+          <h2>My Info</h2>
 	        <p class="login_info">Your rot13’d login is: <?php echo $encrypted_user_name;?></p>
 	        <p class="login_info">The length of your login is: <?php echo $len;?></p>
     	</section>
