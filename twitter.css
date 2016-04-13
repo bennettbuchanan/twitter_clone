@@ -411,12 +411,22 @@ aside {
   min-height: 110px;
 }
 
+.tempcontent {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: white;
+  margin-bottom: 20px;
+  padding: 20px 20px 10px 20px;
+}
+
 .login_form {
   margin: auto;
   line-height: 2em;
   background: white;
+  border: 1px solid #ccc;
   border-radius: 10px;
   padding: 20px;
+  width: 365px;
 }
 
 .login_form h1 {
@@ -428,7 +438,7 @@ aside {
   border: 1px solid #e1e8ed;
   border-radius: 2px;
   height: 25px;
-  width: 50%;
+  width: 75%;
 }
 
 .login_form #submit_button {
@@ -733,6 +743,10 @@ img {
     margin: 0px 20px 20px 20px;
   }
 
+  .tempcontent {
+  	margin: 0px 20px 20px 20px;
+  }
+
   aside {
     flex-direction: row;
     align-items: flex-start;
@@ -892,6 +906,17 @@ img {
     width: 215px;
     margin: 0px 0px 0px 20px;
     flex-direction: row;
+  }
+
+
+  .login_form {
+    margin: auto;
+    line-height: 2em;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
   }
 
   .headercontainer {
