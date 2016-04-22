@@ -10,13 +10,9 @@
 </head>
 <body>
   <?php
-    // if the cookie already exists, update the cookie's value
-    if ($_COOKIE['login_name']) {
-      $login_display = $_COOKIE['login_name'];
-    }
+    include_once 'cookie_updates.php';
     include_once 'model/user.php';
     include_once 'model/status.php';
-    // include page header
     include_once 'views/header.php';
   ?>
   <div class="outercontainer flex-item">
