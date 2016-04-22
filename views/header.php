@@ -13,11 +13,13 @@
       <ul class="toprightmenu flex-item">
         <li class="firstitem">
           <a href="#">Hello,
-            <?php echo $login_display; // display welcome message to user ?>
+            <!-- Display a message to the user. -->
+            <?php echo $login_display;?>
           </a>
         </li>
         <li class="seconditem">
-          <a href="logout.php">Logout</a>
+          <!-- Display "login" for anonymous users, and "logout" for logged in users -->
+          <a href=<?php echo $login_file?>><?php echo $login_string?></a>
         </li>
       </ul>
     </nav>
