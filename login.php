@@ -9,12 +9,12 @@
         </div>
         <nav>
           <ul class="centernav flex-item">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.php">Home</a></li>
           </ul>
         </nav>
       </div>
     </header>
-    <link rel="stylesheet" type="text/css" href="twitter.css">
+    <link rel="stylesheet" type="text/css" href="css/twitter.css">
     <div class="outercontainer flex-item">
       <div class="login_form">
         <h1>Log in to Impossible Octopus Fitness</h1>
@@ -31,15 +31,16 @@
         </form>
       </div>
     </div>
-    <script type="text/javascript" src="/node_modules/handlebars/dist/handlebars.min.js" defer></script>
-    <script type="text/javascript" src="ajax.js" defer></script>
-    <script type="text/javascript" src="post_a_status.js" defer></script>
-    <script type="text/javascript" src="sticky_smart_header.js" defer></script>
-    <script type="text/javascript" src="geolocation.js" defer></script>
-    <script type="text/javascript" src="weather.js" defer></script>
-    <script type="text/javascript" src="load_more.js" defer></script>
-    <script type="text/javascript" src="reply.js" defer></script>
-    <script type="text/javascript" src="toggle.js" defer></script>
-    <script type="text/javascript" src="geolocation_progressive_enhancement.js" defer></script>
+    <script type="text/javascript" src="node_modules/handlebars/dist/handlebars.min.js"></script>
+    <script type="text/javascript" src="js/ajax.js"></script>
+    <script type="text/javascript" src="js/all_images_data.js"></script>
+    <script type="text/javascript" src="js/post_a_status.js"></script>
+    <script type="text/javascript" src="js/sticky_smart_header.js"></script>
+    <script type="text/javascript" src="js/geolocation.js"></script>
+    <script type="text/javascript" src="js/weather.js"></script>
+    <script type="text/javascript" src="js/load_more.js"></script>
+    <script type="text/javascript" src="js/reply.js"></script>
+    <script type="text/javascript" src="js/toggle.js"></script>
+    <script type="text/javascript" src="js/geolocation_progressive_enhancement.js"></script>
   </body>
 </html>

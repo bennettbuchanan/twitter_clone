@@ -18,7 +18,7 @@
           </a>
         </li>
         <li class="seconditem">
-          <!-- Display "login" for anonymous users, and "logout" for logged in users -->
+          <!-- Display "login" for guests, and "logout" for logged in users -->
           <a href=<?php echo $login_file?>><?php echo $login_string?></a>
         </li>
       </ul>

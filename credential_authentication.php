@@ -35,13 +35,15 @@ if ($_COOKIE['login_name']) {
 }
 
 // Set a cookie with the username if credentials are valid.
+// It is necessary to redefine the variable because the index.php
+// page will not be updated with the cookie upon the first login.
 if ($is_true == true) {
   $login_display = $login;
   $login_file = "logout.php";
   $login_string = "logout";
   setcookie('login_file', $login_file);
   setcookie('login_string', $login_string);
-  setcookie('login_name', $login); // 86400 = 1 day
+  setcookie('login_name', $login);
 }
 
 // If credentials are invalid, display error message to user.
