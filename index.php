@@ -200,7 +200,7 @@
   <!-- End Outermost container -->
   <?php include_once 'views/footer.php';?>
   <!-- <script type="text/javascript" src="all_images_data.js" defer></script> -->
-  <script type="text/javascript" src="/node_modules/handlebars/dist/handlebars.min.js"></script>
+  <script type="text/javascript" src="node_modules/handlebars/dist/handlebars.min.js"></script>
   <script type="text/javascript" src="ajax.js"></script>
   <script type="text/javascript" src="post_a_status.js"></script>
   <script type="text/javascript" src="sticky_smart_header.js"></script>
