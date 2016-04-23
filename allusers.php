@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" type="text/css" href="css/twitter.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Impossible Octopus Fitness Farm Users</title>
@@ -59,16 +59,16 @@
   <!-- End Outermost container -->
   <?php include_once 'views/footer.php';?>
   <script type="text/javascript" src="node_modules/handlebars/dist/handlebars.min.js"></script>
-  <script type="text/javascript" src="js/ajax.js"></script>
-  <script type="text/javascript" src="js/all_images_data.js"></script>
-  <script type="text/javascript" src="js/post_a_status.js"></script>
-  <script type="text/javascript" src="js/sticky_smart_header.js"></script>
-  <script type="text/javascript" src="js/geolocation.js"></script>
-  <script type="text/javascript" src="js/weather.js"></script>
-  <script type="text/javascript" src="js/load_more.js"></script>
-  <script type="text/javascript" src="js/reply.js"></script>
-  <script type="text/javascript" src="js/toggle.js"></script>
-  <script type="text/javascript" src="js/geolocation_progressive_enhancement.js"></script>
+  <script type="text/javascript" src="components/js/ajax.js"></script>
+  <script type="text/javascript" src="components/js/all_images_data.js"></script>
+  <script type="text/javascript" src="components/js/post_a_status.js"></script>
+  <script type="text/javascript" src="components/js/sticky_smart_header.js"></script>
+  <script type="text/javascript" src="components/js/geolocation.js"></script>
+  <script type="text/javascript" src="components/js/weather.js"></script>
+  <script type="text/javascript" src="components/js/load_more.js"></script>
+  <script type="text/javascript" src="components/js/reply.js"></script>
+  <script type="text/javascript" src="components/js/toggle.js"></script>
+  <script type="text/javascript" src="components/js/geolocation_progressive_enhancement.js"></script>
 </body>
 
 </html>

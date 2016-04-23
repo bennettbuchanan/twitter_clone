@@ -7,7 +7,7 @@
 ?><!DOCTYPE HTML>
 <html lang="en">
 <head>
-  <link rel="stylesheet" type="text/css" href="css/twitter.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta content="Impossible Octopus Fitness Farm, where impossibility is impossible." name="description">
@@ -128,7 +128,7 @@
             <div>
               <img src="http://d.gr-assets.com/authors/1429114964p5/9810.jpg" alt="Impossible Octopus Fitness Fan Image" class="asideimage">
               <h2 class="featuredusername">Albert</h2>
-              <p class="asidetxt">Albert Einstein was a German-born theoretical physicist. He developed the general theory of relativity, one of the two pillars of modern physics. Einstein's work is also known for its influence on the philosophy of science. Actively involved on this site from the spirit realm.
+              <p class="asidetxt">GOODBYE Einstein was a German-born theoretical physicist. He developed the general theory of relativity, one of the two pillars of modern physics. Einstein's work is also known for its influence on the philosophy of science. Actively involved on this site from the spirit realm.
             </div>
           </section>
           <section class="featureduser" id="bottomfeature">
@@ -147,16 +147,6 @@
   <!-- End Outermost container -->
   <?php include_once 'views/footer.php';?>
   <!-- <script type="text/javascript" src="all_images_data.js" defer></script> -->
-  <script type="text/javascript" src="node_modules/handlebars/dist/handlebars.min.js"></script>
-  <script type="text/javascript" src="js/ajax.js"></script>
-  <script type="text/javascript" src="js/all_images_data.js"></script>
-  <script type="text/javascript" src="js/post_a_status.js"></script>
-  <script type="text/javascript" src="js/sticky_smart_header.js"></script>
-  <script type="text/javascript" src="js/geolocation.js"></script>
-  <script type="text/javascript" src="js/weather.js"></script>
-  <script type="text/javascript" src="js/load_more.js"></script>
-  <script type="text/javascript" src="js/reply.js"></script>
-  <script type="text/javascript" src="js/toggle.js"></script>
-  <script type="text/javascript" src="js/geolocation_progressive_enhancement.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
