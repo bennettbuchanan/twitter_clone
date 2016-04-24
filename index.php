@@ -14,7 +14,6 @@
   <meta content="impossible, octopus, fitness, farm" name="keywords">
   <title>Impossible Octopus Fitness Farm</title>
   <link rel="shortcut icon" href="https://maxcdn.icons8.com/wp-content/uploads/2014/01/octopus-128.png" type="image/x-icon"/>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <body>
   <?php
@@ -27,7 +26,7 @@
     <div class="contentoverwrap flex-item">
       <!--Content -->
       <div class="statuscontentcontainer flex-item">
-        <button class="button post_button" id="post_button">Post a status!</button>
+        <button class="post_button" id="post_button">Post a status!</button>
         <div class="poststatus" id="post_form" aria-live="polite">
           <form method="get" id="post_status">
             <label for="textarea_0">What is your status?</label>
@@ -68,7 +67,7 @@
               <p class="usertxt">'.$elem['post_text'].'
               </p>
               <p class="usertxt">
-                <button class="button reply_link" data-tag="'.$elem['id'].'">Reply</button>
+                <button class="button reply_link" data-tag="'.$elem['id'].'"><i class="fa fa-reply" aria-hidden="true"></i> Reply</button>
               </p>
               <div class="reply_form visuallyhidden" id="user_reply_'.$elem['id'].'">
                 <form method="get">
@@ -98,7 +97,7 @@
             <p class="usertxt">{{post_text}}
             </p>
             <p class="usertxt">
-              <button class="button reply_link" data-tag="{{data_tag}}">Reply</button>
+              <button class="button reply_link" data-tag="{{data_tag}}"><i class="fa fa-reply" aria-hidden="true"></i> Reply</button>
             </p>
             <div class="reply_form visuallyhidden" id="user_reply_{{data_tag}}">
               <form method="get">
@@ -117,7 +116,7 @@
         </script>
         <!-- New statuses are displayed here upon AJAX call.-->
         <div id="content-placeholder" aria-live="polite"></div>
-        <button aria-live="assertive" type="button" class="button call_to_action visuallyhidden" id="extra_statuses_button">See more statuses</button>
+        <button aria-live="assertive" type="button" class="call_to_action visuallyhidden" id="extra_statuses_button">See more statuses</button>
         <!-- <a id="image_table" href="#">All images on this page</a> -->
       </div>
       <!--End Content Overwrap-->
@@ -128,7 +127,7 @@
             <div>
               <img src="http://d.gr-assets.com/authors/1429114964p5/9810.jpg" alt="Impossible Octopus Fitness Fan Image" class="asideimage">
               <h2 class="featuredusername">Albert</h2>
-              <p class="asidetxt">GOODBYE Einstein was a German-born theoretical physicist. He developed the general theory of relativity, one of the two pillars of modern physics. Einstein's work is also known for its influence on the philosophy of science. Actively involved on this site from the spirit realm.
+              <p class="asidetxt">Albert Einstein was a German-born theoretical physicist. He developed the general theory of relativity, one of the two pillars of modern physics. Einstein's work is also known for its influence on the philosophy of science. Actively involved on this site from the spirit realm.
             </div>
           </section>
           <section class="featureduser" id="bottomfeature">

@@ -2,7 +2,7 @@
   <div class="headercontainer flex-item">
     <div id="mobile_view_header">
       <button id="nav-button">&#9776;</button>
-        <h1><img id="logo" src="https://maxcdn.icons8.com/wp-content/uploads/2014/01/octopus-128.png" alt="Impossible Octopus Fitness Club Logo"> <span class="visuallyhidden">Impossible Octopus Fitness</span> </h1>
+        <h1><a href="index.php"><img id="logo" src="https://maxcdn.icons8.com/wp-content/uploads/2014/01/octopus-128.png" alt="Impossible Octopus Fitness Club Logo"></a><span class="visuallyhidden">Impossible Octopus Fitness</span> </h1>
     </div>
     <nav>
       <ul class="centernav flex-item">

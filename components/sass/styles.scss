@@ -1,64 +1,5 @@
-$backgroundcolor: #f1f4f7;
-
-/* http://meyerweb.com/eric/tools/css/reset/
-v2.0 | 20110126
-License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  /* change font from default */
-  font-family: Verdana, sans-serif;
-  color: #222222;
-}
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-  background-color: $backgroundcolor;
-  font-size: .8em;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
+@import "compass", "variables", "mixins", "base", "layout";
+@modules "modules";
 
 .flex-item {
   display: flex;
@@ -139,13 +80,6 @@ header img {
   margin-right: 15px;
 }
 
-/* Set flex-end to align element to the right of the outermost div and set display inline-block to arrange horizontally */
-.toprightmenu {
-  width: 215px;
-  justify-content: flex-end;
-  padding: 15px 0px 15px 0px;
-}
-
 .centernav {
   padding: 15px 0px 15px 0px;
 }
@@ -159,31 +93,29 @@ footer {
   width: 100%;
   background: url("./images/footer_background.jpg") repeat;
   background-color: #222222; /* add background color in case images disabled */
-  padding: 20px 20px;
+  padding: 20px;
 }
 
 .footercontent {
   width: 1032px;
   margin-left: auto;
   margin-right: auto;
-  color: whitesmoke;
+  color: $white;
   justify-content: space-between;
   align-items: center;
   background: black; /* add background for WCAG2AAA specs */
 }
 
 .footercontent a {
-  color: whitesmoke;
-}
-
-.footercontent a:hover {
-  color: whitesmoke;
+  color: $white;
+  &:hover {
+    color: $white;
+  }
 }
 
 .footercontent p {
   padding-right: 60px;
-  color: whitesmoke;
-  font-size: 1em;
+  color: $white;
 }
 
 .footercontent ul {
@@ -211,7 +143,7 @@ footer {
   font-size: 1.25em;
   padding: 10px 10px 10px 10px;
   background: rgba(255, 182, 193, 0.35);
-  border-radius: 4px;
+  @include border-radius;
   margin: 0px 0px 20px 0px;
   text-align: center;
   border: 1px solid red;
@@ -221,10 +153,13 @@ footer {
 .centernav li a {
   margin: 0px 15px;
   text-decoration: none;
-  -moz-transition: all .1s;
-  -o-transition: all .1s;
-  -webkit-transition: all .1s;
-  transition: all .1s;
+  @include transition-property(border);
+  @include transition-duration(.1s);
+  &:hover{
+      padding-bottom: 5px;
+      border-bottom: 4px solid #3C5873;
+      color: #3C5873;
+    }
 }
 
 /* Target the tagline with an id and assign some margins to align based */
@@ -244,51 +179,38 @@ footer {
   width: 100px;
 }
 
+.asideimage{
+  @extend .userimage;
+}
+
 /* Set the text margin and padding in user status paragraphs */
 .usertxt {
   margin-top: 10px;
-  text-align:top;
+}
+
+.asidetxt {
+  @extend .usertxt;
 }
 
 aside {
   padding-top: 20px;
   width: 415px;
   background: white;
-  border-radius: 4px;
+  @include border-radius;
   flex-direction: column;
 }
 
-.asidetxt {
-  margin: 10px 0px;
-}
-
-.asideimage{
-  width: 100px;
-  height: 100px;
-  margin: 0px 15px 10px 0px;
+.post_style{
+  @include border-radius;
   border: 1px solid #ccc;
-  float: left;
-}
-
-.featureheader {
-  margin: 20px 20px 0px 20px;
-  font-size: 150%;
-  text-align: center;
-  background: white;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-bottom: 20px;
-  display: none;
-}
-
-.featureduser {
-  border: 1px solid #ccc;
-  border-radius: 4px;
   margin-bottom: 20px;
   background: white;
   margin: 0px 20px 20px 20px;
   padding: 20px 20px 10px 20px;
+}
+
+.featureduser {
+  @extend .post_style;
 }
 
 .beta {
@@ -302,14 +224,13 @@ aside {
   border: 1px solid #ccc;
   border-radius: 2px;
   z-index: 2;
-}
-
-.beta p {
-  text-align: center;
-  margin-right: 0px;
-  margin-left: 10px;
-  font-size: 80%;
-  color: white;
+  p {
+    text-align: center;
+    margin-right: 0px;
+    margin-left: 10px;
+    font-size: 80%;
+    color: $white;
+  }
 }
 
 /* add button styles */
@@ -317,113 +238,71 @@ aside {
   position: relative;
   border: none;
   padding: 5px 0px;
-  color: white;
+  color: $white;
   border: 1px solid #314354;
   text-align: center;
   margin: 5px 15px 10px 0px;
-  width: 75px;
+  width: 85px;
   cursor: pointer;
-  border-radius: 4px;
+  font-size: 1em;
   background: #354A7B; /* For browsers that do not support gradients */
-  -moz-transition: all .3s;
-  -o-transition: all .3s;
-  -webkit-transition: all .3s;
-  transition: all .3s;
-}
-
-/* Add hover pseudo class to button to change gradient */
-.button:hover{
-  color: white;
-  text-decoration: none;
-  background:  #2B3C64; /* For browsers that do not support gradients */
-}
-
-/* Add active pseudo to change colors when a user clicks on the button */
-.button:active {
-  background:  #212E4D;
-}
-
-.load_button,
-.load_button:hover,
-.load_button:active {
-  width: 200px;
-  background: #9C9898;
-  margin-bottom: 20px;
-  margin-top: 0px;
-  cursor: not-allowed;
+  @include border-radius;
+  @include transition-property(background);
+  @include transition-duration(.3s);
+  &:hover{
+      color: $white;
+      text-decoration: none;
+      background: #2B3C64; /* For browsers that do not support gradients */
+  }
+  &:active {
+    background:  #212E4D;
+  }
+  .fa-reply {
+    color: $white;
+  }
 }
 
 .post_button {
+  @extend .button;
   width: 100%;
   margin: 0px 0px 20px 0px;
-  color: white;
 }
 
 .call_to_action {
+  @extend .button;
   color: black;
   width: 200px;
   background: #FFE1E1;
   margin-bottom: 20px;
-  margin-top: 0px;
-}
-
-.call_to_action:hover {
-  color: black;
-  background: #ffc8c8;
-}
-
-.call_to_action:active {
-  color: black;
-  background: #ffafaf;
-}
-
-#postbutton {
-  margin-top: 5px;
-}
-
-.replybutton {
-  margin-top: 5px;
+  &:hover {
+    color: black;
+    background: #ffc8c8;
+  }
+  &:active {
+    color: black;
+    background: #ffafaf;
+  }
 }
 
 /* begin styles for mystatuses page */
 .username {
-  font-weight: bold;
-  margin-top: 10px;
+  font-weight: 700;
   display: inline-block;
 }
 
 .featuredusername {
-  font-weight: bold;
-  margin-top: 10px;
-  display: inline-block;
+  @extend .username;
 }
 
 /* Set style elements for date */
 .date {
-  color: #222222;
   display: inline-block;
 }
 
 .statuscontent {
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background: white;
-  margin-bottom: 20px;
-  padding: 20px 20px 10px 20px;
+  @extend .post_style;
+  margin: 0px 0px 20px 0px;
   min-height: 110px;
-}
-
-.tempcontent {
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background: white;
-  margin-bottom: 20px;
-  padding: 20px 20px 10px 20px;
-}
-
-.tempcontent h2 {
-  margin-bottom: 15px;
-  font-weight: 700;
 }
 
 .login_form {
@@ -433,37 +312,31 @@ aside {
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 20px;
-  width: 365px;
-}
-
-.login_form h1 {
-  font-size: 1.5em;
-  margin-bottom: 1em;
-}
-
-.login_form input {
-  border: 1px solid #e1e8ed;
-  border-radius: 2px;
-  height: 25px;
-  width: 75%;
-}
-
-.login_form #submit_button {
-  margin-top: 1em;
-  width: 25%;
-  height: auto;
-  margin-bottom: 0px;
-  border: none;
+  width: 415px;
+  h1 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+  }
+  input {
+    border: 1px solid #e1e8ed;
+    border-radius: 2px;
+    height: 25px;
+    width: 75%;
+  }
+  #submit_button {
+    margin-top: 1em;
+    width: 25%;
+    height: auto;
+    margin-bottom: 0px;
+    border: none;
+  }
 }
 
 /* Set styles for main post form */
 .poststatus {
-  border-radius: 4px;
-  background: #eee  ;
-  margin-bottom: 20px;
-  padding: 20px 20px 10px 20px;
+  @extend .post_style;
+  margin: 0px 0px 20px 0px;
   min-height: 160px;
-  border: 1px solid #ccc;
 }
 
 .noscriptPost {
@@ -482,10 +355,15 @@ aside {
 
 /* Set styles for reply form */
 .reply_form {
-  border-radius: 4px;
+  @include border-radius;
   background: #eee;
+  border: 1px solid #aeaeae;
   margin: 10px 0px;
   padding: 20px 20px 15px 20px;
+  textarea {
+    height: 80px;
+    background-color: white;
+  }
 }
 
 #post_form{
@@ -504,15 +382,11 @@ textarea {
   padding: 12px 12px;
   box-sizing: border-box;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: white;
+  @include border-radius;
+  background-color: rgba(245, 245, 245, 0.28);
   font-size: 16px;
   resize: none;
   color: #1D4E71;
-}
-
-.reply_form textarea {
-  height: 80px;
 }
 
 .locationdiv {
@@ -535,7 +409,7 @@ textarea {
   overflow: hidden;
   width: 300px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  @include border-radius;
   margin: 0px 10px 20px 10px;
 }
 
@@ -566,45 +440,41 @@ textarea {
   padding: 5px 0px 5px 0px;
   font-size: 16px;
   font-weight: bolder;
-  font-family: Arial;
+  font-family: $font-secondary;
   width: 100%;
   background: white;
-}
-
-.userinfo p {
-  padding-left: 90px;
+  p {
+    padding-left: 90px;
+  }
 }
 
 .useraddress {
   font-size: 12px;
-  font-family: Arial;
+  font-family: $font-secondary;
   color: #222222;
   margin: 3px 20px 0px 0px;
 }
 
 .userstats {
   background: white;
-}
-
-.userstats ul {
-  text-align: center;
-  max-width: 300px;
-  padding: 15px 0px 15px 0px;
-}
-
-.userstats li {
-  padding: 0px 20px;
-  text-align: center;
-  font-size: 15px;
-  font-family: Arial;
-  color: #222222;
-  background: white;
-  display: inline-block;
-}
-
-.userstats li a {
-  margin: auto;
-  width: 180px;
+  ul {
+    text-align: center;
+    max-width: 300px;
+    padding: 15px 0px 15px 0px;
+  }
+  li {
+    padding: 0px 20px;
+    text-align: center;
+    font-size: 15px;
+    font-family: $font-secondary;
+    color: #222222;
+    background: white;
+    display: inline-block;
+    a {
+      margin: auto;
+      width: 180px;
+    }
+  }
 }
 
 .followstats {
@@ -623,13 +493,13 @@ textarea {
   width: 46%;
   margin: 0px 20px 20px 0px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  @include border-radius;
 }
 
 .postheader {
   background: #ddd;
   padding: 10px;
-  border-radius: 4px;
+  @include border-radius;
 }
 
 .postcontent {
@@ -640,40 +510,43 @@ textarea {
 a {
   color: #3C5873;
   text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: #3C5873;
-}
-
-/* Keep anchor tags at bottom to define color styles */
-
-.toprightmenu a {
-  color: #3C5873;
-  text-decoration: none;
-  -moz-transition: all .1s;
-  -o-transition: all .1s;
-  -webkit-transition: all .1s;
-  transition: all .1s;
-}
-
-.centernav li a:hover,
-.toprightmenu a:hover {
-  padding-bottom: 11px;
-  border-bottom: 4px solid #3C5873;
-  color: #3C5873;
+  &:hover{
+    text-decoration: underline;
+    color: #3C5873;
+  }
 }
 
 img {
-  border-radius: 4px;
+  @include border-radius;
 }
 
 #image_table {
   margin-bottom: 20px;
 }
 
+/* Set flex-end to align element to the right of the outermost div and set display inline-block to arrange horizontally */
+.toprightmenu {
+  width: 215px;
+  justify-content: flex-end;
+  padding: 15px 0px 15px 0px;
+  a {
+    color: #3C5873;
+    text-decoration: none;
+    @include transition-property(border);
+    @include transition-duration(.1s);
+    &:hover{
+      padding-bottom: 5px;
+      border-bottom: 4px solid #3C5873;
+      color: #3C5873;
+    }
+  }
+}
+
 @media (max-width: 992px) {
+
+  .call_to_action{
+    margin-left: 20px;
+  }
 
   /* begin CSS for header */
 
@@ -698,7 +571,7 @@ img {
   }
 
   footer {
-    width: inherit;;
+    width: inherit;
   }
 
   .footercontent {
@@ -706,10 +579,9 @@ img {
     margin: 0px;
     justify-content: space-between;
     align-items: center;
-  }
-
-  .footercontent p {
-    padding: 0px;
+    p {
+      padding: 0px;
+    }
   }
 
    /* begin CSS for homepage */
@@ -750,10 +622,6 @@ img {
     margin: 0px 20px 20px 20px;
   }
 
-  .tempcontent {
-  	margin: 0px 20px 20px 20px;
-  }
-
   aside {
     flex-direction: row;
     align-items: flex-start;
@@ -773,12 +641,6 @@ img {
 
   .featuredusername {
     width: 100%;
-  }
-
-  .featureheader {
-    width: 58.5%;
-    margin: 20px 20px 0px 20px;
-    font-size: 150%;
   }
 
   .featureduser {
@@ -814,14 +676,6 @@ img {
   .poststatus {
     margin: 0px 20px 20px 20px;
   }
-
-  #image_table {
-    margin-left: 20px;
-  }
-
-  .call_to_action {
-    margin-left: 20px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -844,20 +698,19 @@ img {
     height: 25px;
     width: 25px;
     margin: 9px 20px 9px 0px;
-    background-color: white;
+    background-color: $white;
     border-color: #ddd;
     align-self: flex-end;
-    border-radius: 4px;
+    @include border-radius;
     -moz-transition: all .3s;
     -o-transition: all .3s;
     -webkit-transition: all .3s;
     transition: all .3s;
     cursor: pointer;
     border: 1px solid #aeaeae;
-  }
-
-  #nav-button:hover {
-    border: 1px solid #555555;
+    &:hover {
+      border: 1px solid #555555;
+    }
   }
 
   .noscriptPost {
@@ -880,6 +733,9 @@ img {
     border-top: 1px solid #ccc;
     background: white;
     border-bottom: 1px solid #ccc;
+    ul li {
+      padding-top: 10px;
+    }
   }
 
   .nav-hide{
@@ -898,10 +754,6 @@ img {
     border-bottom: 1px solid #ccc;
   }
 
-  nav ul li {
-    padding-top: 10px;
-  }
-
   #mobile_view_header {
     flex-direction: row-reverse;
     display: flex;
@@ -914,7 +766,6 @@ img {
     margin: 0px 0px 0px 20px;
     flex-direction: row;
   }
-
 
   .login_form {
     margin: auto;
@@ -937,6 +788,11 @@ img {
     align-items: center;
     flex-direction: column;
     width: auto;
+    a:hover {
+      padding-bottom: 3px;
+      border-bottom: 3px solid #6889a8;
+      color: #6889a8;
+    }
   }
 
   .seconditem:before {
@@ -949,11 +805,15 @@ img {
     flex-direction: column;
     align-items: center;
     padding: 0px;
-  }
-
-  .centernav li a {
-    margin: 0px 10px;
-    text-decoration: none;
+    li a {
+      margin: 0px 10px;
+      text-decoration: none;
+      &:hover {
+        padding-bottom: 3px;
+        border-bottom: 3px solid #6889a8;
+        color: #6889a8;
+      }
+    }
   }
 
   /* redefine margin, width, and padding for proper layout */
@@ -998,16 +858,13 @@ img {
 
   .featuredusername {
     font-weight: bold;
-    margin-top: 10px;
     display: block;
   }
 
   /* add extra space at bottom for beta notifcation */
   #bottomfeature{
-    margin-bottom: 55px;
+    margin-bottom: 20px;
   }
-
-  /* begin CSS for mystatuses page and allusers page */
 
   /* include margin-bottom for allusers page */
   .alluserspage {
@@ -1038,30 +895,17 @@ img {
     justify-content: center;
   }
 
-  .centernav li a:hover,
-  .toprightmenu a:hover {
-    padding-bottom: 3px;
-    border-bottom: 3px solid #6889a8;
-    color: #6889a8;
-  }
-
-  footer {
-    width: inherit;;
-  }
-
   .footercontent {
     flex-direction: column;
-  }
-
-  .footercontent ul {
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding-bottom: 20px;
-  }
-
-  .footercontent ul li {
-    padding-bottom: 5px;
+    ul {
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding-bottom: 20px;
+      li {
+        padding-bottom: 5px;
+      }
+    }
   }
 }
